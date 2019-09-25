@@ -15,10 +15,13 @@ header {
 }
 
 h1 {
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-family: 'Rock Salt', cursive;
+   line-height: 1.5em;
+   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
    font-size: 2em;
    margin: 0px;
    padding: 20px;
+   padding-left: 30px;
 }
 
 img {
@@ -37,10 +40,12 @@ img {
 main {
    background: #eee;
    padding: 20px;
+   padding-left: 30px;
 }
 
 h2 {
-   font-family: Georgia, 'Times New Roman', Times, serif;
+   /* font-family: Georgia, 'Times New Roman', Times, serif; */
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 hr {
@@ -48,7 +53,8 @@ hr {
 }
 
 ul {
-   font-family: Georgia, 'Times New Roman', Times, serif;
+   /* font-family: Georgia, 'Times New Roman', Times, serif; */
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
    list-style-type: none;
 }
 
@@ -63,6 +69,7 @@ footer {
    color: #eee;
    background: #222;
    padding: 10px 20px;
+   padding-left: 30px;
    border-radius: 0px 0px 15px 15px;
 }
 
