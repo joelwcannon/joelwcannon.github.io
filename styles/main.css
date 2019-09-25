@@ -4,14 +4,12 @@
 }
 
 body {
-   margin: 20px;
    max-width: 800px;
 }
 
 header {
    color: #eee;
    background: #222;
-   border-radius: 15px 15px 0px 0px;
 }
 
 h1 {
@@ -21,14 +19,18 @@ h1 {
    font-size: 2em;
    margin: 0px;
    padding: 20px;
-   padding-left: 30px;
+   padding-left: 20px;
 }
 
 img {
    float: right;
-   width: 200px; 
-   margin: 30px 20px;
-   border-radius: 15px 15px 15px 15px;
+   width: 150px;
+   margin:  10px 0px;
+   margin-left: 10px;
+   border: 10px solid #222;
+ 
+   /* margin: 30px 20px;
+   border-radius: 15px 15px 15px 15px; */
 }
 
 .clearfix::after {
@@ -40,7 +42,7 @@ img {
 main {
    background: #eee;
    padding: 20px;
-   padding-left: 30px;
+   padding-left: 20px;
 }
 
 h2 {
@@ -69,8 +71,7 @@ footer {
    color: #eee;
    background: #222;
    padding: 10px 20px;
-   padding-left: 30px;
-   border-radius: 0px 0px 15px 15px;
+   padding-left: 20px;
 }
 
 .footer a:link,
