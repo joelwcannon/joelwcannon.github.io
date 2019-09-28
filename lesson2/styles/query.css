@@ -1,0 +1,28 @@
+
+@media only screen and (min-width: 32.5em) {   main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
+
+   /* .card {
+      background-color: white;
+      margin: .5em .25em;
+   } */
+
+   main:nth-child(3) {
+      grid-column: 2;
+   }
+}
+
+@media only screen and (min-width: 60em) {
+   main {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+   }
+/* 
+   .card {
+      background-color:white;
+      margin: .5em .25em;
+   } */
+}
+

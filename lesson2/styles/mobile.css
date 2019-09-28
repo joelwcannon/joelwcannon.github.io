@@ -1,0 +1,97 @@
+
+body {
+   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+   padding: .25em 0em;
+   text-align: center;
+}
+ 
+header {
+   background-color: darkblue;
+   padding-bottom:.25em;
+}
+
+h1, h2 {
+   font-family: 'Righteous', cursive;
+   color: white;
+   font-weight: normal;
+}
+
+h2 {
+   background-color: darkblue;
+}
+
+p, h3, h4, h5, h6, footer{
+   font-family:Garamond, Georgia, serif;
+ 
+}
+
+h4, h6 {
+   text-align: center;
+}
+
+figure {
+   width: 95%;
+   margin: 0px auto;
+   display: block;
+}
+
+p {
+   width: 95%;
+   margin: .25em auto;
+   display: block;
+   background-color: white;
+}
+
+img {
+   width: 100%;
+   margin-top: .25em;
+   border: 1px solid black;
+   box-shadow: 2px 2px 4px gray;
+}
+
+main {
+   margin: .0em auto;
+   background-color: rgb(228, 243, 248);
+   display: grid;
+   grid-template-columns: 1fr;
+}
+
+.card {
+   background-color: white;
+   margin: .5em .5em;
+   box-shadow: 2px 2px 4px gray;
+}
+
+footer {
+   font-size: .6em;
+   line-height: 2em;
+   color: white;
+   background: darkblue;
+   padding: 10px 20px;
+}
+
+footer p {
+   background-color: darkblue;
+   text-align: center;
+
+}
+
+.footer a:link,
+.footer a:visited {
+   text-decoration: none;
+   color: white;
+}
+
+.footer a:hover {
+   text-decoration: underline;
+}
+
+.footer a:active {
+   text-decoration: underline;
+   color: red;
+}
+
