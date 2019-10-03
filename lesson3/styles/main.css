@@ -1,0 +1,53 @@
+/* mobile first  */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --primary-color: #f7ff58;
+   --dark-color: #3d3b30;
+   --light-color: #e9edde;
+   --accent-color: #5c80bc;
+   --medium-color: #4d5061;
+}
+body {
+   font-family: 'Dosis', sans-serif;
+   margin: 2em;
+}
+
+main {
+   margin: 1em;
+   background: var(--light-color);
+}
+/*  */
+h1, h2, h3 {   
+   font-family: 'Fredoka One', cursive;
+   margin-top: .5em; 
+   background: var(--primary-color); 
+   color: var(--dark-color);    
+}
+
+h3 {
+   color: var(--accent-color);
+
+}
+
+ol {
+   padding: 1em;
+}
+
+li {
+   padding: .5em;
+}
+
+p {
+   margin-top: .25em;
+   color: var(--medium-color);
+
+}
+
+img {
+   display: block 
+}
