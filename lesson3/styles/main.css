@@ -124,15 +124,18 @@ nav a:hover {
    background: #333;
 }
 
-.active nav a:hover {
+/* nav a:active,
+.active nav a:hover
+ {
    background:red;
-}
+} */
 
+nav a:active,
 .active {
    /* color: var(--accent-color); */
    color: red;
 
-   font-weight: bold;
+   /* font-weight: bold; */
 }
 
 main {
