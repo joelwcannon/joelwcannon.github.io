@@ -49,13 +49,13 @@
 
 }
 
-:root {
+/* :root {
    --primary-color: #371f99;
    --dark-color: #111;
    --light-color: #ffefd9;
    --accent-color: #cc9466;
    --medium-color: #9abcff;
-}
+} */
 
 .font-a {
    font-family: 'Fredoka One', cursive;
