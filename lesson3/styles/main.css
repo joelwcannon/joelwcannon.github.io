@@ -5,67 +5,225 @@
    box-sizing: border-box;
 }
 
-:root {
-   --primary-color: #f7ff58;
-   --dark-color: #3d3b30;
-   --light-color: #e9edde;
-   --accent-color: #5c80bc;
-   --medium-color: #4d5061;
+/* Color Theme Swatches in Hex */
+.Travelcast-1-hex { color: #7A66CC;    padding: .5em;
 }
+.Travelcast-2-hex { color: #371F99;    padding: .5em;
+}
+.Travelcast-3-hex { color: #9ABCFF;    padding: .5em;
+}
+.Travelcast-4-hex { color: #FFEFD9;    padding: .5em;
+}
+.Travelcast-5-hex { color: #CC9466;    padding: .5em;
+}
+
+.Travelcast-4-bg { background-color: #FFEFD9; 
+   padding: .5em;
+}
+.Travelcast-2-bg { 
+   background-color: #371F99; 
+   color: white;
+   padding: .5em;
+}
+.Travelcast-3-bg { 
+   background-color: #9ABCFF; 
+   color: black;
+   padding: .5em;
+
+}
+.Travelcast-1-bg { 
+   background-color: #7A66CC; 
+   color: white;
+   padding: .5em;
+
+}
+.accent {
+   background-color:#371F99;
+   color: #9ABCFF;
+   padding: .5em;
+}
+
+.b-w {
+   
+   padding: .5em;
+
+}
+
+:root {
+   --primary-color: #371f99;
+   --dark-color: #111;
+   --light-color: #ffefd9;
+   --accent-color: #cc9466;
+   --medium-color: #9abcff;
+}
+
+.font-a {
+   font-family: 'Fredoka One', cursive;
+}
+
+.font-b {
+   font-family: 'Dosis', sans-serif;
+}
+
 body {
    font-family: 'Dosis', sans-serif;
-   margin: 2em;
+   margin: 0;
+   line-height: 1.5;
+}
+
+header h1 {
+   color: white;
+   background: #000;
+   text-align: center;
+   margin: 0;
+   padding-top: .25em;
+}
+
+nav {
+   background: #000;
+   text-align: center;
+}
+
+nav ul {
+   list-style: none;
+   display: grid;
+   grid-template-columns: 1fr;   
+
+   /* margin: 0;
+   padding: 0; */
+}
+
+@media only screen and (min-width: 500px) {
+   body {
+      margin: 1em auto;
+      max-width: 800px;
+   }
+   
+   header h1 {
+      padding: .5em;
+   }
+   nav ul {
+      grid-template-columns: repeat(4, 1fr);
+   }
+ }
+
+nav li {
+   /* padding: 0; */
+}
+
+nav a {
+   color: white;
+   text-decoration: none;
+   display: block;
+margin: 0 auto;
+padding: .5em;
+}
+
+nav a:hover {
+   /* color: lightblue; */
+   background: #333;
+}
+
+.active nav a:hover {
+   background:red;
+}
+
+.active {
+   /* color: var(--accent-color); */
+   color: red;
+
+   font-weight: bold;
 }
 
 main {
    margin: 1em;
-   background: var(--light-color);
+   /* background: var(--light-color); */
 }
 /*  */
 h1, h2, h3 {   
-   font-family: 'Fredoka One', cursive;
-   margin-top: .5em; 
-   background: var(--primary-color); 
-   color: var(--dark-color);    
+   /* font-family: 'Fredoka One', cursive; */
+   /* margin-top: .5em;  */
+   /* background: var(--primary-color); 
+   color: var(--dark-color);     */
 }
 
 h3 {
-   color: var(--accent-color);
+   /* color: var(--accent-color); */
 
 }
 
-ol {
+/* ol {
    padding: 1em;
 }
 
 li {
    padding: .5em;
-}
+} */
 
 p {
    margin-top: .25em;
-   color: var(--medium-color);
+   /* color: var(--medium-color); */
 
 }
 
-img {
+.logo {
    display: block; 
-   background-color: var(--primary-color);
+   /* background-color: var(--primary-color); */
    width: 200px;
 }
 
+.color-swatch {
+width: 100%;
+}
+
+.persona {
+   width: 100%;
+}
+
+.audience {
+   display: grid;
+   grid-template-columns: 1fr;   
+}
+
+.audience h3 {
+   margin: 0;
+}
+
+.audience p {
+   padding-bottom: 1em;
+}
+
+.audience ul {
+   padding-bottom: 1em;
+   padding-left: 2em;
+}
+
+@media only screen and (min-width: 500px){
+   .audience {
+      grid-template-columns: 1fr 1fr;   
+   }
+
+   .audience div {
+      padding: 0 .5em;
+   }
+
+   .audience ul {
+      grid-column: span 2;
+   }
+ }
+
 footer {
    font-size: .6em;
-   line-height: 2em;
+   /* line-height: 2em; */
    color: white;
-   background: darkblue;
+   background: #000;
    padding: 10px 20px;
 }
 
 footer p {
-   background-color: darkblue;
+   /* background-color: darkblue; */
    text-align: center;
-   color: white;
+   /* color: white; */
 }
 
 .footer a:link,
