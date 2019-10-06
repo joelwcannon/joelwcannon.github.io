@@ -144,7 +144,7 @@ main {
 }
 /*  */
 h1, h2, h3 {   
-   /* font-family: 'Fredoka One', cursive; */
+   font-family: 'Fredoka One', cursive;
    /* margin-top: .5em;  */
    /* background: var(--primary-color); 
    color: var(--dark-color);     */
