@@ -217,6 +217,7 @@ footer {
 
 footer p {
   text-align: center;
+  padding-bottom: 0.5em;
 }
 
 .footer a:link,
