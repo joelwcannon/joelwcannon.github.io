@@ -1,9 +1,13 @@
-var today = new Date(); 
-var year = today.getFullYear();
+const today = new Date(); 
+const localeDate = new Intl.DateTimeFormat("en-US", {
+   weekday: "long",
+   year: "numeric",
+   month: "long",
+   day: "numeric"
+});
 
-document.getElementById('copyYear').innerHTML = year;
-
-document.getElementById('timestamp').innerHTML = document.lastModified;
+document.getElementById('copyYear').innerHTML = today.getFullYear();
+document.getElementById('timestamp').innerHTML = localeDate.format(today);
 
 function toggleMenu() {
    console.log("it worked!")
