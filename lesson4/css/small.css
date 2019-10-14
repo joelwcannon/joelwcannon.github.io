@@ -168,6 +168,9 @@ nav {
     display: block;
     flex: 1 1 100px;
   }
+  .navigation li a {
+    color: red;
+  }
 }
 
 .hide {
