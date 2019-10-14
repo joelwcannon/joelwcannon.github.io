@@ -5,27 +5,42 @@ $break-large: 56rem; // 896px
 
 $primary-color: #371f99;
 $secondary-color: #9abcff;
+$third-color: #7a66cc;
 $accent-color: #cc9466;
 $light-color: #ffefd9;
 
 // $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif;
-$font-family-sans-serif: 'Dosis', sans-serif;
-$font-family-headings: 'Fredoka One', cursive;
+$font-family-sans-serif: 'Dosis',
+sans-serif;
+$font-family-headings: 'Fredoka One',
+cursive;
 
 
 @mixin breakpoint($break) {
-   @if $break == large {
-   @media (min-width: $break-large) { @content; }
+   @if $break==large {
+      @media (min-width : $break-large) {
+         @content;
+      }
    }
-   @else if $break == medium {
-   @media (min-width: $break-medium) { @content; }
+
+   @else if $break==medium {
+      @media (min-width: $break-medium) {
+         @content;
+      }
    }
-   @else if $break == small {
-   @media (min-width: $break-small) { @content; }
-   } @else {
-   @media ($break) { @content; }
+
+   @else if $break==small {
+      @media (min-width: $break-small) {
+         @content;
+      }
    }
-   } 
+
+   @else {
+      @media ($break) {
+         @content;
+      }
+   }
+}
 
 @mixin flex-container($axis, $wrap: nowrap) {
    display: -webkit-box;
@@ -42,7 +57,7 @@ $font-family-headings: 'Fredoka One', cursive;
    max-width: $max-width;
    margin-left: auto;
    margin-right: auto;
- }
+}
 
 /* Mobile First */
 
@@ -70,7 +85,12 @@ body {
    @include center(800px, 95%);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
    font-family: $font-family-headings;
    font-weight: normal;
    color: $primary-color;
@@ -85,14 +105,15 @@ h2 {
    padding: .5em;
    background-color: $primary-color;
    justify-content: space-between;
-   align-items: flex-end; 
+   align-items: flex-end;
    border-bottom: 1px solid $light-color;
+
    h1 {
       margin: 0;
       font-size: 2rem;
       color: white;
    }
-   
+
    p {
       text-align: center;
       font-style: italic;
@@ -103,13 +124,16 @@ h2 {
 
 
    }
+
    @include breakpoint(medium) {
       & {
          justify-content: flex-start;
+
          h1 {
             margin: 0;
             font-size: 3rem;
          }
+
          p {
             text-align: center;
             font-style: italic;
@@ -125,94 +149,109 @@ h2 {
    font-size: 2em;
    display: block;
    //  padding: .25em;
-    text-decoration: none;
+   text-decoration: none;
    //  flex: 1 1 auto;
-   
-    @include breakpoint(medium) {
+
+   @include breakpoint(medium) {
       & {
-         display:none;
+         display: none;
       }
    }
 }
 
 .button:hover {
-      color: $secondary-color;
+   color: $secondary-color;
 }
 
 .logo {
    height: 50px;
    padding-right: .5em;
    color: white;
+
    @include breakpoint(medium) {
       & {
          height: 72px;
       }
-   } 
+   }
 }
 
 nav {
-   @include center(3000px, 100%) ;
+   @include center(3000px, 100%);
    background-color: $primary-color;
 }
-.hide {
-   // display: block;
-   // display: none;
-}
+
+
+
 .navigation {
    list-style-type: none;
    text-align: center;
    padding: 0;
-   display:block;
+   display: block;
+
    li.active a {
-      // background-color: rgba(255,255,255,0.2);
-      // color: #fff;
       color: $secondary-color;
    }
-   // &.hide {display: none;}
- a {
-    display: block;
-    padding: .5em;
-    color: #fff;
-    text-decoration: none;
-    border-top: 1px solid rgba(0,0,0,.3);
- }
- a:hover {
-    background-color: rgba(255,255,255,0.4);
- }
- @include breakpoint(medium) {
-    & {
-       padding-left: 2%;
-      //  display: block;
-    }
-   &.hide {
-      display:block;
+
+   a {
+      display: block;
+      padding: .5em;
+      color: #fff;
+      text-decoration: none;
+      border-top: 1px solid rgba(0, 0, 0, .3);
    }
-    li {
-       float: left;
-    }
-    li a {
-       border: none;
-       border-right: 1px solid rgba(0,0,0,0.3);
-    }
-   // & {
-   //    @include flex-container (row);
-   //    }
-   // & li {
-   //    display: block;
-   //    flex: 1 1 100px;
-   //    }
-   // & li a {
-   //    color: blue;
-   //    }
+
+   a:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+   }
+
+   @include breakpoint(medium) {
+      & {
+         padding-left: 2%;
+      }
+
+      &.hide {
+         display: block;
+      }
+
+      li {
+         float: left;
+      }
+
+      li a {
+         border: none;
+         border-right: 1px solid rgba(0, 0, 0, 0.3);
+      }
+
+   }
+
+   @include breakpoint(large) {
+
+      & {
+         @include flex-container (row);
+         padding-left: 0;
+      }
+
+      &.hide {
+         display: flex;
+      }
+
+      & li {
+         display: block;
+         flex: 1 1 100px;
+      }
+
+      & li a {
+         // color: red;
+      }
    }
 }
-
-
 
 .hide {
    // display: block;
    display: none;
 }
+
+
 
 .town {
    // text-align: center;
@@ -225,19 +264,37 @@ nav {
    background-color: $secondary-color;
    padding: .5em;
    margin: .5em 0;
+
    div {
       background-color: white;
       padding: .5em;
    }
+
+   // @include breakpoint(medium) {
+   //    background-color: $third-color;
+   // }
+
+   // @include breakpoint(large) {
+   //    background-color: $accent-color;
+   // }
 }
 
 .forecast {
    background-color: $secondary-color;
    padding: .5em;
    margin: .5em 0;
+
    div {
       background-color: white;
       padding: .5em;
+   }
+
+   @include breakpoint(medium) {
+      background-color: $third-color;
+   }
+
+   @include breakpoint(large) {
+      background-color: $accent-color;
    }
 }
 
@@ -256,13 +313,13 @@ nav {
 .map {
    background-color: $accent-color;
    flex: 2 2 200px;
- }
- 
- .contact fieldset {
-    margin: 0 .5em;
-    flex: 1 1 auto;
- }
- 
+}
+
+.contact fieldset {
+   margin: 0 .5em;
+   flex: 1 1 auto;
+}
+
 
 .contact p {
    margin: .25em 0 0;
@@ -278,7 +335,7 @@ footer {
 
 footer p {
    text-align: center;
-   padding-bottom: .5em; 
+   padding-bottom: .5em;
 }
 
 .footer a:link,
