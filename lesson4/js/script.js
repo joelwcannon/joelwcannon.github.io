@@ -1,5 +1,5 @@
 const today = new Date(); 
-const localeDate = new Intl.DateTimeFormat("en-US", {
+const localeDate = new Intl.DateTimeFormat("en-GB", {
    weekday: "long",
    year: "numeric",
    month: "long",
