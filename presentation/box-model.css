@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px 0px grey;
+}
+
+div {
+  width: 50%;
+  /* width: 100%; */
+  height: 100px;
+  border: 10px inset rgba(0, 0, 0, 0.2);
+  margin: 10px auto;
+}
+
+main {
+  margin: 10px;
+  margin: 10px 30px;
+}
+
+.a {
+  margin: 30px auto;
+  margin: 10px auto;
+}
+
+.a:hover,
+.c:hover {
+  background:red;
+}
+
+.a, .b, .c {
+  padding: 25px;
+}
+
+.x {
+  margin: 30px;
+  /* padding:1px; */
+}
+
+.contents {
+  width: 100%;
+  height: 100%;
+  background: white;
+  margin: 0 auto;
+  box-shadow: 0px 0px 0px 0px;
+  border: 0;
+  font-size: 12px;
+}
+
+footer {
+  margin: 20px;
+}
+
+body {
+  background-image: linear-gradient(rgba(255, 255, 0, 0.2), rgba(255, 255, 0, 0.2)), url(./images/grid-white-1556097_1280.png);
+}
+
+main {
+  background-image: linear-gradient(rgba(0, 255, 0, 0.2), rgba(0, 255, 0, 0.2)), url(./images/grid-white-1556097_1280.png);
+}
+
+div {
+  background-image: linear-gradient(rgba(0, 255, 255, 0.2), rgba(0, 255, 255, 0.2)), url(./images/grid-white-1556097_1280.png);
+}
+
+.b {
+  background-image: linear-gradient(rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.2)), url(./images/grid-white-1556097_1280.png);
+}
+
+.b img {
+  border: 5px inset rgba(0, 0, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.c {
+  background-image: linear-gradient(rgba(255, 0, 255, 0.2), rgba(255, 0, 255, 0.2)), url(./images/grid-white-1556097_1280.png);
+  box-sizing: content-box;
+}
+
+.hr {
+  border-style: inset;
+  border-width: 1px;
+}
+
+footer {
+  background-image: linear-gradient(rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.2)), url(./images/grid-white-1556097_1280.png);
+}
+
+/*# sourceMappingURL=box-model.css.map */
+

@@ -1,0 +1,117 @@
+// Globals
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-shadow: 5px 5px 10px 0px grey;
+}
+
+// Variables
+$black-rgba: rgba(0, 0, 0, 0.2);
+$blue-rgba: rgba(0, 0, 255, 0.2);
+$lime-rgba: rgba(0, 255, 0, 0.2);
+$cyan-rgba: rgba(0, 255, 255, 0.2);
+$red-rgba: rgba(255, 0, 0, 0.2);
+$magenta-rgba: rgba(255, 0, 255, 0.2);
+$yellow-rgba: rgba(255, 255, 0, 0.2);
+$dk-blue-rgba: rgba(0, 0, 128, 0.2);
+$dk-lime-rgba: rgba(0, 128, 0, 0.2);
+$dk-cyan-rgba: rgba(0, 128, 128, 0.2);
+$dk-red-rgba: rgba(128, 0, 0, 0.2);
+$dk-magenta-rgba: rgba(128, 0, 128, 0.2);
+$dk-yellow-rgba: rgba(128, 128, 0, 0.2);
+
+// Mixins
+@mixin tinted-grid-bg ($rgba) {
+   background-image: 
+      linear-gradient($rgba, $rgba),
+      url(./images/grid-white-1556097_1280.png);
+}
+
+// Positioning
+div {
+   width: 70%;
+   height: 100px;
+   border: 10px inset $black-rgba;
+   margin: 10px auto;
+}
+
+main {
+   margin: 10px;
+}
+
+.a {
+   margin: 30px auto;
+   margin: 0 auto;
+}
+
+.a, .b, .c {
+   // margin: 20px;
+   padding: 25px;
+}
+
+.b, .c {
+   // width: 200px;
+}
+
+// .b img {
+//    width: 100%;
+//    padding: 10px;
+// }
+
+.d {
+   margin: 30px;
+}
+
+.contents {
+   width: 100%;
+   height: 100%;
+   background: white;
+   margin: 0 auto;
+   box-shadow: 0px 0px 0px 0px;
+   border: 0;
+
+}
+
+footer {
+   margin: 20px;
+}
+
+// Styling
+body {
+   @include tinted-grid-bg($yellow-rgba);
+}
+
+main {
+   @include tinted-grid-bg($lime-rgba);
+}
+
+div {
+   @include tinted-grid-bg($cyan-rgba);
+}
+
+
+.b {
+   @include tinted-grid-bg($blue-rgba);
+}
+
+
+.b img {
+   border: 5px inset $blue-rgba;
+   background-color: $black-rgba;
+   display: none;
+}
+
+.c {
+   @include tinted-grid-bg($magenta-rgba);
+   box-sizing: content-box;
+}
+
+.hr {
+   border-style: inset;
+   border-width: 1px;
+}
+
+footer {
+   @include tinted-grid-bg($red-rgba);
+}
