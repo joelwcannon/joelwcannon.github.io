@@ -327,6 +327,40 @@ div.summary-table {
   }
 }
 
+table.five-day-forecast {
+  border: 2px solid #371f99;
+  width: 500px;
+  height: 150px;
+  text-align: center;
+}
+
+table.five-day-forecast td,
+table.five-day-forecast th {
+  border: 1px solid #371f99;
+  padding: 3px 2px;
+}
+
+table.five-day-forecast tbody td {
+  font-size: 16px;
+}
+
+table.five-day-forecast thead {
+  background: #7a66cc;
+  border-bottom: 1px solid #371f99;
+}
+
+table.five-day-forecast thead th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 1px solid #371f99;
+}
+
+table.five-day-forecast thead th:first-child {
+  border-left: none;
+}
+
 .article {
   background-color: white;
   padding: 0.5em;
