@@ -325,7 +325,7 @@ div.summary-table {
 }
 
 .summary-table-heading {
-   color:white;
+   color: white;
 }
 
 .divTable.summary-table .divTableCell,
@@ -403,54 +403,70 @@ div.summary-table {
 
 .forecast {
    display: none;
-   background-color: $secondary-color;
-   padding: .5em;
-   margin: .5em 0;
+   // background-color: $secondary-color;
+   // padding: .5em;
+   // margin: .5em 0;
 
-   div {
+   // div {
+   //    background-color: white;
+   //    padding: .5em;
+   // }
+   h3 {
+      text-align: center;
+      padding: 1rem;
+   }
+
+   table {
+      margin-left: auto;
+      margin-right: auto;
       background-color: white;
-      padding: .5em;
+      margin-bottom: 2rem;
    }
 
    @include breakpoint(medium) {
       display: block;
-      background-color: $third-color;
+      // background-color: $third-color;
    }
 
-   @include breakpoint(large) {
-      background-color: $accent-color;
-   }
+   // @include breakpoint(large) {
+   //    background-color: $accent-color;
+   // }
 }
 
 table.five-day-forecast {
    border: 2px solid $primary-color;
-   width: 500px;
+   width: 450px;
    height: 150px;
    text-align: center;
- }
- table.five-day-forecast td, 
- table.five-day-forecast th {
+}
+
+table.five-day-forecast td,
+table.five-day-forecast th {
    border: 1px solid $primary-color;
    padding: 3px 2px;
- }
- table.five-day-forecast tbody td {
+}
+
+table.five-day-forecast tbody td {
    font-size: 16px;
- }
- table.five-day-forecast thead {
+}
+
+table.five-day-forecast thead {
    background: $third-color;
    border-bottom: 1px solid $primary-color;
- }
- table.five-day-forecast thead th {
+}
+
+table.five-day-forecast thead th {
    font-size: 16px;
    font-weight: bold;
    color: #FFFFFF;
    text-align: center;
    border-left: 1px solid $primary-color;
- }
- table.five-day-forecast thead th:first-child {
+}
+
+table.five-day-forecast thead th:first-child {
    border-left: none;
- }
- 
+}
+
 //  table.5day-forecast tfoot td {
 //    font-size: 16px;
 //  }
