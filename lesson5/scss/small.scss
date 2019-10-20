@@ -107,12 +107,14 @@ h2 {
    font-size: 1rem;
    font-weight: bold;
    text-align: center;
+
    .fa-times {
       display: block;
       // color: $primary-color;
       float: right;
       padding-top: .25em;
    }
+
    .fa-times:hover {
       color: $accent-color;
    }
@@ -273,31 +275,134 @@ nav {
 
 .town {
    // text-align: center;
-   margin: .5em 0;
+   margin: .5rem 0;
    padding: 0 .5rem;
+   font-size: 2rem;
 
+   @include breakpoint(medium) {
+      font-size: 3rem;
+      padding: 0;
+   }
 }
 
 .summary {
    background-color: $secondary-color;
    padding: .5em;
    margin: .5em 0;
+   // background: url("./images/preston.jpg");
+   // background-repeat: no-repeat;
+   // background-size: auto;
+   position: relative;
 
-   div {
-      background-color: white;
-      padding: .5em;
+
+   // div {
+   //    background-color: white;
+   //    padding: .5em;
+   // }
+
+   @include breakpoint(medium) {
+      background-color: $third-color;
    }
 
-   // @include breakpoint(medium) {
-   //    background-color: $third-color;
-   // }
+   @include breakpoint(large) {
+      background-color: $accent-color;
+   }
 
-   // @include breakpoint(large) {
-   //    background-color: $accent-color;
-   // }
+   img {
+      width: 100%;
+   }
+}
+
+div.summary-table {
+   // font-family: Georgia, serif;
+   // border: 6px solid #111394;
+   background-color: $primary-color;
+   width: 50%;
+   text-align: right;
+   position: absolute;
+   top: 5%;
+   left: 5%;
+}
+
+.summary-table-heading {
+   color:white;
+}
+
+.divTable.summary-table .divTableCell,
+.divTable.summary-table .divTableHead {
+   padding: 3px 2px;
+}
+
+.divTable.summary-table .divTableBody .divTableCell {
+   font-size: 16px;
+   color: #FFFFFF;
+}
+
+.divTable.summary-table .divTableCell {
+   text-align: right;
+}
+
+.summary-table .tableFootStyle {
+   font-size: 13px;
+}
+
+.summary-table .tableFootStyle .links {
+   // text-align: right;
+}
+
+.summary-table .tableFootStyle .links a {
+   display: inline-block;
+   background: #FFFFFF;
+   color: #24943A;
+   padding: 2px 8px;
+   border-radius: 5px;
+}
+
+.summary-table.outerTableFooter {
+   border-top: none;
+}
+
+.summary-table.outerTableFooter .tableFootStyle {
+   padding: 3px 5px;
+}
+
+/* DivTable.com */
+.divTable {
+   display: table;
+}
+
+.divTableRow {
+   display: table-row;
+}
+
+.divTableHeading {
+   display: table-header-group;
+}
+
+.divTable.summary-table .r {
+   text-align: left;
+}
+
+.divTableCell,
+.divTableCellR,
+.divTableHead {
+   display: table-cell;
+}
+
+.divTableHeading {
+   display: table-header-group;
+}
+
+.divTableFoot {
+   display: table-footer-group;
+}
+
+.divTableBody {
+   display: table-row-group;
 }
 
 .forecast {
+   display: none;
    background-color: $secondary-color;
    padding: .5em;
    margin: .5em 0;
@@ -308,6 +413,7 @@ nav {
    }
 
    @include breakpoint(medium) {
+      display: block;
       background-color: $third-color;
    }
 
@@ -320,6 +426,28 @@ nav {
    background-color: white;
    padding: .5em;
    margin: .5em 0;
+
+   img {
+      width: 100%;
+      padding-left: .5em;
+
+      @include breakpoint(medium) {
+         float: right;
+         width: 50%;
+      }
+   }
+
+   h3 {
+      padding: .5rem;
+   }
+
+   h5 {
+      padding-left: 1rem;
+   }
+
+   p {
+      padding: .5rem;
+   }
 }
 
 .contact {
@@ -329,8 +457,17 @@ nav {
 }
 
 .map {
-   background-color: $accent-color;
+   display: none;
    flex: 2 2 200px;
+
+   img {
+      width: 100%;
+      object-fit: cover;
+   }
+
+   @include breakpoint(medium) {
+      display: block;
+   }
 }
 
 .contact fieldset {
@@ -349,6 +486,23 @@ footer {
    background: $primary-color;
    padding: 10px 20px;
    margin: 5px;
+}
+
+fieldset .fa,
+fieldset .far,
+fieldset .fas {
+   display: inline-block;
+   padding-right: .5em;
+   color: $primary-color;
+}
+
+.socialmedia {
+   @include flex-container(row);
+   padding-top: .5rem;
+
+   a {
+      padding: 0.2em;
+   }
 }
 
 footer p {
