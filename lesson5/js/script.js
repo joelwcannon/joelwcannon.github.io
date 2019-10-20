@@ -1,3 +1,4 @@
+const friday = 5;
 const today = new Date(); 
 const localeDate = new Intl.DateTimeFormat("en-GB", {
    weekday: "long",
@@ -6,9 +7,15 @@ const localeDate = new Intl.DateTimeFormat("en-GB", {
    day: "numeric"
 });
 
+if (today.getDay() != friday) {hideBanner()}; // show only on Friday
+
 document.getElementById('copyYear').innerHTML = today.getFullYear();
 document.getElementById('timestamp').innerHTML = localeDate.format(today);
 
 function toggleMenu() {
    document.getElementsByClassName("navigation")[0].classList.toggle("hide");
+}
+
+function hideBanner() {
+   document.getElementsByClassName("banner")[0].classList.toggle("hide");
 }
