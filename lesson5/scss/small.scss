@@ -267,14 +267,12 @@ nav {
 }
 
 .hide {
-   // display: block;
    display: none;
 }
 
 
 
 .town {
-   // text-align: center;
    margin: .5rem 0;
    padding: 0 .5rem;
    font-size: 2rem;
@@ -289,16 +287,7 @@ nav {
    background-color: $secondary-color;
    padding: .5em;
    margin: .5em 0;
-   // background: url("./images/preston.jpg");
-   // background-repeat: no-repeat;
-   // background-size: auto;
    position: relative;
-
-
-   // div {
-   //    background-color: white;
-   //    padding: .5em;
-   // }
 
    @include breakpoint(medium) {
       background-color: $third-color;
@@ -313,104 +302,31 @@ nav {
    }
 }
 
-div.summary-table {
-   // font-family: Georgia, serif;
-   // border: 6px solid #111394;
+.summary-table {
    background-color: $primary-color;
-   width: 50%;
-   text-align: right;
+   background-color: rgba(50, 115, 220, 0.7);
+   width: 200px;
+   text-align: center;
    position: absolute;
    top: 5%;
    left: 5%;
-}
-
-.summary-table-heading {
    color: white;
+   padding: .5em;
+
+   h4 {
+      color: white;
+   }
+
+   p {
+      padding: 3px 2px;
+   }
 }
 
-.divTable.summary-table .divTableCell,
-.divTable.summary-table .divTableHead {
-   padding: 3px 2px;
-}
 
-.divTable.summary-table .divTableBody .divTableCell {
-   font-size: 16px;
-   color: #FFFFFF;
-}
-
-.divTable.summary-table .divTableCell {
-   text-align: right;
-}
-
-.summary-table .tableFootStyle {
-   font-size: 13px;
-}
-
-.summary-table .tableFootStyle .links {
-   // text-align: right;
-}
-
-.summary-table .tableFootStyle .links a {
-   display: inline-block;
-   background: #FFFFFF;
-   color: #24943A;
-   padding: 2px 8px;
-   border-radius: 5px;
-}
-
-.summary-table.outerTableFooter {
-   border-top: none;
-}
-
-.summary-table.outerTableFooter .tableFootStyle {
-   padding: 3px 5px;
-}
-
-/* DivTable.com */
-.divTable {
-   display: table;
-}
-
-.divTableRow {
-   display: table-row;
-}
-
-.divTableHeading {
-   display: table-header-group;
-}
-
-.divTable.summary-table .r {
-   text-align: left;
-}
-
-.divTableCell,
-.divTableCellR,
-.divTableHead {
-   display: table-cell;
-}
-
-.divTableHeading {
-   display: table-header-group;
-}
-
-.divTableFoot {
-   display: table-footer-group;
-}
-
-.divTableBody {
-   display: table-row-group;
-}
 
 .forecast {
    display: none;
-   // background-color: $secondary-color;
-   // padding: .5em;
-   // margin: .5em 0;
-
-   // div {
-   //    background-color: white;
-   //    padding: .5em;
-   // }
+ 
    h3 {
       text-align: center;
       padding: 1rem;
@@ -428,9 +344,7 @@ div.summary-table {
       // background-color: $third-color;
    }
 
-   // @include breakpoint(large) {
-   //    background-color: $accent-color;
-   // }
+  
 }
 
 table.five-day-forecast {
@@ -466,10 +380,6 @@ table.five-day-forecast thead th {
 table.five-day-forecast thead th:first-child {
    border-left: none;
 }
-
-//  table.5day-forecast tfoot td {
-//    font-size: 16px;
-//  }
 
 .article {
    background-color: white;
@@ -580,13 +490,3 @@ footer p {
    clear: both;
 }
 
-/* viewport switch
-$phone-max-switch 400px, 25em;
-< tablet <
-$desktop-min-switch 960px, 60em; 
-
-$desktop-max-width: 60em;
-
-
-
-*/
