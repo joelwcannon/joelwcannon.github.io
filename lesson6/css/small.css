@@ -337,6 +337,7 @@ table.five-day-forecast thead th:first-child {
 }
 .map img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 @media (min-width: 32.5em) {
@@ -347,7 +348,7 @@ table.five-day-forecast thead th:first-child {
 
 .contact fieldset {
   margin: 0 0.5em;
-  flex: 1 1 auto;
+  flex: 10px;
 }
 
 .contact p {

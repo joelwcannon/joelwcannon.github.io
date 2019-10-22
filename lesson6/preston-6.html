@@ -40,9 +40,23 @@
    <main class='max-width'>
       <h2 class='town'>Preston</h2>
       <section class='summary'>
-         <img src="./images/preston.jpg" alt="downtown preston">
+         <picture>
+            <source media="(min-width: 800px)"
+            srcset="./images/franklin-800w.jpg">
+            <source media="(min-width: 500px)"
+            srcset="./images/franklin-500w.jpg">
+            <source media="(min-width: 300px)"
+            srcset="./images/franklin-300w.jpg">
+            <img src="./images/franklin-800w.jpg" alt="Franklin County Landscape">
+         </picture>
+         <!-- <img src="./images/franklin-800w.jpg" alt="downtown preston"
+         srcset = "./images/franklin-300w.jpg 300w,
+         ./images/franklin-500w.jpg 500w,
+         ./images/franklin-800w.jpg 800w"
+         sizes="95vw"> -->
          <div class=summary-table>
-            <h4>Summary</h4>
+            <h4>Weather Summary</h4>
+            <hr>
             <p>Currently: <span>Cloudy</span></p>
             <p>High: <span id='temperature'>59</span> &deg;F</p>
             <p class='windchill'>Wind Chill: <span id='windchill'>?</span> &deg;F</p>
@@ -86,7 +100,7 @@
 
       <section class='article'>
          <article>
-            <img src="./images/halloween.jpg" alt="pumpkin patch">
+            <img src="./images/halloween-400w.jpg" alt="pumpkin patch">
             <h3>Pumpkin Festival</h3>
             <h5>by: Charlie Brown</h5>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dignissimos odit laudantium
@@ -103,7 +117,8 @@
       </section>
       
       <section class='contact'>
-         <div class='map'><img src="./images/prestonmap.PNG" alt="map of preston"></div>
+         
+         <div class='map'><img src="./images/prestonmap-600w.png" alt="map of preston"></div>
          <fieldset>
             <legend>Contact Info</legend>
             <p>Travelcast</p>

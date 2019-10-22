@@ -326,7 +326,7 @@ nav {
 
 .forecast {
    display: none;
- 
+
    h3 {
       text-align: center;
       padding: 1rem;
@@ -344,7 +344,7 @@ nav {
       // background-color: $third-color;
    }
 
-  
+
 }
 
 table.five-day-forecast {
@@ -415,12 +415,14 @@ table.five-day-forecast thead th:first-child {
    margin: 5px 0;
 }
 
+
 .map {
    display: none;
    flex: 2 2 200px;
 
    img {
       width: 100%;
+      height: 100%;
       object-fit: cover;
    }
 
@@ -431,7 +433,7 @@ table.five-day-forecast thead th:first-child {
 
 .contact fieldset {
    margin: 0 .5em;
-   flex: 1 1 auto;
+   flex: 10px;
 }
 
 
@@ -489,4 +491,3 @@ footer p {
    display: table;
    clear: both;
 }
-
