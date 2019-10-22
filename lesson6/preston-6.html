@@ -17,7 +17,7 @@
 </head>
 
 <body>
-   <p class='banner clearfix'><i class="fas fa-times" onclick="hideBanner()"></i>
+   <p class='banner clearfix'><i class="fas fa-times" onclick="toggleBanner()"></i>
       Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion. </p>
    <header class=header>
       <img class=logo src="./images/white-logo.png" alt="travelcast logo">
@@ -45,7 +45,7 @@
             <h4>Summary</h4>
             <p>Currently: <span>Cloudy</span></p>
             <p>High: <span id='temperature'>59</span> &deg;F</p>
-            <p class='windchill'>Wind Chill: <span id='windchill'>?</span>&deg;F</p>
+            <p class='windchill'>Wind Chill: <span id='windchill'>?</span> &deg;F</p>
             <p>Humidity: <span>87</span>%</p>
             <p>Wind Speed: <span id='windspeed'>12</span> mph</p>
          </div>
@@ -128,5 +128,6 @@
    </footer>
 </body>
 <script src="./js/script.js"></script>
+<script src="./js/windchill.js"></script>
 
 </html>
