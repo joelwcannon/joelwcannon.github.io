@@ -7,7 +7,7 @@ const localeDate = new Intl.DateTimeFormat("en-GB", {
    day: "numeric"
 });
 
-if (today.getDay() != friday) {
+if (today.getDay() == friday) {
    toggleBanner() // show only on Friday
 } 
 
