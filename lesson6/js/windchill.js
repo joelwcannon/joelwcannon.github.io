@@ -6,10 +6,10 @@ outputs - an element with an ID for windchill.
 updateWindChill();
 
 function updateWindChill(){
-   let temperatureF = parseFloat(document.getElementById('temperature').innerHTML);
-   let windSpeedMPH = parseFloat(document.getElementById('windspeed').innerHTML);
+   let temperatureF = parseFloat(document.getElementById('temperature').textContent);
+   let windSpeedMPH = parseFloat(document.getElementById('windspeed').textContent);
    let windChillF = windChill(temperatureF, windSpeedMPH);
-   document.getElementById('windchill').innerHTML = windChillF;
+   document.getElementById('windchill').textContent = windChillF;
    // if (windChillF== null) {hideWindChill()}
 }
 
