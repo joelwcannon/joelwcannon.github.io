@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,85 @@
 
    <title>Lazy Load - CIT 230 W7 - Cannon</title>
 </head>
-<body>
-   <h1>
-      <picture><img src="https://via.placeholder.com/400x300.png?text=Placeholder+for+BYUI.org" alt="placeholder"></picture>
-      <picture><img src="" alt=""></picture>
-      <picture><img src="" alt=""></picture>
-      <picture><img src="" alt=""></picture>
-      <picture><img src="" alt=""></picture>
-      <picture><img src="" alt=""></picture>
-   </h1>
 
+<body>
+   <h1>Lazy Loading Demo</h1>
+   <div class="wrapper">
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="blizzard"
+            data-src="blizzard-1245929_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="coast"
+            data-src="coast-984153_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="cyclone"
+            data-src="cyclone-2102397_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="dawn"
+            data-src="dawn-190055_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="desert"
+            data-src="desert-279862_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="desert"
+            data-src="desert-4511513_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="dunes"
+            data-src="dunes-722690_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="field"
+            data-src="field-601209_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="hill"
+            data-src="hill-2165759_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="iceland"
+            data-src="iceland-2111811_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="landscape"
+            data-src="landscape-3369304_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="lightning"
+            data-src="lightning-bolt-768801_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="lighthouse"
+            data-src="desert-279862_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="monument valley"
+            data-src="monument-valley-1593318_640.jpg">
+      </picture>
+      <!-- <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="mountain landscape"
+            data-src="mountain-landscape-2031539_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="nature"
+            data-src="nature-3102762_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="river"
+            data-src="river-1030839_640.jpg">
+      </picture>
+      <picture>
+         <img src="https://via.placeholder.com/640x400.png?text=Placeholder+(640x400)+for+BYUI.org" alt="road"
+            data-src="road-3133502_640.jpg">
+      </picture> -->
+
+   </div>
 </body>
-<script src="lazyload.js"></script>
+<script src="lazyload.js" defer></script>
 
 </html>
