@@ -5,6 +5,7 @@ let imagesToLoad = document.querySelectorAll('img[data-src]');
 
 const loadImages = (image) => {
   image.setAttribute('src', hiresPath.concat(image.getAttribute('data-src')));
+  
   image.onload = () => {
     image.removeAttribute('data-src');
    console.log('loaded:'.concat(image.src)) 
