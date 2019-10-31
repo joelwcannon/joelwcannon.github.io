@@ -20,11 +20,6 @@ const loadPreview = (image) => {
   };
 };
 
-https://github.com/joelwcannon/joelwcannon.github.io/blob/4be89f549e4ced9aa0fb1a0fd13716f51728ee10/lesson7/images/hires/blizzard-1245929_640.jpg
-images\hires\blizzard-1245929_640.jpg
-C:\Users\joelc\Documents\BYUI\CIT230\joelwcannon.github.io\lesson7\images\hires\blizzard-1245929_640.jpg
-
-
 
 // imagesToLoad.forEach((img) => {
 //    loadImages(img);
