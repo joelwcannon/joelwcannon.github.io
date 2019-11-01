@@ -54,7 +54,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+figcaption {
   font-family: "Fredoka One", cursive;
   font-weight: normal;
   color: #371f99;
@@ -75,10 +76,12 @@ h2 {
 }
 .gallery figure {
   margin-bottom: 0.5em;
+  padding: 0.5em;
+  background-color: white;
 }
 @media (min-width: 56rem) {
   .gallery figure:hover {
-    box-shadow: 5px 5px 10px #371f99;
+    box-shadow: 0.2em 0.2em 0.5em 0.5em #9abcff;
   }
 }
 .gallery figure figcaption {
@@ -86,6 +89,7 @@ h2 {
   color: #371f99;
   text-align: center;
   padding: 0.25em;
+  font-family: "Fredoka One", cursive;
 }
 
 .banner {

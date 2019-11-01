@@ -93,7 +93,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+figcaption {
    font-family: $font-family-headings;
    font-weight: normal;
    color: $primary-color;
@@ -104,8 +105,8 @@ h2 {
 }
 
 .gallery-h {
-      margin: .5em;
-      font-weight: bold;
+   margin: .5em;
+   font-weight: bold;
 }
 
 .gallery {
@@ -116,18 +117,22 @@ h2 {
 
    figure {
       margin-bottom: .5em;
+      padding: 0.5em;
+      background-color: white;
+
       @include breakpoint(large) {
          &:hover {
-            box-shadow: 5px 5px 10px $primary-color;
+            box-shadow: .2em .2em .5em .5em $secondary-color;
          }
       }
-   
+
 
       figcaption {
          background-color: white;
          color: $primary-color;
          text-align: center;
          padding: .25em;
+         font-family: $font-family-headings
       }
    }
 }
