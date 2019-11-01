@@ -81,7 +81,7 @@ h2 {
 }
 @media (min-width: 56rem) {
   .gallery figure:hover {
-    box-shadow: 0.2em 0.2em 0.5em 0.5em #9abcff;
+    box-shadow: 0.1em 0.1em 1em 0.25em #9abcff;
   }
 }
 .gallery figure figcaption {

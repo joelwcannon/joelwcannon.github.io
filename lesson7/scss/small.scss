@@ -122,7 +122,7 @@ h2 {
 
       @include breakpoint(large) {
          &:hover {
-            box-shadow: .2em .2em .5em .5em $secondary-color;
+            box-shadow: .1em .1em 1em .25em $secondary-color;
          }
       }
 
