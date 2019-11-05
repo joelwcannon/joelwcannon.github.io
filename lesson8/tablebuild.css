@@ -1,0 +1,41 @@
+body {
+   font-family: 'Ubuntu', sans-serif;
+}
+
+table {
+   background-color: #e7f0ed;
+   box-shadow: 10px 10px 10px #628ca6;
+   border-collapse: collapse;
+   font-size: 1.4rem;
+   text-align: center;
+   border-spacing: 3px;
+   margin: 50px auto;
+}
+
+table,
+td,
+th {
+   padding: 9px;
+   border: 1px solid #bbb;
+}
+
+th {
+   background-color: #7fb9c2;
+   font-size: 36px;
+}
+
+tr:nth-child(even) {
+   background: #e7ffed;
+}
+
+tfoot {
+   background-color: #7fb9c2;
+   font-size: 15px;
+   font-weight: 600;
+}
+
+.invert {
+   color: white;
+   background-color: #628ca6;
+   font-size: 22px;
+}
