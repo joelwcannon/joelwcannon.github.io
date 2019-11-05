@@ -6,7 +6,7 @@ table {
    background-color: #e7f0ed;
    box-shadow: 10px 10px 10px #628ca6;
    border-collapse: collapse;
-   font-size: 1.4rem;
+   font-size: 23px;
    text-align: center;
    border-spacing: 3px;
    margin: 50px auto;
@@ -15,13 +15,20 @@ table {
 table,
 td,
 th {
-   padding: 9px;
+   padding: 10px 13px;
    border: 1px solid #bbb;
 }
 
-th {
+thead th {
    background-color: #7fb9c2;
    font-size: 36px;
+   color:black;
+}
+
+th {
+   color: white;
+   background-color: #628ca6;
+   font-size: 25px;
 }
 
 tr:nth-child(even) {
@@ -30,12 +37,12 @@ tr:nth-child(even) {
 
 tfoot {
    background-color: #7fb9c2;
-   font-size: 15px;
+   font-size: 17px;
    font-weight: 600;
 }
 
 .invert {
    color: white;
    background-color: #628ca6;
-   font-size: 22px;
 }
+
