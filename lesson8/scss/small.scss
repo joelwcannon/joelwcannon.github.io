@@ -1,0 +1,529 @@
+//break widths
+$break-small: 20em; // 320px
+$break-medium: 32.5em; // 520px
+$break-large: 56rem; // 896px
+
+$primary-color: #371f99;
+$secondary-color: #9abcff;
+$third-color: #7a66cc;
+$accent-color: #cc9466;
+$light-color: #ffefd9;
+
+// $font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: 'Dosis',
+sans-serif;
+$font-family-headings: 'Fredoka One',
+cursive;
+
+
+@mixin breakpoint($break) {
+   @if $break==large {
+      @media (min-width : $break-large) {
+         @content;
+      }
+   }
+
+   @else if $break==medium {
+      @media (min-width: $break-medium) {
+         @content;
+      }
+   }
+
+   @else if $break==small {
+      @media (min-width: $break-small) {
+         @content;
+      }
+   }
+
+   @else {
+      @media ($break) {
+         @content;
+      }
+   }
+}
+
+@mixin flex-container($axis, $wrap: nowrap) {
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-flex-flow: $axis $wrap;
+   -ms-flex-flow: $axis $wrap;
+   flex-flow: $axis $wrap;
+}
+
+@mixin center($max-width, $width: 90%) {
+   width: $width;
+   max-width: $max-width;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
+@import '_lazyload';
+
+/* Mobile First */
+
+/* Globals*/
+
+
+html {
+   font-family: $font-family-sans-serif;
+   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background: $light-color;
+}
+
+.max-width {
+   @include center(800px, 95%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figcaption {
+   font-family: $font-family-headings;
+   font-weight: normal;
+   color: $primary-color;
+}
+
+
+h2 {
+   color: $accent-color;
+}
+
+.gallery-h {
+   margin: .5em;
+   font-weight: bold;
+}
+
+.gallery {
+   h1 {
+      margin: .5em;
+      font-weight: bold;
+   }
+
+   figure {
+      margin-bottom: .5em;
+      padding: 0.5em;
+      background-color: white;
+
+      @include breakpoint(large) {
+         &:hover {
+            box-shadow: .1em .1em 1em .25em $secondary-color;
+         }
+      }
+
+
+      figcaption {
+         background-color: white;
+         text-align: center;
+         padding: .25em;
+      }
+   }
+}
+
+.banner {
+   background-color: $secondary-color;
+   color: $primary-color;
+   padding: .25em .5em .25em 1em;
+   font-size: 1rem;
+   font-weight: bold;
+   text-align: center;
+
+   .fa-times {
+      display: block;
+      // color: $primary-color;
+      float: right;
+      padding-top: .25em;
+   }
+
+   .fa-times:hover {
+      color: $accent-color;
+   }
+}
+
+.header {
+   @include flex-container(row);
+   padding: .5em;
+   background-color: $primary-color;
+   justify-content: space-between;
+   align-items: flex-end;
+   border-bottom: 1px solid $light-color;
+
+   h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: white;
+   }
+
+   p {
+      text-align: center;
+      font-style: italic;
+      font-size: .75rem;
+      font-family: $font-family-headings;
+      font-weight: normal;
+      color: white;
+
+
+   }
+
+   @include breakpoint(medium) {
+      & {
+         justify-content: flex-start;
+
+         h1 {
+            margin: 0;
+            font-size: 3rem;
+         }
+
+         p {
+            text-align: center;
+            font-style: italic;
+            font-size: 1rem;
+
+         }
+      }
+   }
+}
+
+.button {
+   color: white;
+   font-size: 2em;
+   display: block;
+   //  padding: .25em;
+   text-decoration: none;
+   //  flex: 1 1 auto;
+
+   @include breakpoint(medium) {
+      & {
+         display: none;
+      }
+   }
+}
+
+.button:hover {
+   color: $secondary-color;
+}
+
+.logo {
+   height: 50px;
+   padding-right: .5em;
+   color: white;
+
+   @include breakpoint(medium) {
+      & {
+         height: 72px;
+      }
+   }
+}
+
+nav {
+   @include center(3000px, 100%);
+   background-color: $primary-color;
+}
+
+
+
+.navigation {
+   list-style-type: none;
+   text-align: center;
+   padding: 0;
+   display: block;
+
+   li.active a {
+      color: $secondary-color;
+   }
+
+   a {
+      display: block;
+      padding: .5em;
+      color: #fff;
+      text-decoration: none;
+      border-top: 1px solid rgba(0, 0, 0, .3);
+   }
+
+   a:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+   }
+
+   @include breakpoint(medium) {
+      & {
+         padding-left: 2%;
+      }
+
+      &.hide {
+         display: block;
+      }
+
+      li {
+         float: left;
+      }
+
+      li a {
+         border: none;
+         border-right: 1px solid rgba(0, 0, 0, 0.3);
+      }
+
+   }
+
+   @include breakpoint(large) {
+
+      & {
+         @include flex-container (row);
+         padding-left: 0;
+      }
+
+      &.hide {
+         display: flex;
+      }
+
+      & li {
+         display: block;
+         flex: 1 1 100px;
+      }
+
+      & li a {
+         // color: red;
+      }
+   }
+}
+
+.hide {
+   display: none;
+}
+
+
+
+.town {
+   margin: .5rem 0;
+   padding: 0 .5rem;
+   font-size: 2rem;
+
+   @include breakpoint(medium) {
+      font-size: 3rem;
+      padding: 0;
+   }
+}
+
+.summary {
+   background-color: $secondary-color;
+   padding: .5em;
+   margin: .5em 0;
+   position: relative;
+
+   @include breakpoint(medium) {
+      background-color: $third-color;
+   }
+
+   @include breakpoint(large) {
+      background-color: $accent-color;
+   }
+
+   img {
+      width: 100%;
+   }
+}
+
+.summary-table {
+   background-color: $primary-color;
+   background-color: rgba(50, 115, 220, 0.7);
+   width: 200px;
+   text-align: center;
+   position: absolute;
+   top: 5%;
+   left: 5%;
+   color: white;
+   padding: .5em;
+
+   h4 {
+      color: white;
+   }
+
+   p {
+      padding: 3px 2px;
+   }
+}
+
+
+
+.forecast {
+   display: none;
+
+   h3 {
+      text-align: center;
+      padding: 1rem;
+   }
+
+   table {
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      margin-bottom: 2rem;
+   }
+
+   @include breakpoint(medium) {
+      display: block;
+      // background-color: $third-color;
+   }
+
+
+}
+
+table.five-day-forecast {
+   border: 2px solid $primary-color;
+   width: 450px;
+   height: 150px;
+   text-align: center;
+}
+
+table.five-day-forecast td,
+table.five-day-forecast th {
+   border: 1px solid $primary-color;
+   padding: 3px 2px;
+}
+
+table.five-day-forecast tbody td {
+   font-size: 16px;
+}
+
+table.five-day-forecast thead {
+   background: $third-color;
+   border-bottom: 1px solid $primary-color;
+}
+
+table.five-day-forecast thead th {
+   font-size: 16px;
+   font-weight: bold;
+   color: #FFFFFF;
+   text-align: center;
+   border-left: 1px solid $primary-color;
+}
+
+table.five-day-forecast thead th:first-child {
+   border-left: none;
+}
+
+.article {
+   background-color: white;
+   padding: .5em;
+   margin: .5em 0;
+
+   img {
+      width: 100%;
+      padding-left: .5em;
+
+      @include breakpoint(medium) {
+         float: right;
+         width: 50%;
+      }
+   }
+
+   h3 {
+      padding: .5rem;
+   }
+
+   h5 {
+      padding-left: 1rem;
+   }
+
+   p {
+      padding: .5rem;
+   }
+}
+
+.contact {
+   @include flex-container(row);
+   background-color: white;
+   margin: 5px 0;
+}
+
+
+.map {
+   display: none;
+   flex: 2 2 200px;
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   @include breakpoint(medium) {
+      display: block;
+   }
+}
+
+.contact fieldset {
+   margin: 0 .5em;
+   flex: 10px;
+}
+
+
+.contact p {
+   margin: .25em 0 0;
+}
+
+footer {
+   font-size: .8em;
+   color: white;
+   background: $primary-color;
+   padding: 10px 20px;
+   margin: 5px;
+}
+
+fieldset .fa,
+fieldset .far,
+fieldset .fas {
+   display: inline-block;
+   padding-right: .5em;
+   color: $primary-color;
+}
+
+.socialmedia {
+   @include flex-container(row);
+   padding-top: .5rem;
+
+   a {
+      padding: 0.2em;
+   }
+}
+
+footer p {
+   text-align: center;
+   padding-bottom: .5em;
+}
+
+.footer a:link,
+.footer a:visited {
+   text-decoration: none;
+   color: white;
+}
+
+.footer a:hover {
+   text-decoration: underline;
+}
+
+.footer a:active {
+   text-decoration: underline;
+   color: $accent-color;
+}
+
+.clearfix:after {
+   content: "";
+   display: table;
+   clear: both;
+}

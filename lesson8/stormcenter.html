@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="description" content="Preston page for BYU Idaho CIT 230 Weather site.">
+   <script src="https://kit.fontawesome.com/c78bb86773.js" crossorigin="anonymous"></script>
+   <!-- <link href="https://fonts.googleapis.com/css?family=Dosis%7CFredoka+One&display=swap" rel="stylesheet"> -->
+   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+   <link rel="stylesheet" type="text/css" href="css/small.css">
+   <link rel="stylesheet" type="text/css" href="css/medium.css">
+   <link rel="stylesheet" type="text/css" href="css/large.css">
+   <link rel="shortcut icon" href="favicon.png">
+   <title>Travelcast - Preston Idaho</title>
+</head>
+
+<body>
+   <p class='banner clearfix hide'><i class="fas fa-times" onclick="toggleBanner()"></i>
+      Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion. </p>
+   <header class=header>
+      <img class=logo src="./images/white-logo.png" alt="travelcast logo">
+      <div>
+         <h1>Travelcast</h1>
+         <p>never get caught in the rain</p>
+      </div>
+      <a class="button" href="#" onclick="toggleMenu()">&#9776;</a>
+   </header>
+   <nav class="clearfix">
+      <ul class='navigation hide'>
+         <li><a href="#">Home</a></li>
+         <li class="active"><a href="preston.html">Preston</a></li>
+         <li><a href="#">Soda Springs</a></li>
+         <li><a href="#">Fish Haven</a></li>
+         <li><a href="#">Storm Center</a></li>
+         <li class="active"><a href="gallery.html">Gallery</a></li>
+      </ul>
+   </nav>
+   <main class='max-width'>
+   </main>
+   <footer class='max-width'>
+      <p class="footer">&copy; <span id="copyYear">2020</span> | Travelcast | Joel Cannon |
+         <a class="lt_link" href="https://www.byui.edu/online">BYU Online Learning</a></p>
+      <p class="mod"><span id="timestamp">Today</span></p>
+   </footer>
+   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+   <script>
+      WebFont.load({
+         google: {
+            families: ['Dosis', 'Fredoka+One']
+         }
+      });
+   </script>
+</body>
+<script src="./js/script.js"></script>
+<script src="./js/windchill.js"></script>
+
+</html>
