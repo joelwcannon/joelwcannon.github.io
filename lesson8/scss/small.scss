@@ -527,3 +527,49 @@ footer p {
    display: table;
    clear: both;
 }
+
+
+// Storm Center
+
+form {
+   display: grid;
+   
+}
+em {
+	font-size: smaller;
+}
+
+input,
+button,
+select,
+textarea {
+	padding: 0.5rem;
+	margin-bottom: .25rem;
+}
+
+input:focus {
+	box-shadow: 0 0 10px #ccc;
+}
+
+fieldset {
+	background-color: #eee;
+	border: 1px solid #ccc;
+}
+
+input:invalid {
+	background-color: #fdd;
+	color: #000;
+}
+input:valid {
+	background-color: #dfd;
+	color: #000;
+}
+
+.flexly {
+	display: flex;
+	align-items: center;
+}
+
+#ratingvalue {
+	margin: 0 15px;
+}
