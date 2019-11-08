@@ -3,4 +3,11 @@
    "cSpell.words": [
       "lname"
    ]
-}
+
+   "liveSassCompile.settings.formats":[
+      {
+          "format": "expanded",
+          "extensionName": ".css",
+          "savePath": "~/../css/"
+      }
+  ]}
