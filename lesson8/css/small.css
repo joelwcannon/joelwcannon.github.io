@@ -1,39 +1,55 @@
 .gallery {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  align-items: stretch;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   gap: 1em;
   margin: 1em;
 }
 
 picture img[data-src] {
-  filter: blur(0.2em);
+  -webkit-filter: blur(0.2em);
+          filter: blur(0.2em);
 }
 
 picture img {
-  filter: blur(0em);
+  -webkit-filter: blur(0em);
+          filter: blur(0em);
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
   transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
   width: 100%;
   height: 90%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 picture img[src*="https://via.placeholder.com"] {
-  filter: blur(0em);
+  -webkit-filter: blur(0em);
+          filter: blur(0em);
+  -webkit-transition: -webkit-filter 0s;
+  transition: -webkit-filter 0s;
   transition: filter 0s;
+  transition: filter 0s, -webkit-filter 0s;
 }
 
 /* Mobile First */
 /* Globals*/
 html {
   font-family: "Dosis", sans-serif;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -66,77 +82,92 @@ h2 {
 }
 
 .gallery-h {
-  margin: 0.5em;
+  margin: .5em;
   font-weight: bold;
 }
 
 .gallery h1 {
-  margin: 0.5em;
+  margin: .5em;
   font-weight: bold;
 }
+
 .gallery figure {
-  margin-bottom: 0.5em;
+  margin-bottom: .5em;
   padding: 0.5em;
   background-color: white;
 }
+
 @media (min-width: 56rem) {
   .gallery figure:hover {
-    box-shadow: 0.1em 0.1em 1em 0.25em #9abcff;
+    -webkit-box-shadow: 0.1em 0.1em 1em 0.25em #9abcff;
+            box-shadow: 0.1em 0.1em 1em 0.25em #9abcff;
   }
 }
+
 .gallery figure figcaption {
   background-color: white;
   text-align: center;
-  padding: 0.25em;
+  padding: .25em;
 }
 
 .banner {
   background-color: #9abcff;
   color: #371f99;
-  padding: 0.25em 0.5em 0.25em 1em;
+  padding: .25em .5em .25em 1em;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
 }
+
 .banner .fa-times {
   display: block;
   float: right;
-  padding-top: 0.25em;
+  padding-top: .25em;
 }
+
 .banner .fa-times:hover {
   color: #cc9466;
 }
 
 .header {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  padding: 0.5em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row nowrap;
+  padding: .5em;
   background-color: #371f99;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   border-bottom: 1px solid #ffefd9;
 }
+
 .header h1 {
   margin: 0;
   font-size: 2rem;
   color: white;
 }
+
 .header p {
   text-align: center;
   font-style: italic;
-  font-size: 0.75rem;
+  font-size: .75rem;
   font-family: "Fredoka One", cursive;
   font-weight: normal;
   color: white;
 }
+
 @media (min-width: 32.5em) {
   .header {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .header h1 {
     margin: 0;
@@ -155,6 +186,7 @@ h2 {
   display: block;
   text-decoration: none;
 }
+
 @media (min-width: 32.5em) {
   .button {
     display: none;
@@ -167,9 +199,10 @@ h2 {
 
 .logo {
   height: 50px;
-  padding-right: 0.5em;
+  padding-right: .5em;
   color: white;
 }
+
 @media (min-width: 32.5em) {
   .logo {
     height: 72px;
@@ -190,19 +223,23 @@ nav {
   padding: 0;
   display: block;
 }
+
 .navigation li.active a {
   color: #9abcff;
 }
+
 .navigation a {
   display: block;
-  padding: 0.5em;
+  padding: .5em;
   color: #fff;
   text-decoration: none;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
+
 .navigation a:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
+
 @media (min-width: 32.5em) {
   .navigation {
     padding-left: 2%;
@@ -218,23 +255,28 @@ nav {
     border-right: 1px solid rgba(0, 0, 0, 0.3);
   }
 }
+
 @media (min-width: 56rem) {
   .navigation {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row nowrap;
     padding-left: 0;
   }
   .navigation.hide {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .navigation li {
     display: block;
-    flex: 1 1 100px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100px;
+            flex: 1 1 100px;
   }
 }
 
@@ -243,10 +285,11 @@ nav {
 }
 
 .town {
-  margin: 0.5rem 0;
-  padding: 0 0.5rem;
+  margin: .5rem 0;
+  padding: 0 .5rem;
   font-size: 2rem;
 }
+
 @media (min-width: 32.5em) {
   .town {
     font-size: 3rem;
@@ -256,20 +299,23 @@ nav {
 
 .summary {
   background-color: #9abcff;
-  padding: 0.5em;
-  margin: 0.5em 0;
+  padding: .5em;
+  margin: .5em 0;
   position: relative;
 }
+
 @media (min-width: 32.5em) {
   .summary {
     background-color: #7a66cc;
   }
 }
+
 @media (min-width: 56rem) {
   .summary {
     background-color: #cc9466;
   }
 }
+
 .summary img {
   width: 100%;
 }
@@ -283,11 +329,13 @@ nav {
   top: 5%;
   left: 5%;
   color: white;
-  padding: 0.5em;
+  padding: .5em;
 }
+
 .summary-table h4 {
   color: white;
 }
+
 .summary-table p {
   padding: 3px 2px;
 }
@@ -295,16 +343,19 @@ nav {
 .forecast {
   display: none;
 }
+
 .forecast h3 {
   text-align: center;
   padding: 1rem;
 }
+
 .forecast table {
   margin-left: auto;
   margin-right: auto;
   background-color: white;
   margin-bottom: 2rem;
 }
+
 @media (min-width: 32.5em) {
   .forecast {
     display: block;
@@ -347,50 +398,60 @@ table.five-day-forecast thead th:first-child {
 
 .article {
   background-color: white;
-  padding: 0.5em;
-  margin: 0.5em 0;
+  padding: .5em;
+  margin: .5em 0;
 }
+
 .article img {
   width: 100%;
-  padding-left: 0.5em;
+  padding-left: .5em;
 }
+
 @media (min-width: 32.5em) {
   .article img {
     float: right;
     width: 50%;
   }
 }
+
 .article h3 {
-  padding: 0.5rem;
+  padding: .5rem;
 }
+
 .article h5 {
   padding-left: 1rem;
 }
+
 .article p {
-  padding: 0.5rem;
+  padding: .5rem;
 }
 
 .contact {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row nowrap;
   background-color: white;
   margin: 5px 0;
 }
 
 .map {
   display: none;
-  flex: 2 2 200px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 2 200px;
+          flex: 2 2 200px;
 }
+
 .map img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+
 @media (min-width: 32.5em) {
   .map {
     display: block;
@@ -398,16 +459,18 @@ table.five-day-forecast thead th:first-child {
 }
 
 .contact fieldset {
-  margin: 0 0.5em;
-  flex: 10px;
+  margin: 0 .5em;
+  -webkit-box-flex: 10px;
+      -ms-flex: 10px;
+          flex: 10px;
 }
 
 .contact p {
-  margin: 0.25em 0 0;
+  margin: .25em 0 0;
 }
 
 footer {
-  font-size: 0.8em;
+  font-size: .8em;
   color: white;
   background: #371f99;
   padding: 10px 20px;
@@ -418,27 +481,28 @@ fieldset .fa,
 fieldset .far,
 fieldset .fas {
   display: inline-block;
-  padding-right: 0.5em;
+  padding-right: .5em;
   color: #371f99;
 }
 
 .socialmedia {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  padding-top: 0.5rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row nowrap;
+  padding-top: .5rem;
 }
+
 .socialmedia a {
   padding: 0.2em;
 }
 
 footer p {
   text-align: center;
-  padding-bottom: 0.5em;
+  padding-bottom: .5em;
 }
 
 .footer a:link,
@@ -463,6 +527,7 @@ footer p {
 }
 
 form {
+  display: -ms-grid;
   display: grid;
 }
 
@@ -475,11 +540,12 @@ button,
 select,
 textarea {
   padding: 0.5rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: .25rem;
 }
 
 input:focus {
-  box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+          box-shadow: 0 0 10px #ccc;
 }
 
 fieldset {
@@ -498,12 +564,17 @@ input:valid {
 }
 
 .flexly {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #ratingvalue {
   margin: 0 15px;
 }
 
+/* testing live-sass compiler */
 /*# sourceMappingURL=small.css.map */
