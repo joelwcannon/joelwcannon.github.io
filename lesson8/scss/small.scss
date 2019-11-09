@@ -530,48 +530,84 @@ footer p {
 
 
 // Storm Center
+.report {
+   background-color: white;
+   padding: .5em;
+   margin: .5em 0;
 
-form {
-   display: grid;
-   
-}
-em {
-	font-size: smaller;
-}
+   form {
+      display: grid;
+   }
 
-input,
-button,
-select,
-textarea {
-	padding: 0.5rem;
-	margin-bottom: .25rem;
-}
+   em {
+      font-size: smaller;
+   }
 
-input:focus {
-	box-shadow: 0 0 10px #ccc;
-}
+   label.above {
+      display: block;
+      padding-top: 1rem;
+   }
 
-fieldset {
-	background-color: #eee;
-	border: 1px solid #ccc;
-}
+   input,
+   button,
+   select,
+   textarea {
+      padding: 0.5rem;
+      margin-bottom: .25rem;
+   }
 
-input:invalid {
-	background-color: #fdd;
-	color: #000;
-}
-input:valid {
-	background-color: #dfd;
-	color: #000;
-}
+   form label.above input,
+   form label.above select {
+      -webkit-appearance: none;
+      display: block;
+      font-size: 1rem;
+      border: solid 1px #999;
+      border-radius: 4px;
+      padding: .75rem;
+      color: #555;
+      width: 100%;
+      max-width: 20rem;
+      background-color: rgba(0, 0, 0, 0.1);
+   }
 
-.flexly {
-	display: flex;
-	align-items: center;
-}
+   input:focus,
+   input:hover {
+      box-shadow: 0 0 10px #ccc;
+   }
 
-#ratingvalue {
-	margin: 0 15px;
+   fieldset {
+      background-color: #eee;
+      border: 1px solid #ccc;
+   }
+
+   input:invalid {
+      background-color: #fdd;
+      color: #000;
+   }
+
+   input:valid {
+      background-color: #dfd;
+      color: #000;
+   }
+
+   .flexly {
+      display: flex;
+      align-items: center;
+   }
+
+   #ratingvalue {
+      margin: 0 15px;
+   }
+
+   .submitBtn {
+      background-color: $accent-color;
+      color: white;
+      border-radius: 1rem;
+      padding: .75rem 1.5rem;
+      margin: 0 0 2rem 2%;
+      width: 96%;
+      max-width: 20rem;
+   }
 }
 
 /* testing live-sass compiler */

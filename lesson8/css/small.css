@@ -526,44 +526,70 @@ footer p {
   clear: both;
 }
 
-form {
+.report {
+  background-color: white;
+  padding: .5em;
+  margin: .5em 0;
+}
+
+.report form {
   display: -ms-grid;
   display: grid;
 }
 
-em {
+.report em {
   font-size: smaller;
 }
 
-input,
-button,
-select,
-textarea {
+.report label.above {
+  display: block;
+  padding-top: 1rem;
+}
+
+.report input,
+.report button,
+.report select,
+.report textarea {
   padding: 0.5rem;
   margin-bottom: .25rem;
 }
 
-input:focus {
+.report form label.above input,
+.report form label.above select {
+  -webkit-appearance: none;
+  display: block;
+  font-size: 1rem;
+  border: solid 1px #999;
+  border-radius: 4px;
+  padding: .75rem;
+  color: #555;
+  width: 100%;
+  max-width: 20rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.report input:focus,
+.report input:hover {
   -webkit-box-shadow: 0 0 10px #ccc;
           box-shadow: 0 0 10px #ccc;
 }
 
-fieldset {
+.report fieldset {
   background-color: #eee;
   border: 1px solid #ccc;
 }
 
-input:invalid {
+.report input:invalid {
   background-color: #fdd;
   color: #000;
 }
 
-input:valid {
+.report input:valid {
   background-color: #dfd;
   color: #000;
 }
 
-.flexly {
+.report .flexly {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -572,8 +598,18 @@ input:valid {
           align-items: center;
 }
 
-#ratingvalue {
+.report #ratingvalue {
   margin: 0 15px;
+}
+
+.report .submitBtn {
+  background-color: #cc9466;
+  color: white;
+  border-radius: 1rem;
+  padding: .75rem 1.5rem;
+  margin: 0 0 2rem 2%;
+  width: 96%;
+  max-width: 20rem;
 }
 
 /* testing live-sass compiler */

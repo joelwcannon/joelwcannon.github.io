@@ -38,79 +38,83 @@
       </ul>
    </nav>
    <main class='max-width'>
-         <h1>Storm Center</h1>
+      <h2 class="town">Storm Center</h2>
+
+      <section class='report'>
          <form method="get" action="thanks.html">
-      <label>Name
-         <input type="text" name="name" pattern="[A-Za-z ]{5,}" title="5 letter minimum" autofocus required></label>
-      <label>Email
-         <input type="email" name="email" placeholder="johndoe@gmail.com"></label>
-      <label>Phone number
-         <input type="tel" name="phone" required></label>
-      <label>Zip code
-         <input type="num" name="zipcode" inputmode="numeric" pattern="([0-9]{5}(-?[0-9]{4})?)"
-            autocomplete="shipping postal-codep" required></label>
-      <label>Storm date
-         <input type="date" name="stormdate"></label>
-      <label>Storm type
-         <input list="stormtypes">
-         <datalist id="stormtypes">
-            <option value="Flash flood">
-            <option value="Hail">
-            <option value="Hurricane">
-            <option value="Thunderstorm">
-            <option value="Tornado">
-         </datalist></label>
+            <label class="above">Name
+               <input type="text" name="name" pattern="[A-Za-z ]{5,}" title="5 letter minimum" autofocus
+                  required></label>
+            <label class="above">Email
+               <input type="email" name="email" placeholder="johndoe@gmail.com"></label>
+            <label class="above">Phone number
+               <input type="tel" name="phone" required></label>
+            <label class="above">Zip code
+               <input type="num" name="zipcode" inputmode="numeric" pattern="([0-9]{5}(-?[0-9]{4})?)"
+                  autocomplete="shipping postal-codep" required></label>
+            <label class="above">Storm date
+               <input type="date" name="stormdate"></label>
+            <label class="above">Storm type
+               <input list="stormtypes">
+               <datalist id="stormtypes">
+                  <option value="Flash flood">
+                  <option value="Hail">
+                  <option value="Hurricane">
+                  <option value="Thunderstorm">
+                  <option value="Tornado">
+               </datalist></label>
 
-         <label class="flexly" for="rating">Rating: &nbsp;&nbsp;&nbsp;
-               <input type="range" id="rating" value="5" min="1" max="10" step="1" list="tickmarks" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
-                     <span id="ratingvalue">5</span>
-               </label>
-         
-                  <datalist id="tickmarks">
-           <option value="0">
-           <option value="1">
-           <option value="2">
-           <option value="3">
-           <option value="4">
-           <option value="5">
-           <option value="6">
-           <option value="7">
-           <option value="8">
-           <option value="9">
-           <option value="10">
-         </datalist>
+            <label class="flexly" for="rating">Rating: &nbsp;&nbsp;&nbsp;
+               <input type="range" id="rating" value="5" min="1" max="10" step="1" list="tickmarks"
+                  oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+               <span id="ratingvalue">5</span>
+            </label>
 
-      <label class="">Storm region
-         <select name="stormregion" id="">
-            <option value="" disabled>Please select &#9662;</option>
-            <option value="preston">Preston</option>
-            <option value="sodasprings">Soda Springs</option>
-            <option value="fishhaven">Fish Haven</option>
-         </select>
-      </label>
-      <fieldset>
-         <legend>User in danger level <em>(Choose one)</em></legend>
-         <div class="selection">
-            <label for="yes"><input type="radio" id="yes" name="danger" value="yes" checked>Yes</label>
-         </div>
+            <datalist id="tickmarks">
+               <option value="0">
+               <option value="1">
+               <option value="2">
+               <option value="3">
+               <option value="4">
+               <option value="5">
+               <option value="6">
+               <option value="7">
+               <option value="8">
+               <option value="9">
+               <option value="10">
+            </datalist>
 
-         <div class="selection">
-            <label for="no"><input type="radio" id="no" name="danger" value="no">
-               No</label>
-         </div>
+            <label class="above">Storm region
+               <select name="stormregion" id="">
+                  <option value="" disabled>Please select &#9662;</option>
+                  <option value="preston">Preston</option>
+                  <option value="sodasprings">Soda Springs</option>
+                  <option value="fishhaven">Fish Haven</option>
+               </select>
+            </label>
+            <fieldset>
+               <legend>User in danger level <em>(Choose one)</em></legend>
+               <div class="selection">
+                  <label for="yes"><input type="radio" id="yes" name="danger" value="yes" checked>Yes</label>
+               </div>
 
-         <div class="selection">
-            <label for="maybe"><input type="radio" id="maybe" name="danger" value="maybe">Maybe</label>
-         </div>
+               <div class="selection">
+                  <label for="no"><input type="radio" id="no" name="danger" value="no">
+                     No</label>
+               </div>
 
-      </fieldset>
-      <label>Comments
-         <input type="textarea" name="comments"></label>
+               <div class="selection">
+                  <label for="maybe"><input type="radio" id="maybe" name="danger" value="maybe">Maybe</label>
+               </div>
+
+            </fieldset>
+            <label class="above">Comments
+               <input type="textarea" name="comments"></label>
 
 
-      <input type="submit" value="Report storm" class="submitBtn">
-   </form>
-
+            <input type="submit" value="Report storm" class="submitBtn">
+         </form>
+      </section>
    </main>
    <footer class='max-width'>
       <p class="footer">&copy; <span id="copyYear">2020</span> | Travelcast | Joel Cannon |
@@ -127,6 +131,5 @@
    </script>
 </body>
 <script src="./js/script.js"></script>
-<script src="./js/windchill.js"></script>
 
 </html>

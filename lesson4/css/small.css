@@ -2,13 +2,15 @@
 /* Globals*/
 html {
   font-family: "Dosis", sans-serif;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -41,34 +43,43 @@ h2 {
 
 .header {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  padding: 0.5em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row nowrap;
+  padding: .5em;
   background-color: #371f99;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   border-bottom: 1px solid #ffefd9;
 }
+
 .header h1 {
   margin: 0;
   font-size: 2rem;
   color: white;
 }
+
 .header p {
   text-align: center;
   font-style: italic;
-  font-size: 0.75rem;
+  font-size: .75rem;
   font-family: "Fredoka One", cursive;
   font-weight: normal;
   color: white;
 }
+
 @media (min-width: 32.5em) {
   .header {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .header h1 {
     margin: 0;
@@ -87,6 +98,7 @@ h2 {
   display: block;
   text-decoration: none;
 }
+
 @media (min-width: 32.5em) {
   .button {
     display: none;
@@ -99,9 +111,10 @@ h2 {
 
 .logo {
   height: 50px;
-  padding-right: 0.5em;
+  padding-right: .5em;
   color: white;
 }
+
 @media (min-width: 32.5em) {
   .logo {
     height: 72px;
@@ -122,19 +135,23 @@ nav {
   padding: 0;
   display: block;
 }
+
 .navigation li.active a {
   color: #9abcff;
 }
+
 .navigation a {
   display: block;
-  padding: 0.5em;
+  padding: .5em;
   color: #fff;
   text-decoration: none;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
+
 .navigation a:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
+
 @media (min-width: 32.5em) {
   .navigation {
     padding-left: 2%;
@@ -150,23 +167,28 @@ nav {
     border-right: 1px solid rgba(0, 0, 0, 0.3);
   }
 }
+
 @media (min-width: 56rem) {
   .navigation {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row nowrap;
     padding-left: 0;
   }
   .navigation.hide {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .navigation li {
     display: block;
-    flex: 1 1 100px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100px;
+            flex: 1 1 100px;
   }
 }
 
@@ -175,34 +197,38 @@ nav {
 }
 
 .town {
-  margin: 0.5em 0;
-  padding: 0 0.5rem;
+  margin: .5em 0;
+  padding: 0 .5rem;
 }
 
 .summary {
   background-color: #9abcff;
-  padding: 0.5em;
-  margin: 0.5em 0;
+  padding: .5em;
+  margin: .5em 0;
 }
+
 .summary div {
   background-color: white;
-  padding: 0.5em;
+  padding: .5em;
 }
 
 .forecast {
   background-color: #9abcff;
-  padding: 0.5em;
-  margin: 0.5em 0;
+  padding: .5em;
+  margin: .5em 0;
 }
+
 .forecast div {
   background-color: white;
-  padding: 0.5em;
+  padding: .5em;
 }
+
 @media (min-width: 32.5em) {
   .forecast {
     background-color: #7a66cc;
   }
 }
+
 @media (min-width: 56rem) {
   .forecast {
     background-color: #cc9466;
@@ -211,38 +237,42 @@ nav {
 
 .article {
   background-color: white;
-  padding: 0.5em;
-  margin: 0.5em 0;
+  padding: .5em;
+  margin: .5em 0;
 }
 
 .contact {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row nowrap;
   background-color: white;
   margin: 5px 0;
 }
 
 .map {
   background-color: #cc9466;
-  flex: 2 2 200px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 2 200px;
+          flex: 2 2 200px;
 }
 
 .contact fieldset {
-  margin: 0 0.5em;
-  flex: 1 1 auto;
+  margin: 0 .5em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .contact p {
-  margin: 0.25em 0 0;
+  margin: .25em 0 0;
 }
 
 footer {
-  font-size: 0.8em;
+  font-size: .8em;
   color: white;
   background: #371f99;
   padding: 10px 20px;
@@ -251,7 +281,7 @@ footer {
 
 footer p {
   text-align: center;
-  padding-bottom: 0.5em;
+  padding-bottom: .5em;
 }
 
 .footer a:link,
@@ -285,5 +315,4 @@ $desktop-max-width: 60em;
 
 
 */
-
 /*# sourceMappingURL=small.css.map */
