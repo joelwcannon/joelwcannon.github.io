@@ -545,6 +545,8 @@ footer p {
    label.above {
       display: block;
       padding-top: 1rem;
+      // @include breakpoint(large) {
+      //    & { float: left; width: 10em; margin-right: 1em; }      }
    }
 
    input,
@@ -568,6 +570,9 @@ footer p {
       background-color: rgba(0, 0, 0, 0.1);
       // background-color: white;
 
+//       @include breakpoint(large) {
+// float: right;      }
+
       &:invalid {
          background-color: #fdd;
          // background-color: red;
@@ -586,7 +591,9 @@ footer p {
          // box-shadow: 0 0 10px #ccc;
          box-shadow: 0 0 10px $secondary-color;
          background-color: white;
-      }align-self: auto;   
+      }
+
+      align-self: auto;
    }
 
    input:focus,
@@ -597,7 +604,7 @@ footer p {
    }
 
    fieldset {
-      background-color: #eef;
+      background-color: lighten($secondary-color, 20%);
       border: 1px solid #ccc;
       margin: 2%;
    }
@@ -605,6 +612,14 @@ footer p {
    textarea {
       width: 100%;
       max-width: 30rem;
+      background-color: #dfd;
+      
+      &:focus,
+      &:hover {
+         // box-shadow: 0 0 10px #ccc;
+         box-shadow: 0 0 10px $secondary-color;
+         background-color: white;
+      }
    }
 
    output {
@@ -619,9 +634,9 @@ footer p {
       @include breakpoint(large) {
          padding: .4rem .25rem;
       }
-  }
+   }
 
-  
+   
 
    // input:invalid {
    //    // background-color: #fdd;
