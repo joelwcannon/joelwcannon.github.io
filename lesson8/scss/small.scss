@@ -479,7 +479,7 @@ table.five-day-forecast thead th:first-child {
 footer {
    font-size: .8em;
    color: white;
-   background: $primary-color;
+   background: $third-color;
    padding: 10px 20px;
    margin: 5px;
 }
@@ -530,7 +530,7 @@ footer p {
 
 // Storm Center
 .report {
-   background-color: white;
+   background-color: lighten($secondary-color, 15%);
    padding: .5em;
    margin: .5em 0;
 
@@ -559,35 +559,80 @@ footer p {
    form label.above select {
       -webkit-appearance: none;
       display: block;
-      font-size: 1rem;
       border: solid 1px #999;
       border-radius: 4px;
       padding: .75rem;
       color: #555;
       width: 100%;
-      max-width: 20rem;
+      max-width: 30rem;
       background-color: rgba(0, 0, 0, 0.1);
+      // background-color: white;
+
+      &:invalid {
+         background-color: #fdd;
+         // background-color: red;
+         // box-shadow: 0 0 10px red;
+
+         color: black;
+      }
+
+      &:valid {
+         background-color: #dfd;
+         color: black;
+      }
+
+      &:focus,
+      &:hover {
+         // box-shadow: 0 0 10px #ccc;
+         box-shadow: 0 0 10px $secondary-color;
+         background-color: white;
+      }align-self: auto;   
    }
 
    input:focus,
    input:hover {
-      box-shadow: 0 0 10px #ccc;
+      // box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 10px $secondary-color;
+
    }
 
    fieldset {
-      background-color: #eee;
+      background-color: #eef;
       border: 1px solid #ccc;
+      margin: 2%;
    }
 
-   input:invalid {
-      background-color: #fdd;
-      color: #000;
+   textarea {
+      width: 100%;
+      max-width: 30rem;
    }
 
-   input:valid {
-      background-color: #dfd;
-      color: #000;
+   output {
+      padding-left: .5em;
    }
+
+   form label.sbs {
+      display: block;
+      padding: .75rem .25rem;
+      color: #555;
+
+      @include breakpoint(large) {
+         padding: .4rem .25rem;
+      }
+  }
+
+  
+
+   // input:invalid {
+   //    // background-color: #fdd;
+   //    background-color: red;
+   //    color: #000;
+   // }
+
+   // input:valid {
+   //    background-color: #dfd;
+   //    color: #000;
+   // }
 
    .flexly {
       display: flex;
@@ -599,7 +644,7 @@ footer p {
    }
 
    .submitBtn {
-      background-color: $accent-color;
+      background-color: $primary-color;
       color: white;
       border-radius: 1rem;
       padding: .75rem 1.5rem;

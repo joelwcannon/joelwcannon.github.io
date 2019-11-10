@@ -472,7 +472,7 @@ table.five-day-forecast thead th:first-child {
 footer {
   font-size: .8em;
   color: white;
-  background: #371f99;
+  background: #7a66cc;
   padding: 10px 20px;
   margin: 5px;
 }
@@ -527,7 +527,7 @@ footer p {
 }
 
 .report {
-  background-color: white;
+  background-color: #e7efff;
   padding: .5em;
   margin: .5em 0;
 }
@@ -558,35 +558,69 @@ footer p {
 .report form label.above select {
   -webkit-appearance: none;
   display: block;
-  font-size: 1rem;
   border: solid 1px #999;
   border-radius: 4px;
   padding: .75rem;
   color: #555;
   width: 100%;
-  max-width: 20rem;
+  max-width: 30rem;
   background-color: rgba(0, 0, 0, 0.1);
+  -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
+}
+
+.report form label.above input:invalid,
+.report form label.above select:invalid {
+  background-color: #fdd;
+  color: black;
+}
+
+.report form label.above input:valid,
+.report form label.above select:valid {
+  background-color: #dfd;
+  color: black;
+}
+
+.report form label.above input:focus, .report form label.above input:hover,
+.report form label.above select:focus,
+.report form label.above select:hover {
+  -webkit-box-shadow: 0 0 10px #9abcff;
+          box-shadow: 0 0 10px #9abcff;
+  background-color: white;
 }
 
 .report input:focus,
 .report input:hover {
-  -webkit-box-shadow: 0 0 10px #ccc;
-          box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #9abcff;
+          box-shadow: 0 0 10px #9abcff;
 }
 
 .report fieldset {
-  background-color: #eee;
+  background-color: #eef;
   border: 1px solid #ccc;
+  margin: 2%;
 }
 
-.report input:invalid {
-  background-color: #fdd;
-  color: #000;
+.report textarea {
+  width: 100%;
+  max-width: 30rem;
 }
 
-.report input:valid {
-  background-color: #dfd;
-  color: #000;
+.report output {
+  padding-left: .5em;
+}
+
+.report form label.sbs {
+  display: block;
+  padding: .75rem .25rem;
+  color: #555;
+}
+
+@media (min-width: 56rem) {
+  .report form label.sbs {
+    padding: .4rem .25rem;
+  }
 }
 
 .report .flexly {
@@ -603,7 +637,7 @@ footer p {
 }
 
 .report .submitBtn {
-  background-color: #cc9466;
+  background-color: #371f99;
   color: white;
   border-radius: 1rem;
   padding: .75rem 1.5rem;

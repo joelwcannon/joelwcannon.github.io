@@ -42,19 +42,24 @@
 
       <section class='report'>
          <form method="get" action="thanks.html">
-            <label class="above">Name
-               <input type="text" name="name" pattern="[A-Za-z ]{5,}" title="5 letter minimum" autofocus
-                  required></label>
-            <label class="above">Email
-               <input type="email" name="email" placeholder="johndoe@gmail.com"></label>
-            <label class="above">Phone number
-               <input type="tel" name="phone" required></label>
-            <label class="above">Zip code
-               <input type="num" name="zipcode" inputmode="numeric" pattern="([0-9]{5}(-?[0-9]{4})?)"
-                  autocomplete="shipping postal-codep" required></label>
-            <label class="above">Storm date
+            <fieldset>
+               <legend>Personal Information</legend>
+               <label class="above">Name *
+                  <input type="text" name="name" pattern="[A-Za-z ]{5,}" title="5 letter minimum" autofocus
+                     required></label>
+               <label class="above">Email
+                  <input type="email" name="email"></label>
+               <label class="above">Phone Number *
+                  <input type="tel" name="phone" required></label>
+               <label class="above">Zip Code *
+                  <input type="num" name="zipcode" inputmode="numeric" pattern="([0-9]{5}(-?[0-9]{4})?)"
+                     autocomplete="shipping postal-codep" required></label>
+            </fieldset>
+            <fieldset>
+               <legend>Storm Information</legend>
+               <label class="above">Storm Date
                <input type="date" name="stormdate"></label>
-            <label class="above">Storm type
+            <label class="above">Storm Type
                <input list="stormtypes">
                <datalist id="stormtypes">
                   <option value="Flash flood">
@@ -64,10 +69,11 @@
                   <option value="Tornado">
                </datalist></label>
 
-            <label class="flexly" for="rating">Rating: &nbsp;&nbsp;&nbsp;
+            <label class="flexly" for="rating">Storm Severity (1-10) &nbsp; 
                <input type="range" id="rating" value="5" min="1" max="10" step="1" list="tickmarks"
-                  oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
-               <span id="ratingvalue">5</span>
+                  oninput="ratingValue.value=parseInt(rating.value)">
+               <output id="ratingValue">5</output>
+
             </label>
 
             <datalist id="tickmarks">
@@ -84,33 +90,37 @@
                <option value="10">
             </datalist>
 
-            <label class="above">Storm region
+            <label class="above">Storm Region
                <select name="stormregion" id="">
-                  <option value="" disabled>Please select &#9662;</option>
+                  <option value="">Please Select &#9662;</option>
                   <option value="preston">Preston</option>
                   <option value="sodasprings">Soda Springs</option>
                   <option value="fishhaven">Fish Haven</option>
                </select>
             </label>
+         </fieldset>
+
             <fieldset>
-               <legend>User in danger level <em>(Choose one)</em></legend>
+               <legend>User in Danger Level <em>(Choose one)</em></legend>
                <div class="selection">
-                  <label for="yes"><input type="radio" id="yes" name="danger" value="yes" checked>Yes</label>
+                  <label class="sbs" for="yes"><input type="radio" id="yes" name="danger" value="yes">Yes</label>
                </div>
 
                <div class="selection">
-                  <label for="no"><input type="radio" id="no" name="danger" value="no">
-                     No</label>
+                  <label class="sbs" for="no"><input type="radio" id="no" name="danger" value="no">No</label>
                </div>
 
                <div class="selection">
-                  <label for="maybe"><input type="radio" id="maybe" name="danger" value="maybe">Maybe</label>
+                  <label class="sbs" for="maybe"><input type="radio" id="maybe" name="danger" value="maybe">Maybe</label>
                </div>
 
             </fieldset>
-            <label class="above">Comments
-               <input type="textarea" name="comments"></label>
-
+            
+            <fieldset>
+               <legend>Additional Information or Comments</legend>
+               
+               <textarea name="comments"> hello </textarea>
+            </fieldset>
 
             <input type="submit" value="Report storm" class="submitBtn">
          </form>
