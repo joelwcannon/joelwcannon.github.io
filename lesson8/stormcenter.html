@@ -43,7 +43,7 @@
       <section class='report'>
          <form method="get" action="thanks.html">
             <fieldset>
-               <legend>Personal Information</legend>
+               <legend>Personal Information (* required)</legend>
                <label class="above">Name *
                   <input type="text" name="name" pattern="[A-Za-z ]{5,}" title="5 letter minimum" autofocus
                      required></label>
@@ -52,7 +52,7 @@
                <label class="above">Phone Number *
                   <input type="tel" name="phone" required></label>
                <label class="above">Zip Code *
-                  <input type="number" name="zipcode" inputmode="numeric" autocomplete="shipping-postal-code"
+                  <input type="number" name="zip" inputmode="numeric" autocomplete="shipping-postal-code"
                      required></label>
             </fieldset>
             <fieldset>
@@ -69,7 +69,7 @@
                      <option value="Tornado">
                   </datalist></label>
 
-               <label class="flexly" for="rating">Storm Severity (1-10) &nbsp;
+               <label class="flexly" for="rating">Storm Severity (1-10): &nbsp;
                   <input type="range" id="rating" value="5" min="1" max="10" step="1" list="tickmarks"
                      oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
                   <span id="ratingvalue">5</span>
@@ -100,7 +100,7 @@
             </fieldset>
 
             <fieldset>
-               <legend>User in Danger <em>(Choose one)</em></legend>
+               <legend>Are You in Danger <em>(Choose one)</em></legend>
                <div class="selection">
                   <label class="sbs" for="yes"><input type="radio" id="yes" name="danger" value="yes">Yes</label>
                </div>
@@ -119,10 +119,10 @@
             <fieldset>
                <legend>Additional Information or Comments</legend>
 
-               <textarea name="comments" rows="4"> </textarea>
+               <textarea name="comments" rows="4" placeholder="Enter details here..."> </textarea>
             </fieldset>
 
-            <input type="submit" value="Report Storm" class="submitBtn">
+            <input type="submit" value="Send my Storm Report" class="submitBtn">
          </form>
       </section>
    </main>
