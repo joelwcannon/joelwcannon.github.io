@@ -613,7 +613,7 @@ footer p {
       width: 100%;
       max-width: 30rem;
       background-color: #dfd;
-      
+
       &:focus,
       &:hover {
          // box-shadow: 0 0 10px #ccc;
@@ -634,6 +634,10 @@ footer p {
       @include breakpoint(large) {
          padding: .4rem .25rem;
       }
+   }
+
+   form input[type="range" i] {
+      margin-top: .5em;
    }
 
    

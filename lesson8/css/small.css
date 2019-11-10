@@ -544,6 +544,9 @@ footer p {
     padding: 0.4rem 0.25rem;
   }
 }
+.report form input[type=range i] {
+  margin-top: 0.5em;
+}
 .report .flexly {
   display: flex;
   align-items: center;
