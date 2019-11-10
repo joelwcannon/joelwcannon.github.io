@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <meta name="description" content="Preston page for BYU Idaho CIT 230 Weather site.">
+   <meta name="description" content="Storm Center page for BYU Idaho CIT 230 Weather site.">
    <script src="https://kit.fontawesome.com/c78bb86773.js" crossorigin="anonymous"></script>
    <!-- <link href="https://fonts.googleapis.com/css?family=Dosis%7CFredoka+One&display=swap" rel="stylesheet"> -->
    <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -48,7 +48,7 @@
                   <input type="text" name="name" pattern="[A-Za-z ]{5,}" title="5 letter minimum" autofocus
                      required></label>
                <label class="above">Email
-                  <input type="email" name="email"></label>
+                  <input type="email" name="email" placeholder="johndoe@gmail.com"></label>
                <label class="above">Phone Number *
                   <input type="tel" name="phone" required></label>
                <label class="above">Zip Code *
@@ -92,7 +92,7 @@
 
             <label class="above">Storm Region
                <select name="stormregion" id="">
-                  <option value="">Please Select &#9662;</option>
+                  <option value="" selected="true" disabled="disabled">Please Select &#9662;</option>
                   <option value="preston">Preston</option>
                   <option value="sodasprings">Soda Springs</option>
                   <option value="fishhaven">Fish Haven</option>
