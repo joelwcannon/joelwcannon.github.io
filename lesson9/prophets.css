@@ -11,6 +11,14 @@ body {
 
 main {
    background-color: #dddddd;
+   padding-top: .5em;
+}
+
+footer {
+   background-color: #dddddd;
+
+   color: black;
+   padding: 1em;
 }
 
 div {
