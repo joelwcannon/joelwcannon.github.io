@@ -1,0 +1,25 @@
+.navigation {
+   list-style-type: none;
+   text-align: center;
+   padding: 0;
+   display: block;
+ }
+ 
+ @media (min-width: 32.5em) {
+   .navigation {
+     display: block;
+     border: 1px solid red;
+     padding: 10px;
+   }
+   .navigation.hide {
+     display: block;
+     border: 1px solid red;
+   }
+   .navigation li {
+     float: left;
+   }
+   .navigation li a {
+     border: none;
+     border-right: 1px solid rgba(0, 0, 0, 0.3);
+   }
+ }
