@@ -105,6 +105,48 @@ h2 {
    color: $accent-color;
 }
 
+.cards {
+   margin: 1rem 0;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+   gap: 1em;
+   // background-color: $secondary-color;
+   text-align: center;
+
+   .card {
+      // height: 300px;
+      
+      padding: 1em;
+      background-color: lighten($secondary-color, 10%);
+
+      h3 {
+         padding-bottom: .5rem;
+      }
+
+      h4 {
+         font-family: $font-family-sans-serif;
+         font-style: italic;
+      }
+
+      p {
+         padding: .25em 0;
+      }
+
+      img {
+         width: 100%;
+         height: auto;
+      }
+      // &::before {
+      //    content: attr(data-town);
+      // }
+   }
+
+   // .card:last-child,
+   // .card[data-town='Preston'] {
+   //    background-color: lighten($secondary-color, 10%);
+   // }
+}
+
 .gallery-h {
    margin: .5em;
    font-weight: bold;
@@ -570,8 +612,8 @@ footer p {
       background-color: rgba(0, 0, 0, 0.1);
       // background-color: white;
 
-//       @include breakpoint(large) {
-// float: right;      }
+      //       @include breakpoint(large) {
+      // float: right;      }
 
       &:invalid {
          background-color: #fdd;
@@ -636,11 +678,11 @@ footer p {
       }
    }
 
-   form input[type="range" i] {
+   form input[type="range"i] {
       margin-top: .5em;
    }
 
-   
+
 
    // input:invalid {
    //    // background-color: #fdd;

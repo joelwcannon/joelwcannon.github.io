@@ -65,6 +65,32 @@ h2 {
   color: #cc9466;
 }
 
+.cards {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1em;
+  text-align: center;
+}
+.cards .card {
+  padding: 1em;
+  background-color: #cddeff;
+}
+.cards .card h3 {
+  padding-bottom: 0.5rem;
+}
+.cards .card h4 {
+  font-family: "Dosis", sans-serif;
+  font-style: italic;
+}
+.cards .card p {
+  padding: 0.25em 0;
+}
+.cards .card img {
+  width: 100%;
+  height: auto;
+}
+
 .gallery-h {
   margin: 0.5em;
   font-weight: bold;
