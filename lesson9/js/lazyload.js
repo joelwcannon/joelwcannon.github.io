@@ -1,5 +1,5 @@
-const hiresPath = '../lesson7/images/hires/';
-const lowresPath = '../lesson7/images/lowres/';
+const hiresPath = '../lesson9/images/hires/';
+const lowresPath = '../lesson9/images/lowres/';
 
 let imagesToLoad = document.querySelectorAll('img[data-src]');
 

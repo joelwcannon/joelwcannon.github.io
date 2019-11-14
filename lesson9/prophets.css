@@ -29,28 +29,54 @@ div {
 .cards {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-   align-items: stretch;
+   /* align-items: stretch; */
+}
+
+.cards2 {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   /* align-items: stretch; */
 }
 
 section {
    background-color: #B9B9CC;
    margin: .5em;
+   padding: 0 1em;
+   overflow: hidden;
+
 }
 
 h2 {
-   margin: .5em;
+   margin: .5rem;
 }
 
 p {
    color: black;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   margin: .5em;
+   margin: .5em 0;
 }
 
-img {
-   width: 80%;
+.cards img {
+   width: 100%;
    height: 70%;
    object-fit: cover;
+   box-shadow: 0.25em 0.25em .25em 0.1em gray;
+   margin-top: 1em;
+   overflow: hidden;
+
+}
+
+picture {
+   padding: 5%;
+   overflow: hidden;
+}
+
+.cards2 img {
+   width: 90%;
+   height: 100%;
+   object-fit: cover;
+   overflow: hidden;
+
    box-shadow: 0.25em 0.25em .25em 0.1em gray;
    margin-bottom: 1em;
 }
