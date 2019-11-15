@@ -42,11 +42,13 @@ body {
   background: #ffefd9;
 }
 
-.max-width {
-  width: 95%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 32.5em) {
+  .max-width {
+    width: 95%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 h1,
@@ -65,19 +67,10 @@ h2 {
   color: #cc9466;
 }
 
-.cards {
-  margin: 1rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1em;
-  text-align: center;
-}
 .cards .card {
-  padding: 1em;
   background-color: #cddeff;
-}
-.cards .card h3 {
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
 }
 .cards .card h4 {
   font-family: "Dosis", sans-serif;
@@ -87,8 +80,64 @@ h2 {
   padding: 0.25em 0;
 }
 .cards .card img {
-  width: 100%;
-  height: auto;
+  max-width: 400px;
+  width: 60%;
+}
+.cards .card:nth-child(even) {
+  background-color: #e7efff;
+}
+@media (min-width: 32.5em) {
+  .cards {
+    margin: 1rem 0;
+  }
+  .cards .card {
+    text-align: right;
+  }
+  .cards .card img {
+    float: right;
+    padding-left: 0.5em;
+  }
+  .cards .card:nth-child(even) {
+    background-color: #e7efff;
+    text-align: left;
+  }
+  .cards .card:nth-child(even) img {
+    float: left;
+    padding-right: 0.5em;
+  }
+}
+@media (min-width: 56rem) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 1em;
+    text-align: center;
+  }
+  .cards .card {
+    padding: 1em;
+    text-align: center;
+  }
+  .cards .card h3 {
+    padding-bottom: 0.5rem;
+  }
+  .cards .card h4 {
+    font-family: "Dosis", sans-serif;
+    font-style: italic;
+  }
+  .cards .card p {
+    padding: 0.25em 0;
+  }
+  .cards .card img {
+    width: 100%;
+    height: auto;
+  }
+  .cards .card:nth-child(even) {
+    background-color: #cddeff;
+    text-align: center;
+  }
+  .cards .card:nth-child(even) img {
+    float: none;
+  }
 }
 
 .gallery-h {

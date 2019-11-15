@@ -9,7 +9,7 @@ fetch(requestURL)
       // console.table(jsonObject); // temporary checking for valid response and data parsing
       const towns = jsonObject['towns'];
 
-      let townsToConfig = document.querySelectorAll('a.card[data-town]');
+      let townsToConfig = document.querySelectorAll('div.card[data-town]');
       // console.table(townsToConfig);
 
       townsToConfig.forEach((townEl) => {
@@ -34,8 +34,8 @@ fetch(requestURL)
                let populationEl = document.createElement('p');
                populationEl.textContent = `2019 Population: ${towns[i].currentPopulation}`;
 
-               townEl.appendChild(townNameEl);
                townEl.appendChild(imageEl);
+               townEl.appendChild(townNameEl);
                townEl.appendChild(mottoEl);
                townEl.appendChild(yearFoundedEl);
                townEl.appendChild(populationEl);

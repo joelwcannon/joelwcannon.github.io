@@ -85,7 +85,10 @@ body {
 }
 
 .max-width {
-   @include center(1000px, 95%);
+   @include breakpoint(medium) {
+
+      @include center(1000px, 95%);
+   }
 }
 
 h1,
@@ -105,23 +108,21 @@ h2 {
    color: $accent-color;
 }
 
+// .bleed {
+//    margin-right: 0;
+//    margin-left: 0;
+//    width: 100%;
+// }
+
 .cards {
-   margin: 1rem 0;
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-   gap: 1em;
-   // background-color: $secondary-color;
-   text-align: center;
 
    .card {
-      // height: 300px;
-      
-      padding: 1em;
       background-color: lighten($secondary-color, 10%);
+      padding: .5rem;
+      text-align: center;
 
-      h3 {
-         padding-bottom: .5rem;
-      }
+
+      h3 {}
 
       h4 {
          font-family: $font-family-sans-serif;
@@ -133,18 +134,79 @@ h2 {
       }
 
       img {
-         width: 100%;
-         height: auto;
+         max-width: 400px;
+         width: 60%;
       }
-      // &::before {
-      //    content: attr(data-town);
-      // }
    }
 
-   // .card:last-child,
-   // .card[data-town='Preston'] {
-   //    background-color: lighten($secondary-color, 10%);
-   // }
+   .card:nth-child(even) {
+      background-color: lighten($secondary-color, 15%);
+   }
+
+
+   @include breakpoint(medium) {
+      margin: 1rem 0;
+
+      .card {
+         text-align: right;
+
+         img {
+            float: right;
+            padding-left: .5em;
+         }
+      }
+
+      .card:nth-child(even) {
+         background-color: lighten($secondary-color, 15%);
+         text-align: left;
+
+         img {
+            float: left;
+            padding-right: .5em;
+         }
+
+      }
+   }
+
+   @include breakpoint(large) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+      gap: 1em;
+      text-align: center;
+
+      .card {
+         padding: 1em;
+         text-align: center;
+
+         h3 {
+            padding-bottom: .5rem;
+         }
+
+         h4 {
+            font-family: $font-family-sans-serif;
+            font-style: italic;
+         }
+
+         p {
+            padding: .25em 0;
+         }
+
+         img {
+            width: 100%;
+            height: auto;
+         }
+      }
+
+      .card:nth-child(even) {
+         background-color: lighten($secondary-color, 10%);
+         text-align: center;
+
+         img {
+            float: none;
+         }
+
+      }
+   }
 }
 
 .gallery-h {
