@@ -33,12 +33,16 @@ fetch(requestURL)
 
                let populationEl = document.createElement('p');
                populationEl.textContent = `2019 Population: ${towns[i].currentPopulation}`;
+               
+               let rainFallEl = document.createElement('p');
+               rainFallEl.textContent = `Average Rain Fall: ${towns[i].averageRainfall}"`;
 
                townEl.appendChild(imageEl);
                townEl.appendChild(townNameEl);
                townEl.appendChild(mottoEl);
                townEl.appendChild(yearFoundedEl);
                townEl.appendChild(populationEl);
+               townEl.appendChild(rainFallEl);
             }
          }
          // observer.observe(img);
