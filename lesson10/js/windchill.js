@@ -14,6 +14,7 @@ function updateWindChill(){
 }
 
 function windChill(tempF, speed) { 
+   console.log(tempF + " " + speed)
    const maxTempF = 50; 
    const minWindSpeed = 3;
    // let f = null;

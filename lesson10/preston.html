@@ -54,18 +54,20 @@
          <div class=summary-table>
             <h4>Weather Summary</h4>
             <hr>
-            <p>Currently: <span>Cloudy</span></p>
-            <p>High: <span id='temperature'>59</span> &deg;F</p>
+            <p>Currently: <span id='description'>?</span></p>
+            <p>Temperature: <span id='temperature'>?</span> &deg;F</p>
+
             <p class='windchill'>Wind Chill: <span id='windchill'>?</span> &deg;F</p>
-            <p>Humidity: <span>87</span>%</p>
-            <p>Wind Speed: <span id='windspeed'>12</span> mph</p>
+            <p>High: <span id='hightemp'>?</span> &deg;F</p>
+            <p>Humidity: <span id='humidity'>?</span>%</p>
+            <p>Wind Speed: <span id='windspeed'>10</span> mph</p>
          </div>
       </section>
 
       <section class='forecast'>
          <div>
             <h3>5 Day Forecast</h3>
-            <table class="five-day-forecast">
+            <!-- <table class="five-day-forecast">
                <thead>
                   <tr>
                      <th>Wed</th>
@@ -91,7 +93,34 @@
                      <td>70 &deg;F</td>
                   </tr>
                </tbody>
-            </table>
+            </table> -->
+            <div id="five-day-grid">
+               <!-- <div class="daily-forecast">
+                  <div class="dow">Mon</div>
+                  <img src="./images/weather/cloudy.png" class="weather-icon"></img>
+                  <div class="temp">99 °F</div>
+               </div>
+               <div class="daily-forecast">
+                  <div class="dow">Tue</div>
+                  <img src="./images/weather/cloudy.png" class="weather-icon"></img>
+                  <div class="temp">99 °F</div>
+               </div>
+               <div class="daily-forecast">
+                  <div class="dow">Wed</div>
+                  <img src="./images/weather/cloudy.png" class="weather-icon"></img>
+                  <div class="temp">99 °F</div>
+               </div>
+               <div class="daily-forecast">
+                  <div class="dow">Thu</div>
+                  <img src="./images/weather/cloudy.png" class="weather-icon"></img>
+                  <div class="temp">99 °F</div>
+               </div>
+               <div class="daily-forecast">
+                  <div class="dow">Fri</div>
+                  <img src="./images/weather/cloudy.png" class="weather-icon"></img>
+                  <div class="temp">99 °F</div>
+               </div> -->
+            </div>
          </div>
       </section>
 
@@ -148,6 +177,7 @@
    </script>
 </body>
 <script src="./js/script.js"></script>
-<script src="./js/windchill.js"></script>
+<script src="js/weatherapi.js"></script>
+<!-- <script src="./js/windchill.js"></script> -->
 
 </html>

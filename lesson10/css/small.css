@@ -374,50 +374,43 @@ nav {
   text-align: center;
   padding: 1rem;
 }
-.forecast table {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
-  margin-bottom: 2rem;
-}
 @media (min-width: 32.5em) {
   .forecast {
     display: block;
   }
 }
 
-table.five-day-forecast {
-  border: 2px solid #371f99;
+#five-day-grid {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  margin: auto auto;
+  margin-bottom: 2rem;
   width: 450px;
-  height: 150px;
+}
+#five-day-grid .daily-forecast {
   text-align: center;
 }
-
-table.five-day-forecast td,
-table.five-day-forecast th {
-  border: 1px solid #371f99;
-  padding: 3px 2px;
-}
-
-table.five-day-forecast tbody td {
-  font-size: 16px;
-}
-
-table.five-day-forecast thead {
-  background: #7a66cc;
-  border-bottom: 1px solid #371f99;
-}
-
-table.five-day-forecast thead th {
-  font-size: 16px;
+#five-day-grid .daily-forecast .dow {
+  margin: 1px;
+  padding: 4px;
+  background-color: #7a66cc;
+  color: white;
   font-weight: bold;
-  color: #FFFFFF;
-  text-align: center;
-  border-left: 1px solid #371f99;
 }
-
-table.five-day-forecast thead th:first-child {
-  border-left: none;
+#five-day-grid .daily-forecast .weather-icon {
+  margin: 1px;
+  padding: 4px;
+  width: 87px;
+  border: 1px solid black;
+  background-color: #cddeff;
+}
+#five-day-grid .daily-forecast .temp {
+  margin: 1px;
+  padding: 4px;
+  border: 1px solid #371f99;
+  background-color: white;
 }
 
 .article {
