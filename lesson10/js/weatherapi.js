@@ -1,7 +1,7 @@
 const prestonId = 5604473;
 const appId = "ca6c0f399be1148d24ceb57e7ed8ae40";
-const weatherAPIURL = `http://api.openweathermap.org/data/2.5/weather?id=${prestonId}&units=imperial&APPID=${appId}`;
-const forecastAPIURL = `http://api.openweathermap.org/data/2.5/forecast?id=${prestonId}&units=imperial&APPID=${appId}`;
+const weatherAPIURL = `https://api.openweathermap.org/data/2.5/weather?id=${prestonId}&units=imperial&APPID=${appId}`;
+const forecastAPIURL = `https://api.openweathermap.org/data/2.5/forecast?id=${prestonId}&units=imperial&APPID=${appId}`;
 const weatherIconPath = "https://openweathermap.org/img/w/";
 const dow = new Intl.DateTimeFormat("en-US", {
    weekday: "short"
