@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="description" content="Preston page for BYU Idaho CIT 230 Weather site.">
+   <script src="https://kit.fontawesome.com/c78bb86773.js" crossorigin="anonymous"></script>
+   <!-- <link href="https://fonts.googleapis.com/css?family=Dosis%7CFredoka+One&display=swap" rel="stylesheet"> -->
+   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+   <link rel="stylesheet" type="text/css" href="css/small.css">
+   <link rel="stylesheet" type="text/css" href="css/medium.css">
+   <link rel="stylesheet" type="text/css" href="css/large.css">
+   <link rel="shortcut icon" href="favicon.png">
+   <title>Travelcast - Preston Idaho</title>
+</head>
+
+<body>
+   <p class='banner clearfix hide'><i class="fas fa-times" onclick="toggleBanner()"></i>
+      Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion. </p>
+   <header class=header>
+      <img class=logo src="./images/white-logo.png" alt="travelcast logo">
+      <div>
+         <h1>Travelcast</h1>
+         <p>never get caught in the rain</p>
+      </div>
+      <a class="button" href="#" onclick="toggleMenu()">&#9776;</a>
+   </header>
+   <nav class="clearfix">
+      <ul class='navigation hide'>
+         <li><a href="./">Home</a></li>
+         <li class="active"><a href="#">Preston</a></li>
+         <li><a href="#">Soda Springs</a></li>
+         <li><a href="#">Fish Haven</a></li>
+         <li><a href="stormcenter.html">Storm Center</a></li>
+         <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+   </nav>
+   <main class='max-width'>
+      <h2 class='town'>Preston</h2>
+      <section class='summary'>
+         <picture>
+            <source media="(min-width: 800px)" srcset="./images/franklin-800w.jpg">
+            <source media="(min-width: 500px)" srcset="./images/franklin-500w.jpg">
+            <source media="(min-width: 300px)" srcset="./images/franklin-300w.jpg">
+            <img src="./images/franklin-800w.jpg" alt="Franklin County Landscape">
+         </picture>
+         <!-- <img src="./images/franklin-800w.jpg" alt="downtown preston"
+         srcset = "./images/franklin-300w.jpg 300w,
+         ./images/franklin-500w.jpg 500w,
+         ./images/franklin-800w.jpg 800w"
+         sizes="95vw"> -->
+         <div class=summary-table>
+            <h4>Weather Summary</h4>
+            <hr>
+            <p>Currently: <span id='description'>?</span></p>
+            <p>Temperature: <span id='temperature'>?</span> &deg;F</p>
+
+            <p class='windchill'>Wind Chill: <span id='windchill'>?</span> &deg;F</p>
+            <p>High: <span id='hightemp'>?</span> &deg;F</p>
+            <p>Humidity: <span id='humidity'>?</span>%</p>
+            <p>Wind Speed: <span id='windspeed'>10</span> mph</p>
+         </div>
+      </section>
+
+      <section class='forecast'>
+         <div>
+            <h3>5 Day Forecast</h3>
+            <!-- <table class="five-day-forecast">
+               <thead>
+                  <tr>
+                     <th>Wed</th>
+                     <th>Thu</th>
+                     <th>Fri</th>
+                     <th>Sat</th>
+                     <th>Sun</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td><img src="./images/weather/partial.png" alt=""></td>
+                     <td><img src="./images/weather/cloudy.png" alt=""></td>
+                     <td><img src="./images/weather/rain.png" alt=""></td>
+                     <td><img src="./images/weather/partial.png" alt=""></td>
+                     <td><img src="./images/weather/sunny.png" alt=""></td>
+                  </tr>
+                  <tr>
+                     <td>68 &deg;F</td>
+                     <td>65 &deg;F</td>
+                     <td>63 &deg;F</td>
+                     <td>67 &deg;F</td>
+                     <td>70 &deg;F</td>
+                  </tr>
+               </tbody>
+            </table> -->
+            <div id="five-day-grid">
+               <!-- <div class="daily-forecast">
+                  <div class="dow">Mon</div>
+                  <img src="./images/weather/cloudy.png" class="weather-icon"></img>
+                  <div class="temp">99 °F</div>
+               </div>
+               <div class="daily-forecast">
+                  <div class="dow">Tue</div>
+                  <img src="./images/weather/cloudy.png" class="weather-icon"></img>
+                  <div class="temp">99 °F</div>
+               </div>
+               <div class="daily-forecast">
+                  <div class="dow">Wed</div>
+                  <img src="./images/weather/cloudy.png" class="weather-icon"></img>
+                  <div class="temp">99 °F</div>
+               </div>
+               <div class="daily-forecast">
+                  <div class="dow">Thu</div>
+                  <img src="./images/weather/cloudy.png" class="weather-icon"></img>
+                  <div class="temp">99 °F</div>
+               </div>
+               <div class="daily-forecast">
+                  <div class="dow">Fri</div>
+                  <img src="./images/weather/cloudy.png" class="weather-icon"></img>
+                  <div class="temp">99 °F</div>
+               </div> -->
+            </div>
+         </div>
+      </section>
+
+      <section class='article'>
+         <article>
+            <img src="./images/halloween-400w.jpg" alt="pumpkin patch">
+            <h3>Pumpkin Festival</h3>
+            <h5>by: Charlie Brown</h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus dignissimos odit laudantium
+               magni, architecto quibusdam dolore natus facilis harum praesentium eveniet, non deserunt! Dolor itaque
+               commodi laudantium nostrum delectus omnis accusamus recusandae vitae? Distinctio corporis dolor, quia
+               repellat officia veritatis laborum ab harum rem tempore asperiores, quod amet vero odit.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis excepturi necessitatibus quaerat esse
+               voluptatibus laboriosam deserunt in tempore rem modi facere, magni nemo mollitia aut repudiandae
+               accusantium. Commodi nisi velit ullam, odit quibusdam esse numquam nobis, nihil tempora vero eos, quos
+               exercitationem consectetur eligendi earum ducimus mollitia placeat nemo natus!</p>
+         </article>
+         <div></div>
+      </section>
+
+      <section class='contact'>
+
+         <div class='map'><img src="./images/prestonmap-600w.png" alt="map of preston"></div>
+         <fieldset>
+            <legend>Contact Info</legend>
+            <p>Travelcast</p>
+            <p><i class="fas fa-map-marker-alt"></i>30 N 1st E</p>
+            <p>Preston, ID 83263</p>
+            <br>
+            <p><i class="fas fa-phone"></i>555.123.4567</p>
+            <p><i class="far fa-envelope"></i>travelcast@gmail.com</p>
+            <div class="socialmedia">
+               <a href="http://facebook.com" class="fab fa-2x fa-facebook-square"></a>
+               <a href="#" class="fab fa-2x fa-linkedin"></a>
+               <a href="#" class="fab fa-2x fa-twitter-square"></a>
+               <a href="#" class="fab fa-2x fa-pinterest-square"></a>
+            </div>
+         </fieldset>
+      </section>
+   </main>
+   <footer class='max-width'>
+      <p class="footer">&copy; <span id="copyYear">2020</span> | Travelcast | Joel Cannon |
+         <a class="lt_link" href="https://www.byui.edu/online">BYU Online Learning</a></p>
+      <p class="mod"><span id="timestamp">Today</span></p>
+   </footer>
+   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+   <script>
+      WebFont.load({
+         google: {
+            families: ['Dosis', 'Fredoka+One']
+         }
+      });
+   </script>
+</body>
+<script src="./js/script.js"></script>
+<script src="js/weatherapi.js"></script>
+<!-- <script src="./js/windchill.js"></script> -->
+
+</html>

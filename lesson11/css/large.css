@@ -1,0 +1,7 @@
+@media (min-width: 56rem) {
+   .summary {
+      background-color: #cc9466;
+   }
+}
+
+/* more media query css in small.css */
