@@ -632,6 +632,33 @@ footer p {
   max-width: 20rem;
 }
 
+.error404 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/lostluggage2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.error404 div {
+  margin: 30vh auto 2vh;
+  background-color: rgba(50, 115, 220, 0.7);
+  width: 75vw;
+}
+.error404 div h1 {
+  margin: 10vh auto 2vh;
+  font-size: 5vw;
+  text-align: center;
+  color: white;
+}
+.error404 div a,
+.error404 div p {
+  font-size: 2.5vw;
+  font-weight: 500;
+  padding: 5vh 0;
+  text-align: center;
+  color: white;
+}
+
 /* testing live-sass compiler */
 
 /*# sourceMappingURL=small.css.map */
