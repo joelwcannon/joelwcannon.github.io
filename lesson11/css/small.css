@@ -72,75 +72,75 @@ h2 {
   color: inherit;
   text-decoration: inherit;
 }
-.cards a .card {
+.cards .card {
   background-color: #cddeff;
   padding: 0.5rem;
   text-align: center;
 }
-.cards a .card h4 {
+.cards .card h4 {
   font-family: "Dosis", sans-serif;
   font-style: italic;
 }
-.cards a .card p {
+.cards .card p {
   padding: 0.25em 0;
 }
-.cards a .card img {
+.cards .card img {
   max-width: 400px;
   width: 60%;
 }
-.cards a .even {
+.cards .even {
   background-color: #e7efff;
 }
 @media (min-width: 32.5em) {
-  .cards a {
+  .cards {
     margin: 1rem 0;
   }
-  .cards a .card {
+  .cards .card {
     text-align: right;
   }
-  .cards a .card img {
+  .cards .card img {
     float: right;
     padding-left: 0.5em;
   }
-  .cards a .even {
+  .cards .even {
     background-color: #e7efff;
     text-align: left;
   }
-  .cards a .even img {
+  .cards .even img {
     float: left;
     padding-right: 0.5em;
   }
 }
 @media (min-width: 56rem) {
-  .cards a {
+  .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
     gap: 1em;
     text-align: center;
   }
-  .cards a .card {
+  .cards .card {
     padding: 1em;
     text-align: center;
   }
-  .cards a .card h3 {
+  .cards .card h3 {
     padding-bottom: 0.5rem;
   }
-  .cards a .card h4 {
+  .cards .card h4 {
     font-family: "Dosis", sans-serif;
     font-style: italic;
   }
-  .cards a .card p {
+  .cards .card p {
     padding: 0.25em 0;
   }
-  .cards a .card img {
+  .cards .card img {
     width: 100%;
     height: auto;
   }
-  .cards a .even {
+  .cards .even {
     background-color: #cddeff;
     text-align: center;
   }
-  .cards a .even img {
+  .cards .even img {
     float: none;
   }
 }
