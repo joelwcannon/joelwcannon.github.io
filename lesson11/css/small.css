@@ -67,75 +67,80 @@ h2 {
   color: #cc9466;
 }
 
-.cards .card {
+.cards a:-webkit-any-link,
+.cards a:active {
+  color: inherit;
+  text-decoration: inherit;
+}
+.cards a .card {
   background-color: #cddeff;
   padding: 0.5rem;
   text-align: center;
 }
-.cards .card h4 {
+.cards a .card h4 {
   font-family: "Dosis", sans-serif;
   font-style: italic;
 }
-.cards .card p {
+.cards a .card p {
   padding: 0.25em 0;
 }
-.cards .card img {
+.cards a .card img {
   max-width: 400px;
   width: 60%;
 }
-.cards .card:nth-child(even) {
+.cards a .even {
   background-color: #e7efff;
 }
 @media (min-width: 32.5em) {
-  .cards {
+  .cards a {
     margin: 1rem 0;
   }
-  .cards .card {
+  .cards a .card {
     text-align: right;
   }
-  .cards .card img {
+  .cards a .card img {
     float: right;
     padding-left: 0.5em;
   }
-  .cards .card:nth-child(even) {
+  .cards a .even {
     background-color: #e7efff;
     text-align: left;
   }
-  .cards .card:nth-child(even) img {
+  .cards a .even img {
     float: left;
     padding-right: 0.5em;
   }
 }
 @media (min-width: 56rem) {
-  .cards {
+  .cards a {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
     gap: 1em;
     text-align: center;
   }
-  .cards .card {
+  .cards a .card {
     padding: 1em;
     text-align: center;
   }
-  .cards .card h3 {
+  .cards a .card h3 {
     padding-bottom: 0.5rem;
   }
-  .cards .card h4 {
+  .cards a .card h4 {
     font-family: "Dosis", sans-serif;
     font-style: italic;
   }
-  .cards .card p {
+  .cards a .card p {
     padding: 0.25em 0;
   }
-  .cards .card img {
+  .cards a .card img {
     width: 100%;
     height: auto;
   }
-  .cards .card:nth-child(even) {
+  .cards a .even {
     background-color: #cddeff;
     text-align: center;
   }
-  .cards .card:nth-child(even) img {
+  .cards a .even img {
     float: none;
   }
 }
