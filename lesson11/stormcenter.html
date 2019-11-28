@@ -43,14 +43,14 @@
             <fieldset>
                <legend>Personal Information (* required)</legend>
                <label class="above">Name *
-                  <input type="text" name="name" pattern="[A-Za-z ]{5,}" title="5 letter minimum" autofocus
+                  <input type="text" name="name" pattern="[A-Za-z ]{5,}" title="5 letter minimum" autofocus autocomplete="name"
                      required></label>
                <label class="above">Email
-                  <input type="email" name="email" placeholder="johndoe@gmail.com"></label>
+                  <input type="email" name="email" placeholder="johndoe@gmail.com" autocomplete="email"></label>
                <label class="above">Phone Number *
                   <input type="tel" name="phone" required></label>
                <label class="above">Zip Code *
-                  <input type="number" name="zip" inputmode="numeric" autocomplete="shipping postal-code"
+                  <input type="number" name="zip" inputmode="numeric" 
                      required></label>
             </fieldset>
             <fieldset>
@@ -89,7 +89,7 @@
 
                <label class="above">Storm Region
                   <select name="stormregion">
-                     <option value="" selected=true disabled="disabled">Please Select &#9662;</option>
+                     <option value="" selected disabled="disabled">Please Select &#9662;</option>
                      <option value="preston">Preston</option>
                      <option value="sodasprings">Soda Springs</option>
                      <option value="fishhaven">Fish Haven</option>
