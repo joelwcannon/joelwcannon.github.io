@@ -418,6 +418,32 @@ nav {
   background-color: white;
 }
 
+.events {
+  margin-bottom: 2rem;
+  display: none;
+}
+.events h3 {
+  text-align: center;
+  padding: 0.5rem;
+}
+@media (min-width: 32.5em) {
+  .events {
+    display: block;
+  }
+}
+
+.event-list {
+  background-color: white;
+  margin: 0.25em auto;
+  width: 450px;
+  border: 1px solid #7a66cc;
+}
+.event-list p {
+  text-align: center;
+  padding: 0.25rem;
+  color: #371f99;
+}
+
 .article {
   background-color: white;
   padding: 0.5em;

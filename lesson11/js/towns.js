@@ -17,6 +17,8 @@ fetch(requestURL)
             let townName = towns[i].name;
             console.log(townEl.dataset.town);
             if (townName == townEl.dataset.town) {
+               console.log(towns[i]);
+
                let townNameEl = document.createElement('h3');
                townNameEl.textContent = townName;
 
