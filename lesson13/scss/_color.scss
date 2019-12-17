@@ -1,0 +1,47 @@
+/*
+ Colors
+ */
+$color-pale-brown: #8C7E4C;
+$color-moccasin: #FFF1BD;
+$color-splash: #F2DF9B;
+$color-mariner: #4951A6;
+$color-pale-cornflower-blue: #9BA3F2;
+$color-nero: #222222;
+$color-emerald: #6fce72;
+$color-terra-cotta: #e4655f;
+
+$body-color: $color-nero;
+$heading-color: $color-mariner;
+$bg-color: $color-moccasin;
+$banner-color: $color-splash;
+$primary-color: $color-pale-brown;
+$link-color: $color-mariner;
+$accent-color: $color-pale-brown;
+$alert-color: $color-terra-cotta;
+$success-color: $color-emerald;
+
+
+body {
+   color: $body-color;
+}
+
+h1 {
+   color: $primary-color;
+}
+
+h2, h3, h4, h5, h6 {
+   color: $heading-color;
+}
+
+.header,
+.footer {
+   background-color: $banner-color;
+}
+
+a {
+   color: $link-color;
+
+   &:hover {
+      color: $accent-color;
+   }
+}
