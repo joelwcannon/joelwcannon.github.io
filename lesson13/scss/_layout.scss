@@ -14,5 +14,37 @@
    margin: 0;
 }
 
+.header {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+.logo {
+   width: 200px;
+   margin: .25rem 0;
+
+   h1 {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 0;
+   }
+   p {
+      text-align: center;
+      font-size: .9rem;
+      line-height: .8;
+      padding-bottom: .25rem;
+      font-style: italic;
+   }
+}
+
+.footer {
+   margin-top: .5rem;
+   padding: .25rem;
+   text-align: center;
+
+}
+
 
 

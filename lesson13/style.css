@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 /*
  Colors
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 body {
   color: #222222;
 }
@@ -30,13 +30,13 @@ a:hover {
  Typography
  */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "'Roboto', sans-serif";
   font-weight: 400;
   line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-family: 'Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif';
   font-weight: 700;
   line-height: 1.2;
 }
@@ -53,37 +53,21 @@ html {
 *:after {
   box-sizing: inherit;
   padding: 0;
-  margin: 0;
+  margin: 10;
 }
 
 .header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .logo {
   width: 200px;
-  margin: 0.25rem 0;
 }
 .logo h1 {
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 0;
-}
-.logo p {
-  text-align: center;
-  font-size: 0.9rem;
-  line-height: 0.8;
-  padding-bottom: 0.25rem;
-  font-style: italic;
-}
-
-.footer {
-  margin-top: 0.5rem;
-  padding: 0.25rem;
-  text-align: center;
+  color: red;
 }
 
 /*
@@ -92,17 +76,15 @@ html {
 .topnav {
   overflow: hidden;
   background-color: #F2DF9B;
-  align-self: center;
-  margin-right: 0.25rem;
 }
 
 .topnav a {
   float: left;
   display: block;
   text-align: center;
-  padding: 0.25rem 0.5rem;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
@@ -164,25 +146,18 @@ html {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav {
-    align-self: flex-start;
-  }
-
-  .topnav a, .dropdown .dropbtn {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
 
   .topnav a.icon {
     float: right;
     display: block;
-    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 600px) {
   .topnav.responsive {
     position: relative;
-    right: 0;
-    padding-right: 2.5rem;
   }
 
   .topnav.responsive .icon {

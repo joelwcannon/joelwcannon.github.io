@@ -5,6 +5,8 @@
 .topnav {
   overflow: hidden;
   background-color: $banner-color;
+  align-self: center;
+  margin-right: .25rem;
 }
 
 .topnav a {
@@ -12,9 +14,9 @@
   display: block;
 //   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: .25rem .5rem;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -76,17 +78,25 @@
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
+  .topnav {
+    align-self: flex-start;
+  }
+  .topnav a, .dropdown .dropbtn {
     display: none;
   }
   .topnav a.icon {
     float: right;
     display: block;
+    font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+    right: 0;
+    padding-right: 2.5rem;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
