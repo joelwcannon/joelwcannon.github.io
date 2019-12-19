@@ -33,7 +33,7 @@ function showSlides(n) {
   //   slideIndex = slides.length
   // }
 
-  slideIndex = wrap(slideIndex, slide.length);
+  slideIndex = wrap(slideIndex, slides.length);
 
   slides[slideIndex].style.display = "block";
   dots[slideIndex].className += " active";

@@ -1,95 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Document</title>
+   <meta name="description" content="Home page for BYU Idaho CIT 230 Final Project.">
+   <script src="https://kit.fontawesome.com/c78bb86773.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <title>Book - Temple Inn & Suites</title>
+
 </head>
+
 <body>
-      <!-- location, date, number and type of rooms, registrant's full name, email, phone, home state or country, and special accommodations/comments. 
-      // city - list
-      // check-in - date
-      // check-out - date, days
-      // adults - number
-      // children - number
-      // rooms - number
-      // beds - choice
-      // name - text
-      // email - email
-      // phone - tel
-      // country - country
-      // state - state
-      // comments - text area -->
+   <header class="header">
+      <div class="logo">
+         <a href="./">
+            <h1>Temple Inn & Suites</h1>
+            <p>rest inn peace</p>
+         </a>
+      </div>
+      <div class="topnav" id="myTopnav">
+         <a href="#visit">Visit a Temple</a>
+         <a href="#stay">Plan a Stay</a>
+         <a href="#" class="active">Book Now</a>
+         <a href="#contact">Contact Us</a>
+         <a href="#" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+   </header>
+
+   <main class='max-width'>
+      <h2 class="town">Book a Reservation</h2>
+
+      <section class='report'>
+         <form method="get" action="thanks.html">
+
+            <fieldset>
+               <legend>Accomodation Information (* required)</legend>
+               <label class="above">Location *
+                  <select name="location" required>
+                     <option value="" selected disabled="disabled">Please Select &#9662;</option>
+                     <option value="manila">Manila, Philippines</option>
+                     <option value="sapporo">Sapporo, Japan</option>
+                     <option value="london">London, United Kingdom</option>
+                     <option value="copenhagen">Copenhagen, Denmark</option>
+                  </select>
+               </label>
+
+               <label class="above">Check-in *
+                  <input type="date" name="checkin" required></label>
+               <label class="above">Check-out
+                  <input type="date" name="checkout"></label>
+
+               <label class="above">Bed
+                  <select name="bed">
+                     <option value="" selected disabled="disabled">Please Select &#9662;</option>
+                     <option value="king">King</option>
+                     <option value="queen">Queen</option>
+                     <option value="double">Double</option>
+                  </select></label>
+            </fieldset>
+
+            <fieldset>
+               <legend>Personal Information</legend>
+               <label class="above">Name *
+                  <input type="text" name="name" pattern="[A-Za-z ]{5,}" title="5 letter minimum" autofocus
+                     autocomplete="name" required></label>
+               <label class="above">Email *
+                  <input type="email" name="email" placeholder="johndoe@gmail.com" autocomplete="email"
+                     required></label>
+               <label class="above">Phone Number
+                  <input type="tel" name="phone"></label>
+
+               <label class="above">Country
+                  <select>
+                     <option value="AF">Afghanistan</option>
+                     <option value="AX">Åland Islands</option>
+                     <option value="AL">Albania</option>
+                     <option value="DZ">Algeria</option>
+                     <option value="AS">American Samoa</option>
+                     <option value="AD">Andorra</option>
+                     <option value="AO">Angola</option>
+                     <option value="AI">Anguilla</option>
+                     <option value="AQ">Antarctica</option>
+                     <option value="AG">Antigua and Barbuda</option>
+                     <option value="AR">Argentina</option>
+                     <option value="AM">Armenia</option>
+                     <option value="AW">Aruba</option>
+                     <option value="AU">Australia</option>
+                     <option value="AT">Austria</option>
+                     <option value="AZ">Azerbaijan</option>
+                     <option value="BS">Bahamas</option>
+                     <option value="BH">Bahrain</option>
+                     <option value="BD">Bangladesh</option>
+                     <option value="BB">Barbados</option>
+                     <option value="BY">Belarus</option>
+                     <option value="BE">Belgium</option>
+                     <option value="BZ">Belize</option>
+                     <option value="BJ">Benin</option>
+                     <option value="BM">Bermuda</option>
+                     <option value="BT">Bhutan</option>
+                     <option value="BO">Bolivia, Plurinational State of</option>
+                     <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                     <option value="BA">Bosnia and Herzegovina</option>
+                     <option value="BW">Botswana</option>
+                     <option value="BV">Bouvet Island</option>
+                     <option value="BR">Brazil</option>
+                     <option value="IO">British Indian Ocean Territory</option>
+                     <option value="BN">Brunei Darussalam</option>
+                     <option value="BG">Bulgaria</option>
+                     <option value="BF">Burkina Faso</option>
+                     <option value="BI">Burundi</option>
+                     <option value="KH">Cambodia</option>
+                     <option value="CM">Cameroon</option>
+                     <option value="CA">Canada</option>
+                     <option value="CV">Cape Verde</option>
+                     <option value="KY">Cayman Islands</option>
+                     <option value="CF">Central African Republic</option>
+                     <option value="TD">Chad</option>
+                     <option value="CL">Chile</option>
+                     <option value="CN">China</option>
+                     <option value="CX">Christmas Island</option>
+                     <option value="CC">Cocos (Keeling) Islands</option>
+                     <option value="CO">Colombia</option>
+                     <option value="KM">Comoros</option>
+                     <option value="CG">Congo</option>
+                     <option value="CD">Congo, the Democratic Republic of the</option>
+                     <option value="CK">Cook Islands</option>
+                     <option value="CR">Costa Rica</option>
+                     <option value="CI">Côte d'Ivoire</option>
+                     <option value="HR">Croatia</option>
+                     <option value="CU">Cuba</option>
+                     <option value="CW">Curaçao</option>
+                     <option value="CY">Cyprus</option>
+                     <option value="CZ">Czech Republic</option>
+                     <option value="DK">Denmark</option>
+                     <option value="DJ">Djibouti</option>
+                     <option value="DM">Dominica</option>
+                     <option value="DO">Dominican Republic</option>
+                     <option value="EC">Ecuador</option>
+                     <option value="EG">Egypt</option>
+                     <option value="SV">El Salvador</option>
+                     <option value="GQ">Equatorial Guinea</option>
+                     <option value="ER">Eritrea</option>
+                     <option value="EE">Estonia</option>
+                     <option value="ET">Ethiopia</option>
+                     <option value="FK">Falkland Islands (Malvinas)</option>
+                     <option value="FO">Faroe Islands</option>
+                     <option value="FJ">Fiji</option>
+                     <option value="FI">Finland</option>
+                     <option value="FR">France</option>
+                     <option value="GF">French Guiana</option>
+                     <option value="PF">French Polynesia</option>
+                     <option value="TF">French Southern Territories</option>
+                     <option value="GA">Gabon</option>
+                     <option value="GM">Gambia</option>
+                     <option value="GE">Georgia</option>
+                     <option value="DE">Germany</option>
+                     <option value="GH">Ghana</option>
+                     <option value="GI">Gibraltar</option>
+                     <option value="GR">Greece</option>
+                     <option value="GL">Greenland</option>
+                     <option value="GD">Grenada</option>
+                     <option value="GP">Guadeloupe</option>
+                     <option value="GU">Guam</option>
+                     <option value="GT">Guatemala</option>
+                     <option value="GG">Guernsey</option>
+                     <option value="GN">Guinea</option>
+                     <option value="GW">Guinea-Bissau</option>
+                     <option value="GY">Guyana</option>
+                     <option value="HT">Haiti</option>
+                     <option value="HM">Heard Island and McDonald Islands</option>
+                     <option value="VA">Holy See (Vatican City State)</option>
+                     <option value="HN">Honduras</option>
+                     <option value="HK">Hong Kong</option>
+                     <option value="HU">Hungary</option>
+                     <option value="IS">Iceland</option>
+                     <option value="IN">India</option>
+                     <option value="ID">Indonesia</option>
+                     <option value="IR">Iran, Islamic Republic of</option>
+                     <option value="IQ">Iraq</option>
+                     <option value="IE">Ireland</option>
+                     <option value="IM">Isle of Man</option>
+                     <option value="IL">Israel</option>
+                     <option value="IT">Italy</option>
+                     <option value="JM">Jamaica</option>
+                     <option value="JP">Japan</option>
+                     <option value="JE">Jersey</option>
+                     <option value="JO">Jordan</option>
+                     <option value="KZ">Kazakhstan</option>
+                     <option value="KE">Kenya</option>
+                     <option value="KI">Kiribati</option>
+                     <option value="KP">Korea, Democratic People's Republic of</option>
+                     <option value="KR">Korea, Republic of</option>
+                     <option value="KW">Kuwait</option>
+                     <option value="KG">Kyrgyzstan</option>
+                     <option value="LA">Lao People's Democratic Republic</option>
+                     <option value="LV">Latvia</option>
+                     <option value="LB">Lebanon</option>
+                     <option value="LS">Lesotho</option>
+                     <option value="LR">Liberia</option>
+                     <option value="LY">Libya</option>
+                     <option value="LI">Liechtenstein</option>
+                     <option value="LT">Lithuania</option>
+                     <option value="LU">Luxembourg</option>
+                     <option value="MO">Macao</option>
+                     <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                     <option value="MG">Madagascar</option>
+                     <option value="MW">Malawi</option>
+                     <option value="MY">Malaysia</option>
+                     <option value="MV">Maldives</option>
+                     <option value="ML">Mali</option>
+                     <option value="MT">Malta</option>
+                     <option value="MH">Marshall Islands</option>
+                     <option value="MQ">Martinique</option>
+                     <option value="MR">Mauritania</option>
+                     <option value="MU">Mauritius</option>
+                     <option value="YT">Mayotte</option>
+                     <option value="MX">Mexico</option>
+                     <option value="FM">Micronesia, Federated States of</option>
+                     <option value="MD">Moldova, Republic of</option>
+                     <option value="MC">Monaco</option>
+                     <option value="MN">Mongolia</option>
+                     <option value="ME">Montenegro</option>
+                     <option value="MS">Montserrat</option>
+                     <option value="MA">Morocco</option>
+                     <option value="MZ">Mozambique</option>
+                     <option value="MM">Myanmar</option>
+                     <option value="NA">Namibia</option>
+                     <option value="NR">Nauru</option>
+                     <option value="NP">Nepal</option>
+                     <option value="NL">Netherlands</option>
+                     <option value="NC">New Caledonia</option>
+                     <option value="NZ">New Zealand</option>
+                     <option value="NI">Nicaragua</option>
+                     <option value="NE">Niger</option>
+                     <option value="NG">Nigeria</option>
+                     <option value="NU">Niue</option>
+                     <option value="NF">Norfolk Island</option>
+                     <option value="MP">Northern Mariana Islands</option>
+                     <option value="NO">Norway</option>
+                     <option value="OM">Oman</option>
+                     <option value="PK">Pakistan</option>
+                     <option value="PW">Palau</option>
+                     <option value="PS">Palestinian Territory, Occupied</option>
+                     <option value="PA">Panama</option>
+                     <option value="PG">Papua New Guinea</option>
+                     <option value="PY">Paraguay</option>
+                     <option value="PE">Peru</option>
+                     <option value="PH">Philippines</option>
+                     <option value="PN">Pitcairn</option>
+                     <option value="PL">Poland</option>
+                     <option value="PT">Portugal</option>
+                     <option value="PR">Puerto Rico</option>
+                     <option value="QA">Qatar</option>
+                     <option value="RE">Réunion</option>
+                     <option value="RO">Romania</option>
+                     <option value="RU">Russian Federation</option>
+                     <option value="RW">Rwanda</option>
+                     <option value="BL">Saint Barthélemy</option>
+                     <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                     <option value="KN">Saint Kitts and Nevis</option>
+                     <option value="LC">Saint Lucia</option>
+                     <option value="MF">Saint Martin (French part)</option>
+                     <option value="PM">Saint Pierre and Miquelon</option>
+                     <option value="VC">Saint Vincent and the Grenadines</option>
+                     <option value="WS">Samoa</option>
+                     <option value="SM">San Marino</option>
+                     <option value="ST">Sao Tome and Principe</option>
+                     <option value="SA">Saudi Arabia</option>
+                     <option value="SN">Senegal</option>
+                     <option value="RS">Serbia</option>
+                     <option value="SC">Seychelles</option>
+                     <option value="SL">Sierra Leone</option>
+                     <option value="SG">Singapore</option>
+                     <option value="SX">Sint Maarten (Dutch part)</option>
+                     <option value="SK">Slovakia</option>
+                     <option value="SI">Slovenia</option>
+                     <option value="SB">Solomon Islands</option>
+                     <option value="SO">Somalia</option>
+                     <option value="ZA">South Africa</option>
+                     <option value="GS">South Georgia and the South Sandwich Islands</option>
+                     <option value="SS">South Sudan</option>
+                     <option value="ES">Spain</option>
+                     <option value="LK">Sri Lanka</option>
+                     <option value="SD">Sudan</option>
+                     <option value="SR">Suriname</option>
+                     <option value="SJ">Svalbard and Jan Mayen</option>
+                     <option value="SZ">Swaziland</option>
+                     <option value="SE">Sweden</option>
+                     <option value="CH">Switzerland</option>
+                     <option value="SY">Syrian Arab Republic</option>
+                     <option value="TW">Taiwan, Province of China</option>
+                     <option value="TJ">Tajikistan</option>
+                     <option value="TZ">Tanzania, United Republic of</option>
+                     <option value="TH">Thailand</option>
+                     <option value="TL">Timor-Leste</option>
+                     <option value="TG">Togo</option>
+                     <option value="TK">Tokelau</option>
+                     <option value="TO">Tonga</option>
+                     <option value="TT">Trinidad and Tobago</option>
+                     <option value="TN">Tunisia</option>
+                     <option value="TR">Turkey</option>
+                     <option value="TM">Turkmenistan</option>
+                     <option value="TC">Turks and Caicos Islands</option>
+                     <option value="TV">Tuvalu</option>
+                     <option value="UG">Uganda</option>
+                     <option value="UA">Ukraine</option>
+                     <option value="AE">United Arab Emirates</option>
+                     <option value="GB">United Kingdom</option>
+                     <option value="US" selected>United States</option>
+                     <option value="UM">United States Minor Outlying Islands</option>
+                     <option value="UY">Uruguay</option>
+                     <option value="UZ">Uzbekistan</option>
+                     <option value="VU">Vanuatu</option>
+                     <option value="VE">Venezuela, Bolivarian Republic of</option>
+                     <option value="VN">Viet Nam</option>
+                     <option value="VG">Virgin Islands, British</option>
+                     <option value="VI">Virgin Islands, U.S.</option>
+                     <option value="WF">Wallis and Futuna</option>
+                     <option value="EH">Western Sahara</option>
+                     <option value="YE">Yemen</option>
+                     <option value="ZM">Zambia</option>
+                     <option value="ZW">Zimbabwe</option>
+                  </select>
+               </label>
+
+               <label class="above">Postal Code
+                  <input type="string" name="zip"></label>
+            </fieldset>
 
 
-      https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/
-      
-      https://www.churchofjesuschrist.org/temples/details/laie-hawaii-temple?lang=eng
-      laie-hawaii/400x250/laie-temple-772761-wallpaper.jpg
-      laie-hawaii/800x500/laie-temple-772761-wallpaper.jpg
-      laie-hawaii/1280x800/laie-temple-772761-wallpaper.jpg
+            <fieldset>
+               <legend>Special Accommodations or Comments</legend>
 
-      https://www.churchofjesuschrist.org/temples/details/las-vegas-nevada-temple?lang=eng
-      las-vegas-nevada/400x250/las-vegas-temple-lds-758757-wallpaper.jpg
+               <textarea name="comments" rows="4" placeholder="Enter details here..."> </textarea>
+            </fieldset>
 
-      https://www.churchofjesuschrist.org/temples/details/houston-texas-temple?lang=eng
-      houston-texas/2018/400x250/houston-temple02.jpg
-      houston-texas/2018/800x500/houston-temple02.jpg
-      
-      https://www.churchofjesuschrist.org/temples/photo-gallery/denver-colorado-temple?lang=eng
-      denver-colorado/400x250/denver-temple-lds-766966-wallpaper.jpg
-
-      https://www.churchofjesuschrist.org/temples/photo-gallery/copenhagen-denmark-temple?lang=eng
-      copenhagen-denmark/400x250/copenhagen-denmark-temple-lds-278232-wallpaper.jpg
-
-      https://www.churchofjesuschrist.org/temples/photo-gallery/chicago-illinois-temple?lang=eng
-      chicago-illinois/400x250/chicago-illinois-lds-temple-82591-wallpaper.jpg
-
-      https://www.churchofjesuschrist.org/temples/details/boston-massachusetts-temple?lang=eng
-      boston-massachusetts/400x250/boston-temple-lds-945541-wallpaper.jpg
-
-      https://www.churchofjesuschrist.org/temples/details/bern-switzerland-temple?lang=eng
-      bern-switzerland/400x250/ber-switzerland-temple-lds-903376-wallpaper.jpg
-
-      https://www.churchofjesuschrist.org/temples/details/london-england-temple?lang=eng
-      london-england/400x250/london-england-temple-lds-784251-wallpaper.jpg
-
-      https://www.churchofjesuschrist.org/temples/details/los-angeles-california-temple?lang=eng
-      los-angeles-california/400x250/los-angeles-temple-766339-wallpaper.jpg
-
-      https://www.churchofjesuschrist.org/temples/details/manhattan-new-york-temple?lang=eng
-      manhattan-new-york/400x250/manhattan-temple-lds-248728-wallpaper.jpg
-
-      https://www.churchofjesuschrist.org/temples/details/manila-philippines-temple?lang=eng
-      manila-philippines/400x250/manila-philippines-temple-lds-129585-wallpaper.jpg
-
-      https://www.churchofjesuschrist.org/temples/details/paris-france-temple?lang=eng
-      paris-france/2018/400x250/Paris-Temple02.jpg
-
-      https://www.churchofjesuschrist.org/temples/details/rome-italy-temple?lang=eng
-      rome-italy/2019/400x250/6-Rome-Temple-2160338.jpg
-
-      https://www.churchofjesuschrist.org/temples/details/sapporo-japan-temple?lang=eng
-      sapporo-japan/400x250/sapporo-japan-exterior-night-1945721.jpg
-
-      https://www.churchofjesuschrist.org/temples/details/vancouver-british-columbia-temple?lang=eng
-      vancouver-british-columbia/400x250/vancouver-temple-766984-wallpaper.jpg   
-
-      id: "1001";
-      name: "Sapporo Japan Temple";
-      address:`1-6-1 Oyachi-Nishi
-      Atsubetsu-ku Sapporo, Hokkaido
-      004-0042, Japan`; 
-      telephone: "(81) 11-890-8120";
-      map-url: "https://www.churchofjesuschrist.org/temples/map?lang=eng&templeName=sapporo-japan-temple"
-      closures: "Wednesday, 1 January 2020 - Friday, 3 January 2020
-      Monday, 9 March 2020 - Tuesday, 24 March 2020
-      Saturday, 11 April 2020
-      Monday, 7 September 2020 - Tuesday, 22 September 2020
-      Saturday, 10 October 2020
-      Friday, 25 December 2020"
+            <input type="submit" value="Book my Reservation" class="submitBtn">
+         </form>
+      </section>
+   </main>
 
 
+   <footer class="footer">
+      <div class="copyright">copyright 2019</div>
+   </footer>
+
+
+   <script src="./js/script.js"></script>
 </body>
+
 </html>

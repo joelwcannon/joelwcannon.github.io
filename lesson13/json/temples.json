@@ -1,0 +1,36 @@
+{id: "1001",
+   name: "Sapporo Japan Temple",
+   imageurls: [
+   "sapporo-japan/400x250/sapporo-japan-exterior-night-1945721.jpg",
+   "sapporo-japan/800x500/sapporo-japan-exterior-night-1945721.jpg",
+   "sapporo-japan/1280x800/sapporo-japan-exterior-night-1945721.jpg"],
+   address:"1-6-1 Oyachi-Nishi\n
+   Atsubetsu-ku Sapporo, Hokkaido\n
+   004-0042, Japan",
+   telephone: "(81) 11-890-8120",
+   email: "sapporotemple@lds.org",
+   map-url: "https://www.churchofjesuschrist.org/temples/map?lang=eng&templeName=sapporo-japan-temple",
+   services: ["Clothing rental available",
+   "Cafeteria available",
+   "No patron housing available",
+   "Distribution center nearby"],
+   closures: ["Wednesday, 1 January 2020 - Friday, 3 January 2020",
+   "Monday, 9 March 2020 - Tuesday, 24 March 2020",
+   "Saturday, 11 April 2020",
+   "Monday, 7 September 2020 - Tuesday, 22 September 2020",
+   "Saturday, 10 October 2020",
+   "Friday, 25 December 2020"],
+   schedule: [
+   {time: "11:00 AM", 
+         session: "Walk-ins Only - Japanese"},
+   {time: "2:00 PM", 
+         session: "Walk-ins Only - Japanese"},
+   {time: "7:00 PM", 
+         session: "Walk-ins Only - Japanese"}],
+   milestones: [
+   {date: "3 October 2009",
+         milestone: "Announced"},
+   {date: "22 October 2011",
+         milestone: "Groundbreaking"},
+   {date: "21 August 2016",
+         milestone: "Dedicated"}]}

@@ -2,7 +2,63 @@
 //  Util
 //  */
 
- $med-width: 30em;
- $lg-width: 60em;
- $xlg-width: 80em;
+//media break widths
+$break-medium: 30em;
+$break-large: 60em;
+$break-xlg: 80em;
 
+@mixin breakpoint($break) {
+   @if $break==xlg {
+      @media (min-width : $break-xlg) {
+         @content;
+      }
+   }
+
+   @else if $break==large {
+      @media (min-width: $break-large) {
+         @content;
+      }
+   }
+
+   @else if $break==medium {
+      @media (min-width: $break-medium) {
+         @content;
+      }
+   }
+
+   @else {
+      @media ($break) {
+         @content;
+      }
+   }
+}
+
+@mixin flex-container($axis, $wrap: nowrap) {
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-flex-flow: $axis $wrap;
+   -ms-flex-flow: $axis $wrap;
+   flex-flow: $axis $wrap;
+}
+
+@mixin center($max-width, $width: 90%) {
+   width: $width;
+   max-width: $max-width;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.clearfix:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.max-width {
+   @include breakpoint(medium) {
+
+      @include center(1000px, 95%);
+   }
+}
