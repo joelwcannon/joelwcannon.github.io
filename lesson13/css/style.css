@@ -5,7 +5,7 @@
   clear: both;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 60em) {
   .max-width {
     width: 95%;
     max-width: 1000px;
@@ -51,7 +51,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -71,6 +71,10 @@ html {
   margin: 0;
 }
 
+body {
+  background-color: #fffae6;
+}
+
 .header {
   display: flex;
   flex-wrap: nowrap;
@@ -83,6 +87,7 @@ html {
   margin: 0.25rem 0;
 }
 .logo h1 {
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   font-size: 1.2rem;
   text-align: center;
   margin: 0;
@@ -100,6 +105,108 @@ html {
   padding: 0.25rem;
   text-align: center;
   font-size: 0.8rem;
+}
+
+.heading {
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+  font-size: 2rem;
+}
+@media (min-width: 30em) {
+  .heading {
+    font-size: 2.2rem;
+    padding: 0;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 11.5rem auto;
+  grid-column-gap: 0.5rem;
+}
+
+.sidebar {
+  background-color: white;
+  padding: 0.5rem;
+}
+.sidebar a {
+  display: block;
+  font-size: 1rem;
+  padding: 0.25em 0;
+}
+
+.content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+ul.services,
+ul.closures,
+ul.milestones {
+  margin: 1rem 0;
+  font-weight: bold;
+}
+ul.services li,
+ul.closures li,
+ul.milestones li {
+  display: list-item;
+  margin-left: 2rem;
+  font-weight: 300;
+}
+
+.summary-table {
+  background-color: white;
+  width: 300px;
+  padding: 0.5em;
+}
+.forecast {
+  display: none;
+}
+.forecast h3 {
+  text-align: left;
+  padding: 0.25rem;
+}
+@media (min-width: 30em) {
+  .forecast {
+    display: block;
+  }
+}
+
+#five-day-grid {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  margin-bottom: 2rem;
+  width: 390px;
+}
+#five-day-grid .daily-forecast {
+  text-align: center;
+}
+#five-day-grid .daily-forecast .dow {
+  margin: 1px;
+  background-color: #4951A6;
+  color: white;
+  font-weight: bold;
+}
+#five-day-grid .daily-forecast .weather-icon {
+  margin: 1px;
+  width: 75px;
+  border: 1px solid black;
+  background-color: #9BA3F2;
+}
+#five-day-grid .daily-forecast .temp {
+  margin: 1px;
+  border: 1px solid #8C7E4C;
+  background-color: white;
 }
 
 /*
@@ -282,6 +389,7 @@ html {
 .report {
   padding: 0.5em;
   margin: 0.5em 0;
+  background-color: white;
 }
 .report form {
   display: grid;

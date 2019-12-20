@@ -1,36 +1,58 @@
-{id: "1001",
-   name: "Sapporo Japan Temple",
-   imageurls: [
-   "sapporo-japan/400x250/sapporo-japan-exterior-night-1945721.jpg",
-   "sapporo-japan/800x500/sapporo-japan-exterior-night-1945721.jpg",
-   "sapporo-japan/1280x800/sapporo-japan-exterior-night-1945721.jpg"],
-   address:"1-6-1 Oyachi-Nishi\n
+{
+      "id": "1001",
+      "name": "Sapporo Japan Temple",
+      "imageurls": [
+            "sapporo-japan/400x250/sapporo-japan-exterior-night-1945721.jpg",
+            "sapporo-japan/800x500/sapporo-japan-exterior-night-1945721.jpg",
+            "sapporo-japan/1280x800/sapporo-japan-exterior-night-1945721.jpg"
+      ],
+      "address":"1-6-1 Oyachi-Nishi\n
    Atsubetsu-ku Sapporo, Hokkaido\n
    004-0042, Japan",
-   telephone: "(81) 11-890-8120",
-   email: "sapporotemple@lds.org",
-   map-url: "https://www.churchofjesuschrist.org/temples/map?lang=eng&templeName=sapporo-japan-temple",
-   services: ["Clothing rental available",
-   "Cafeteria available",
-   "No patron housing available",
-   "Distribution center nearby"],
-   closures: ["Wednesday, 1 January 2020 - Friday, 3 January 2020",
-   "Monday, 9 March 2020 - Tuesday, 24 March 2020",
-   "Saturday, 11 April 2020",
-   "Monday, 7 September 2020 - Tuesday, 22 September 2020",
-   "Saturday, 10 October 2020",
-   "Friday, 25 December 2020"],
-   schedule: [
-   {time: "11:00 AM", 
-         session: "Walk-ins Only - Japanese"},
-   {time: "2:00 PM", 
-         session: "Walk-ins Only - Japanese"},
-   {time: "7:00 PM", 
-         session: "Walk-ins Only - Japanese"}],
-   milestones: [
-   {date: "3 October 2009",
-         milestone: "Announced"},
-   {date: "22 October 2011",
-         milestone: "Groundbreaking"},
-   {date: "21 August 2016",
-         milestone: "Dedicated"}]}
+   "telephone": "(81) 11-890-8120",
+      "email": "sapporotemple@lds.org",
+      "map-url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5833.558919804913!2d141.445742!3d43.025029!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc125b7be861e71!2sSapporo%20Japan%20Temple!5e0!3m2!1sen!2sus!4v1576808905259!5m2!1sen!2sus",
+      "weather-id": "2128295",
+      "services": [
+            "Clothing rental available",
+            "Cafeteria available",
+            "No patron housing available",
+            "Distribution center nearby"
+      ],
+      "closures": [
+            "Wednesday, 1 January 2020 - Friday, 3 January 2020",
+            "Monday, 9 March 2020 - Tuesday, 24 March 2020",
+            "Saturday, 11 April 2020",
+            "Monday, 7 September 2020 - Tuesday, 22 September 2020",
+            "Saturday, 10 October 2020",
+            "Friday, 25 December 2020"
+      ],
+      "schedule": [
+            {
+                  "time": "11:00 AM",
+                  "session": "Walk-ins Only - Japanese"
+            },
+            {
+                  "time": "2:00 PM",
+                  "session": "Walk-ins Only - Japanese"
+            },
+            {
+                  "time": "7:00 PM",
+                  "session": "Walk-ins Only - Japanese"
+            }
+      ],
+      "milestones": [
+            {
+                  "date": "3 October 2009",
+                  "milestone": "Announced"
+            },
+            {
+                  "date": "22 October 2011",
+                  "milestone": "Groundbreaking"
+            },
+            {
+                  "date": "21 August 2016",
+                  "milestone": "Dedicated"
+            }
+      ]
+}

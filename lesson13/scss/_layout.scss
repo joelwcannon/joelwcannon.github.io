@@ -14,6 +14,10 @@
    margin: 0;
 }
 
+body {
+   background-color: lighten($bg-color, 8%);
+}
+
 .header {
    display: flex;
    flex-wrap: nowrap;
@@ -26,6 +30,7 @@
    margin: .25rem 0;
 
    h1 {
+      font-family: $header-font;
       font-size: 1.2rem;
       text-align: center;
       margin: 0;
@@ -45,6 +50,120 @@
    text-align: center;
    font-size: .8rem;
 
+}
+
+
+.heading {
+   margin: .5rem 0;
+   padding: 0 .5rem;
+   font-size: 2rem;
+
+   @include breakpoint(medium) {
+      font-size: 2.2rem;
+      padding: 0;
+   }
+}
+
+.container {
+   display: grid;
+   grid-template-columns: 11.5rem auto;
+   grid-column-gap: .5rem;
+}
+
+.sidebar {
+   background-color: white;
+   padding: .5rem;
+   a {
+      display: block;
+      font-size: 1rem;
+padding: .25em 0;   }
+}
+
+.content {
+   @include flex-container(row, wrap);
+   justify-content: space-between;
+   align-items: flex-start;
+   align-content: flex-start;
+}
+
+ul.services,
+ul.closures,
+ul.milestones {
+   margin: 1rem 0;
+   font-weight: bold;
+   li {
+      display: list-item;
+      // color: red;
+      margin-left: 2rem;
+      font-weight: 300;
+
+   }
+}
+
+.summary-table {
+   background-color: white;
+   width: 300px;
+   padding: .5em;
+
+   h4 {
+   }
+
+   p {
+      // padding: 3px 2px;
+   }
+}
+
+
+.forecast {
+   display: none;
+
+   h3 {
+      text-align: left;
+      padding: .25rem;
+   }
+
+   @include breakpoint(medium) {
+      display: block;
+   }
+}
+
+#five-day-grid {
+   background-color: white;
+   display: flex;
+   justify-content: space-evenly;
+   border: 1px solid black;
+   // margin: auto auto;
+   margin-bottom: 2rem;
+   width: 390px;
+
+   .daily-forecast {
+      text-align: center;
+
+      .dow {
+         margin: 1px;
+         // padding: 4px;
+         background-color: $color-mariner;
+         color: white;
+         font-weight: bold;
+      }
+
+      .weather-icon {
+         margin: 1px;
+         // padding: 3px;
+         width: 75px;
+         border: 1px solid black;
+         background-color: $color-pale-cornflower-blue;
+      }
+
+      .temp {
+         margin: 1px;
+         // padding: 3px;
+
+         border: 1px solid $primary-color;
+         background-color: white;
+
+      }
+   }
 }
 
 

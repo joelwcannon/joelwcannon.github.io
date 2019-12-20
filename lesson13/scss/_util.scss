@@ -57,7 +57,7 @@ $break-xlg: 80em;
 }
 
 .max-width {
-   @include breakpoint(medium) {
+   @include breakpoint(large) {
 
       @include center(1000px, 95%);
    }
