@@ -121,13 +121,13 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 11.5rem auto;
+  grid-template-columns: 9.5rem auto;
   grid-column-gap: 0.5rem;
 }
 @media (min-width: 60em) {
   .container {
     display: grid;
-    grid-template-columns: 11.5rem auto;
+    grid-template-columns: 9.5rem auto;
     grid-column-gap: 0.5rem;
   }
 }
@@ -136,10 +136,12 @@ body {
   background-color: white;
   padding: 0.5rem;
 }
+.sidebar h3 {
+  font-size: 1rem;
+}
 .sidebar a {
   display: block;
-  font-size: 1rem;
-  padding: 0.25em 0;
+  font-size: 0.8rem;
 }
 
 .content {
