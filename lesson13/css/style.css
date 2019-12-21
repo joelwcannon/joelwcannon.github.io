@@ -453,13 +453,23 @@ a.tile {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
   font-size: 15px;
-  padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
-  width: 100%;
+  top: 1rem;
+  right: 1rem;
   text-align: center;
+  background-color: #F2DF9B;
+  border-radius: 10px;
+}
+.text a {
+  text-decoration: none;
+  font-weight: 800;
+  padding: 8px 12px;
+}
+.text a:hover {
+  background-color: #555;
+  color: white;
+  border-radius: 10px;
 }
 
 /* Number text (1/3 etc) */
