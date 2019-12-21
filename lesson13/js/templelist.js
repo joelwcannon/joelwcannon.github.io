@@ -1,8 +1,9 @@
-// console.log ("temple list");
-const requestURL = './json/templelist.json';
+// console.log("temple list");
+const templeListURL = './json/templelist.json';
+const templesURL = './json/temples.json';
 const imagesPath = 'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/';
 
-fetch(requestURL)
+fetch(templeListURL)
    .then(function (response) {
       return response.json();
    })
@@ -12,77 +13,83 @@ fetch(requestURL)
 
       let listToConfig = document.querySelector('aside.sidebar');
       // console.table(listToConfig);
-towns.forEach((town) => {
-   let aEl = document.createElement('a');
-   aEl.setAttribute('href', "#");
-   aEl.textContent = town.name;
-   listToConfig.appendChild(aEl);
-})
-      // townsToConfig.forEach((townEl) => {
-      //    for (let i = 0; i < towns.length; i++) {
-      //       let townName = towns[i].name;
-      //       console.log(townEl.dataset.town);
-      //       if (townName == townEl.dataset.town) {
-      //          console.log(towns[i]);
+      towns.forEach((town) => {
+         let aEl = document.createElement('a');
 
-      //          let townNameEl = document.createElement('h3');
-      //          townNameEl.textContent = townName;
+         if (town.weatherid) {
+            aEl.setAttribute('href', `visit.html?id=${town.id}&weatherid=${town.weatherid}`);
+         } else {
+            aEl.classList.toggle("inactive");
+         }
+         // aEl.className = "live";
+         aEl.textContent = town.name;
+         listToConfig.appendChild(aEl);
+      })
 
-      //          let imageEl = document.createElement('img');
-      //          // imageEl.setAttribute('src', imagesPath.concat(image.getAttribute('data-src')));
-      //          imageEl.setAttribute('src', imagesPath.concat(towns[i].photo));
-      //          imageEl.setAttribute('alt', townName);
+   });
 
-      //          let mottoEl = document.createElement('h4');
-      //          mottoEl.textContent = `"${towns[i].motto}"`;
+function matchingTemple(temple) {
+   return temple.id == urlp['id'];
+   // console.log(urlp['id'], (urlp['id'] == temple.id), temple);
+}
 
-      //          let yearFoundedEl = document.createElement('p');
-      //          yearFoundedEl.textContent = `Founded: ${towns[i].yearFounded}`;
+fetch(templesURL)
+   .then((response) => response.json())
+   .then((jsObject) => {
+      // console.log("temples ", jsObject);
 
-      //          let populationEl = document.createElement('p');
-      //          populationEl.textContent = `2019 Population: ${towns[i].currentPopulation}`;
-               
-      //          let rainFallEl = document.createElement('p');
-      //          rainFallEl.textContent = `Average Rain Fall: ${towns[i].averageRainfall}"`;
+      const temple = jsObject.find(matchingTemple);
+      // console.log("temple found ", temple);
+      if (temple) {
+         
 
-      //          townEl.appendChild(imageEl);
-      //          townEl.appendChild(townNameEl);
-      //          townEl.appendChild(mottoEl);
-      //          townEl.appendChild(yearFoundedEl);
-      //          townEl.appendChild(populationEl);
-      //          townEl.appendChild(rainFallEl);
-      //       }
-      //    }
-      //    // observer.observe(img);
-      // });
+         document.getElementById('name').textContent = temple.name;
+         // document.getElementById('name').setAttribute('data-weatherid',temple.weatherid);
+         document.getElementById('phone').innerHTML = `<span>Phone: </span>
+      <a href="tel:${temple.phone}">${temple.phone}</a>`;
+         document.getElementById('email').innerHTML = `<span>Email: </span>
+      <a href="mailto:${temple.email}">${temple.email}</a>`;
+         document.getElementById('map').setAttribute('src', temple.mapurl);
+         document.getElementById('photo').innerHTML = `<source media="(min-width: 800px)" srcset="${imagesPath}${temple.imageurls[1]}">
+      <source media="(min-width: 400px)" srcset="${imagesPath}${temple.imageurls[0]}">
+      <img src="./images/houseofthelord.jfif" alt="placeholder">`;
 
-      // for (let i = 0; i < towns.length; i++) {
-         // select matching card
-         // let card = document.createElement('section');
+         buildList("services", "Services", temple.services);
+         buildList("closures", "2020 Closures", temple.closures);
 
-         // let townName = towns[i].name;
-         // let townNameEl = document.createElement('h3');
-         // townNameEl.textContent = townName;
+         function buildList(id, title, arr) {
+            const ulEl = document.getElementById(id);
 
-         // let imageEl = document.createElement('img');
-         // imageEl.setAttribute('src', imagesPath.concat(image.getAttribute('data-src')));
-         // imageEl.setAttribute('src', imagesPath.concat(towns[i].photo));
-         // imageEl.setAttribute('alt', townName);
+            // console.log(title, arr);
+            // console.log(document.getElementById(id).textContent)
 
-         // let mottoEl = document.createElement('p');
-         // mottoEl.textContent = towns[i].motto;
+            ulEl.innerHTML = title;
+            arr.forEach((li) => {
+               let liEl = document.createElement('li');
+               liEl.textContent = `${li}`;
+               ulEl.appendChild(liEl);
+            })
+         }
 
-         // let yearFoundedEl = document.createElement('p');
-         // yearFoundedEl.textContent = towns[i].yearfounded;
+         let ulEl = document.getElementById("milestones");
 
-         // let populationEl = document.createElement('p');
-         // populationEl.textContent = towns[i].currentPopulation;
+         ulEl.innerHTML = "Milestones";
+         temple.milestones.forEach((li) => {
+            let liEl = document.createElement('li');
+            liEl.innerHTML = `<span class="mdate">${li.date}</span> -- <span class="milestone">${li.milestone}</span>`;
+            ulEl.appendChild(liEl);
+         })
 
-         // card.appendChild(imageEl);
-         // card.appendChild(townNameEl);
-         // card.appendChild(mottoEl);
-         // card.appendChild(yearFoundedEl);
-         // card.appendChild(populationEl);
-
-      // }
+         ulEl = document.getElementById("schedule");
+         ulEl.innerHTML = "Schedule";
+         temple.schedule.forEach((li) => {
+            let liEl = document.createElement('li');
+            liEl.innerHTML = `<span class="time">${li.time}</span> : <span class="session">${li.session}</span>`;
+            ulEl.appendChild(liEl);
+         })
+         
+         console.log(temple);
+         const cityEl = document.getElementById("city");
+         cityEl.classList.remove("hide");
+      }
    });

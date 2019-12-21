@@ -55,10 +55,3 @@ $break-xlg: 80em;
    display: table;
    clear: both;
 }
-
-.max-width {
-   @include breakpoint(large) {
-
-      @include center(1000px, 95%);
-   }
-}

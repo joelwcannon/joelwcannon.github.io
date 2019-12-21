@@ -1,5 +1,5 @@
 const townId = document.getElementById('name').dataset.weatherid;
-console.log(townId);
+// console.log(townId);
 // const sapporoId = 2128295;
 const appId = "ca6c0f399be1148d24ceb57e7ed8ae40";
 const weatherAPIURL = `https://api.openweathermap.org/data/2.5/weather?id=${townId}&units=imperial&APPID=${appId}`;

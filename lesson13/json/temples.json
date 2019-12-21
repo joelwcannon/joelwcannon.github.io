@@ -1,58 +1,307 @@
-{
-      "id": "1001",
-      "name": "Sapporo Japan Temple",
-      "imageurls": [
-            "sapporo-japan/400x250/sapporo-japan-exterior-night-1945721.jpg",
-            "sapporo-japan/800x500/sapporo-japan-exterior-night-1945721.jpg",
-            "sapporo-japan/1280x800/sapporo-japan-exterior-night-1945721.jpg"
-      ],
-      "address":"1-6-1 Oyachi-Nishi\n
-   Atsubetsu-ku Sapporo, Hokkaido\n
-   004-0042, Japan",
-   "telephone": "(81) 11-890-8120",
-      "email": "sapporotemple@lds.org",
-      "map-url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5833.558919804913!2d141.445742!3d43.025029!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc125b7be861e71!2sSapporo%20Japan%20Temple!5e0!3m2!1sen!2sus!4v1576808905259!5m2!1sen!2sus",
-      "weather-id": "2128295",
-      "services": [
-            "Clothing rental available",
-            "Cafeteria available",
-            "No patron housing available",
-            "Distribution center nearby"
-      ],
-      "closures": [
-            "Wednesday, 1 January 2020 - Friday, 3 January 2020",
-            "Monday, 9 March 2020 - Tuesday, 24 March 2020",
-            "Saturday, 11 April 2020",
-            "Monday, 7 September 2020 - Tuesday, 22 September 2020",
-            "Saturday, 10 October 2020",
-            "Friday, 25 December 2020"
-      ],
-      "schedule": [
-            {
-                  "time": "11:00 AM",
-                  "session": "Walk-ins Only - Japanese"
-            },
-            {
-                  "time": "2:00 PM",
-                  "session": "Walk-ins Only - Japanese"
-            },
-            {
-                  "time": "7:00 PM",
-                  "session": "Walk-ins Only - Japanese"
-            }
-      ],
-      "milestones": [
-            {
-                  "date": "3 October 2009",
-                  "milestone": "Announced"
-            },
-            {
-                  "date": "22 October 2011",
-                  "milestone": "Groundbreaking"
-            },
-            {
-                  "date": "21 August 2016",
-                  "milestone": "Dedicated"
-            }
-      ]
-}
+[
+      {
+            "id": "1181",
+            "name": "Sapporo Japan Temple",
+            "imageurls": [
+                  "sapporo-japan/400x250/sapporo-japan-exterior-night-1945721.jpg",
+                  "sapporo-japan/800x500/sapporo-japan-exterior-night-1945721.jpg",
+                  "sapporo-japan/1280x800/sapporo-japan-exterior-night-1945721.jpg"
+            ],
+            "phone": "(81) 11-890-8120",
+            "email": "sapporotemple@lds.org",
+            "mapurl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5833.558919804913!2d141.445742!3d43.025029!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc125b7be861e71!2sSapporo%20Japan%20Temple!5e0!3m2!1sen!2sus!4v1576808905259!5m2!1sen!2sus",
+            "weatherid": "2128295",
+            "services": [
+                  "Clothing rental available",
+                  "Cafeteria available",
+                  "No patron housing available",
+                  "Distribution center nearby"
+            ],
+            "closures": [
+                  "Wednesday, 1 January 2020 - Friday, 3 January 2020",
+                  "Monday, 9 March 2020 - Tuesday, 24 March 2020",
+                  "Saturday, 11 April 2020",
+                  "Monday, 7 September 2020 - Tuesday, 22 September 2020",
+                  "Saturday, 10 October 2020",
+                  "Friday, 25 December 2020"
+            ],
+            "schedule": [
+                  {
+                        "time": "11:00 AM",
+                        "session": "Walk-ins Only - Japanese"
+                  },
+                  {
+                        "time": "2:00 PM",
+                        "session": "Walk-ins Only - Japanese"
+                  },
+                  {
+                        "time": "7:00 PM",
+                        "session": "Walk-ins Only - Japanese"
+                  }
+            ],
+            "milestones": [
+                  {
+                        "date": "3 October 2009",
+                        "milestone": "Announced"
+                  },
+                  {
+                        "date": "22 October 2011",
+                        "milestone": "Groundbreaking"
+                  },
+                  {
+                        "date": "21 August 2016",
+                        "milestone": "Dedicated"
+                  }
+            ]
+      },
+      {
+            "id": "1020",
+            "name": "Bern Switzerland Temple",
+            "imageurls": [
+                  "bern-switzerland/400x250/ber-switzerland-temple-lds-903376-wallpaper.jpg",
+                  "bern-switzerland/800x500/ber-switzerland-temple-lds-903376-wallpaper.jpg",
+                  "bern-switzerland/1280x800/ber-switzerland-temple-lds-903376-wallpaper.jpg"
+            ],
+            "phone": "(41) 31-915-5252",
+            "email": "berntemple@lds.org",
+            "mapurl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2720.942596435019!2d7.456042415609637!3d47.00210007914918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e3a67b8ddf01f%3A0x5eb1fc15d2088b68!2sTempelstrasse%202%2C%203052%20Zollikofen%2C%20Switzerland!5e0!3m2!1sen!2sus!4v1576873100168!5m2!1sen!2sus",
+            "weatherid": "2661552",
+            "services": [
+                  "Clothing rental available",
+                  "No cafeteria available",
+                  "Patron housing available",
+                  "Distribution center nearby"
+            ],
+            "closures": [
+                  "Wednesday, 1 January 2020 - Thursday, 2 January 2020",
+                  "Monday, 6 January 2020 - Monday, 20 January 2020",
+                  "Monday, 18 May 2020 - Monday, 13 July 2020",
+                  "Thursday, 24 December 2020 - Saturday, 26 December 2020",
+                  "Thursday, 31 December 2020"
+            ],
+            "schedule": [
+                  {
+                        "time": "8:00 AM",
+                        "session": "Walk-ins and Appointments"
+                  },
+                  {
+                        "time": "9:15 AM",
+                        "session": "Walk-ins Only"
+                  },
+                  {
+                        "time": "10:30 AM",
+                        "session": "Walk-ins and Appointments"
+                  },
+                  {
+                        "time": "11:45 AM",
+                        "session": "Walk-ins Only"
+                  }
+            ],
+            "milestones": [
+                  {
+                        "date": "1 July 1952",
+                        "milestone": "Announced"
+                  },
+                  {
+                        "date": "5 August 1953",
+                        "milestone": "Groundbreaking"
+                  },
+                  {
+                        "date": "11 September 1955",
+                        "milestone": "Dedicated"
+                  },
+                  {
+                        "date": "23 October 1992",
+                        "milestone": "Rededicated"
+                  }
+            ]
+      },
+      {
+            "id": "1026",
+            "name": "Boston Massachusetts Temple",
+            "imageurls": [
+                  "boston-massachusetts/400x250/boston-temple-lds-945541-wallpaper.jpg",
+                  "boston-massachusetts/800x500/boston-temple-lds-945541-wallpaper.jpg",
+                  "boston-massachusetts/1280x800/boston-temple-lds-945541-wallpaper.jpg"
+            ],
+            "phone": "(1) 617-993-9993",
+            "email": "bostontemple@lds.org",
+            "mapurl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.7483401000886!2d-71.18843704890857!3d42.41180363972255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e377d35680d53b%3A0x6f508d6ee816c71f!2s100%20Hinckley%20Way%2C%20Arlington%2C%20MA%2002476!5e0!3m2!1sen!2sus!4v1576873963228!5m2!1sen!2sus",
+            "weatherid": "4930956",
+            "services": [
+                  "Clothing rental available",
+                  "No cafeteria available",
+                  "No patron housing available",
+                  "Distribution center nearby"
+            ],
+            "closures": [
+                  "Wednesday, 1 January 2020",
+                  "Monday, 6 January 2020 - Monday, 20 January 2020",
+                  "Saturday, 4 April 2020",
+                  "Saturday, 4 July 2020",
+                  "Monday, 6 July 2020 - Monday, 20 July 2020",
+                  "Saturday, 3 October 2020",
+                  "Wednesday, 25 November 2020",
+                  "Thursday, 26 November 2020",
+                  "Thursday, 24 December 2020",
+                  "Friday, 25 December 2020",
+                  "Thursday, 31 December 2020"
+            ],
+            "schedule": [
+                  {
+                        "time": "4:30 PM",
+                        "session": "Walk-ins and Appointments"
+                  },
+                  {
+                        "time": "5:30 PM",
+                        "session": "Walk-ins and Appointments"
+                  },
+                  {
+                        "time": "6:30 PM",
+                        "session": "Walk-ins and Appointments"
+                  },
+                  {
+                        "time": "7:30 PM",
+                        "session": "Walk-ins and Appointments"
+                  }
+            ],
+            "milestones": [
+                  {
+                        "date": "30 September 1995",
+                        "milestone": "Announced"
+                  },
+                  {
+                        "date": "13 June 1997",
+                        "milestone": "Groundbreaking"
+                  },
+                  {
+                        "date": "1 October 2000",
+                        "milestone": "Dedicated"
+                  }
+            ]
+      },
+      {
+            "id": "1040",
+            "name": "Chicago Illinois Temple",
+            "imageurls": [
+                  "chicago-illinois/400x250/chicago-illinois-lds-temple-82591-wallpaper.jpg",
+                  "chicago-illinois/800x500/chicago-illinois-lds-temple-82591-wallpaper.jpg",
+                  "chicago-illinois/1280x800/chicago-illinois-lds-temple-82591-wallpaper.jpg"
+            ],
+            "phone": "(1) 847-299-6500",
+            "email": "chicagotemple@lds.org",
+            "mapurl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.9708045934412!2d-87.86175344891696!3d42.08667506021249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fb87733e84ac9%3A0x3bc880a27e94d9e9!2s4151%20W%20Lake%20Ave%2C%20Glenview%2C%20IL%2060025!5e0!3m2!1sen!2sus!4v1576874526054!5m2!1sen!2sus",
+            "weatherid": "4887398",
+            "services": [
+                  "Clothing rental available",
+                  "No cafeteria available",
+                  "No patron housing available",
+                  "Distribution center nearby"
+            ],
+            "closures": [
+                  "Wednesday, 1 January 2020",
+                  "Saturday, 4 April 2020 - Thursday, 9 July 2020",
+                  "Saturday, 3 October 2020",
+                  "Thursday, 24 December 2020 - Friday, 25 December 2020",
+                  "Thursday, 31 December 2020 - Friday, 1 January 2021"
+            ],
+            "schedule": [
+                  {
+                        "time": "3:00 PM",
+                        "session": "Walk-ins and Appointments - English"
+                  },
+                  {
+                        "time": "4:00 PM",
+                        "session": "Walk-ins and Appointments - English"
+                  },
+                  {
+                        "time": "5:00 PM",
+                        "session": "Walk-ins and Appointments - English"
+                  },
+                  {
+                        "time": "6:00 PM",
+                        "session": "Walk-ins and Appointments - English"
+                  },
+                  {
+                        "time": "7:00 PM",
+                        "session": "Walk-ins and Appointments - English"
+                  },
+                  {
+                        "time": "7:30 PM",
+                        "session": "Walk-ins and Appointments - English"
+                  }
+            ],
+            "milestones": [
+                  {
+                        "date": "1 April 1981",
+                        "milestone": "Announced"
+                  },
+                  {
+                        "date": "13 August 1983",
+                        "milestone": "Groundbreaking"
+                  },
+                  {
+                        "date": "9 August 1985",
+                        "milestone": "Dedicated"
+                  },
+                  {
+                        "date": "8 October 1989",
+                        "milestone": "Rededicated"
+                  }
+            ]
+      },
+      {
+            "id": "1049",
+            "name": "Copenhagen Denmark Temple",
+            "imageurls": [
+                  "copenhagen-denmark/400x250/copenhagen-denmark-temple-lds-278232-wallpaper.jpg",
+                  "copenhagen-denmark/800x500/copenhagen-denmark-temple-lds-278232-wallpaper.jpg",
+                  "copenhagen-denmark/1280x800/copenhagen-denmark-temple-lds-278232-wallpaper.jpg"
+            ],
+            "phone": "(45) 38-18-1818",
+            "email": "copenhagentemple@lds.org",
+            "mapurl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.7858464869187!2d12.531672351485605!3d55.69271090399691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253b4125b1f0d%3A0x7abbc6fb4df01e7!2sPriorvej%2012%2C%202000%20Frederiksberg%2C%20Denmark!5e0!3m2!1sen!2sus!4v1576875300492!5m2!1sen!2sus",
+            "weatherid": "2618425",
+            "services": [
+                  "No clothing rental available",
+                  "No cafeteria available",
+                  "Patron housing available",
+                  "Distribution center nearby"
+            ],
+            "closures": [
+            "Wednesday, 1 January 2020",
+            "Monday, 20 April 2020 - Monday, 4 May 2020",
+                  "Monday, 21 September 2020 - Monday, 5 October 2020",
+                  "Wednesday, 23 December 2020 - Monday, 28 December 2020",
+                  "Thursday, 31 December 2020 - Friday, 1 January 2021"
+            ],
+            "schedule": [
+                  {
+                        "time": "8:00 AM",
+                        "session": "Walk-ins Only"
+                  },
+                  {
+                        "time": "10:00 AM",
+                        "session": "Walk-ins Only"
+                  },
+                  {
+                        "time": "12:00 PM",
+                        "session": "Walk-ins Only"
+                  }
+            ],
+            "milestones": [
+                  {
+                        "date": "17 March 1999",
+                        "milestone": "Announced"
+                  },
+                  {
+                        "date": "24 April 1999",
+                        "milestone": "Groundbreaking"
+                  },
+                  {
+                        "date": "23 May 2004",
+                        "milestone": "Dedicated"
+                  }
+            ]
+      }
+]

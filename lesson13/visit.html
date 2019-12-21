@@ -35,79 +35,184 @@
          <aside class="sidebar">
             <h3>Select a Location</h3>
          </aside>
-         <section class="content">
+         <section>
             <h2 class="heading">Visit a Temple</h2>
-
-            <picture>
-               <!-- <source media="(min-width: 1280px)" srcset="https://picsum.photos/1280/800"> -->
-               <source media="(min-width: 800px)" srcset="https://picsum.photos/800/500">
-               <source media="(min-width: 400px)" srcset="https://picsum.photos/400/250">
-               <img src="./images/houseofthelord.jfif" alt="placeholder">
-            </picture>
-            <div class="contact">
-               <h2 id="name" data-id="1000" data-weatherid="2128295">Sapporo Japan Temple</h2>
-               <!-- <p id="address">1-6-1 Oyachi-Nishi\n
+            <div class="hide content" id="city">
+               <picture id="photo">
+                  <!-- <source media="(min-width: 1280px)" srcset="https://picsum.photos/1280/800"> -->
+                  <source media="(min-width: 800px)" srcset="">
+                  <source media="(min-width: 400px)" srcset="">
+                  <img src="./images/houseofthelord.jfif" alt="placeholder">
+               </picture>
+               <div class="contact">
+                  <h2 id="name" data-id="1000" data-weatherid="2128295">??</h2>
+                  <!-- <p id="address">1-6-1 Oyachi-Nishi\n
                Atsubetsu-ku Sapporo, Hokkaido\n
                004-0042, Japan</p> -->
-               <div id="phone">
-                  <span>Phone: </span>
-                  <a href="tel:(81) 11-890-8120">(81) 11-890-8120</a>
-               </div>
-               <div id="email">
-                  <span>Email: </span><a href="mailto: sapporotemple@lds.org">sapporotemple@lds.org</a>
-               </div>
-               <div id="map">
-                  
-               </div>
-
-               <iframe class="map"
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5833.558919804913!2d141.445742!3d43.025029!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc125b7be861e71!2sSapporo%20Japan%20Temple!5e0!3m2!1sen!2sus!4v1576808905259!5m2!1sen!2sus"
-                  width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-            <div class="weather">
-               <div class=summary-table>
-                  <h4>Weather Summary</h4>
-                  <hr>
-                  <p>Currently: <span id='description'>?</span></p>
-                  <p>Temperature: <span id='temperature'>?</span> &deg;F</p>
-
-                  <p class='windchill'>Wind Chill: <span id='windchill'>?</span> &deg;F</p>
-                  <p>High: <span id='hightemp'>?</span> &deg;F</p>
-                  <p>Humidity: <span id='humidity'>?</span>%</p>
-                  <p>Wind Speed: <span id='windspeed'>10</span> mph</p>
-               </div>
-
-               <section class='forecast'>
-                  <div>
-                     <h3>5 Day Forecast</h3>
-                     <div id="five-day-grid">
-                     </div>
+                  <div id="phone">
+                     <span>Phone: </span>
+                     <a href="tel:??">??</a>
                   </div>
-               </section>
+                  <div id="email">
+                     <span>Email: </span><a href="mailto:??">??</a>
+                  </div>
+
+
+                  <iframe class="map" id="map" src="https://google.com" width="400" height="300" frameborder="0"
+                     style="border:0;" allowfullscreen=""></iframe>
+               </div>
+               <div class="weather">
+                  <div class=summary-table>
+                     <h4>Weather Summary</h4>
+                     <hr>
+                     <p>Currently: <span id='description'>?</span></p>
+                     <p>Temperature: <span id='temperature'>?</span> &deg;F</p>
+
+                     <p class='windchill'>Wind Chill: <span id='windchill'>?</span> &deg;F</p>
+                     <p>High: <span id='hightemp'>?</span> &deg;F</p>
+                     <p>Humidity: <span id='humidity'>?</span>%</p>
+                     <p>Wind Speed: <span id='windspeed'>10</span> mph</p>
+                  </div>
+
+                  <section class='forecast'>
+                     <div>
+                        <h3>5 Day Forecast</h3>
+                        <div id="five-day-grid">
+                        </div>
+                     </div>
+                  </section>
+               </div>
+
+               <ul class="services" id="services">Services
+                  <!-- <li>1Clothing rental available</li>
+                  <li>2Cafeteria available</li>
+                  <li>3No patron housing available</li>
+                  <li>4Distribution center nearby</li> -->
+               </ul>
+
+               <ul class="schedule" id="schedule">XSchedule
+                  <li><span class="time"></span> : <span class="session"></span></li>
+               </ul>
+
+               <ul class="closures" id="closures">2020 Closures
+                  <!-- <li>Wednesday, 1 January 2020 - Friday, 3 January 2020</li>
+                  <li>Monday, 9 March 2020 - Tuesday, 24 March 2020</li>
+                  <li>Saturday, 11 April 2020</li>
+                  <li>Monday, 7 September 2020 - Tuesday, 22 September 2020</li>
+                  <li>Saturday, 10 October 2020</li>
+                  <li>Friday, 25 December 2020</li> -->
+               </ul>
+               <ul class="milestones" id="milestones">Milestones
+                  <li><span class="mdate"></span><span class="milestone"></span></li>
+               </ul>
             </div>
 
-            <ul class="services">Services
-               <li>Clothing rental available</li>
-               <li>Cafeteria available</li>
-               <li>No patron housing available</li>
-               <li>Distribution center nearby</li>
-            </ul>
-            <ul class="closures">2020 Closures
-               <li>Wednesday, 1 January 2020 - Friday, 3 January 2020</li>
-               <li>Monday, 9 March 2020 - Tuesday, 24 March 2020</li>
-               <li>Saturday, 11 April 2020</li>
-               <li>Monday, 7 September 2020 - Tuesday, 22 September 2020</li>
-               <li>Saturday, 10 October 2020</li>
-               <li>Friday, 25 December 2020</li>
-            </ul>
-            <ul class=milestones>Milestones
-               <li>Clothing rental available</li>
-               <li>Cafeteria available</li>
-               <li>No patron housing available</li>
-               <li>Distribution center nearby</li>
-            </ul>
-
-
+            <section class="tileGroup"><span class="title">About Temple Ordinances</span>
+               <div class="tiles"><a class="tile"
+                     href="https://www.churchofjesuschrist.org/temples/prepare-for-your-temple-visit?lang=eng">
+                     <div class="mediaContainer">
+                        <figure class="figContainer">
+                           <img
+                              src="./images/preparing-to-enter-the-temple.jpg"
+                              alt="Prepare for the Temple" class="templeImg">
+                        </figure>
+                     </div>
+                     <div class="textContainer"><span class="title">Prepare for the Temple</span>
+                     </div>
+                  </a><a class="tile" href="https://www.churchofjesuschrist.org/temples/what-is-proxy-baptism?lang=eng">
+                     <div class="mediaContainer">
+                        <figure class="figContainer">
+                           <img
+                              src="./images/john-the-baptist-and-jesus.jpg"
+                              alt="About Proxy Baptism and Confirmation" class="img-_yhV1 image-o9iU9">
+                        </figure>
+                     </div>
+                     <div class="textContainer"><span class="title">About Proxy Baptism and
+                           Confirmation</span>
+                     </div>
+                  </a><a class="tile"
+                     href="https://www.churchofjesuschrist.org/temples/what-is-temple-endowment?lang=eng">
+                     <div class="mediaContainer">
+                        <figure class="figContainer">
+                           <img
+                              src="./images/what-is-the-temple-endowment.jpg"
+                              alt="About the Temple Endowment" class="templeImg">
+                        </figure>
+                     </div>
+                     <div class="textContainer"><span class="title">About the Temple Endowment</span>
+                     </div>
+                  </a><a class="tile"
+                     href="https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng">
+                     <div class="mediaContainer">
+                        <figure class="figContainer">
+                           <img
+                              src="./images/what-happens-in-a-temple-sealing.jpg"
+                              alt="About a Temple Sealing" class="templeImg">
+                        </figure>
+                     </div>
+                     <div class="textContainer"><span class="title">About a Temple Sealing</span>
+                     </div>
+                  </a></div>
+            </section>
+            <!-- <section class="tileGroup"><span class="title">About Temple Ordinances</span>
+               <div class="tiles"><a class="tile"
+                     href="https://www.churchofjesuschrist.org/temples/prepare-for-your-temple-visit?lang=eng">
+                     <div class="mediaContainer">
+                        <figure class="figContainer">
+                           <div class="imageContainer">
+                              <div class="loaded-b-kdr"><img sizes="100vw"
+                                    src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/320x200/preparing-to-enter-the-temple-1338089.jpg"
+                                    srcset="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/320x200/preparing-to-enter-the-temple-1338089.jpg 320w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/400x250/preparing-to-enter-the-temple-1338089.jpg 400w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/800x500/preparing-to-enter-the-temple-1338089.jpg 800w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/1280x800/preparing-to-enter-the-temple-1338089.jpg 1280w"
+                                    alt="Prepare for the Temple" class="templeImg"></div>
+                           </div>
+                        </figure>
+                     </div>
+                     <div class="textContainer"><span class="title">Prepare for the Temple</span>
+                     </div>
+                  </a><a class="tile" href="https://www.churchofjesuschrist.org/temples/what-is-proxy-baptism?lang=eng">
+                     <div class="mediaContainer">
+                        <figure class="figContainer">
+                           <div class="imageContainer">
+                              <div class="loaded-b-kdr"><img sizes="100vw"
+                                    src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/320x200/john-the-baptist-and-jesus-1440913.jpg"
+                                    srcset="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/320x200/john-the-baptist-and-jesus-1440913.jpg 320w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/400x250/john-the-baptist-and-jesus-1440913.jpg 400w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/800x500/john-the-baptist-and-jesus-1440913.jpg 800w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/1280x800/john-the-baptist-and-jesus-1440913.jpg 1280w"
+                                    alt="About Proxy Baptism and Confirmation" class="img-_yhV1 image-o9iU9"></div>
+                           </div>
+                        </figure>
+                     </div>
+                     <div class="textContainer"><span class="title">About Proxy Baptism and
+                           Confirmation</span>
+                     </div>
+                  </a><a class="tile"
+                     href="https://www.churchofjesuschrist.org/temples/what-is-temple-endowment?lang=eng">
+                     <div class="mediaContainer">
+                        <figure class="figContainer">
+                           <div class="imageContainer">
+                              <div class="loaded-b-kdr"><img sizes="100vw"
+                                    src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/320x200/what-is-the-temple-endowment-1336848.jpg"
+                                    srcset="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/320x200/what-is-the-temple-endowment-1336848.jpg 320w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/400x250/what-is-the-temple-endowment-1336848.jpg 400w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/800x500/what-is-the-temple-endowment-1336848.jpg 800w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/1280x800/what-is-the-temple-endowment-1336848.jpg 1280w"
+                                    alt="About the Temple Endowment" class="templeImg"></div>
+                           </div>
+                        </figure>
+                     </div>
+                     <div class="textContainer"><span class="title">About the Temple Endowment</span>
+                     </div>
+                  </a><a class="tile"
+                     href="https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng">
+                     <div class="mediaContainer">
+                        <figure class="figContainer">
+                           <div class="imageContainer">
+                              <div class="loaded-b-kdr"><img sizes="100vw"
+                                    src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/320x200/what-happens-in-a-temple-sealing-1084027.jpg"
+                                    srcset="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/320x200/what-happens-in-a-temple-sealing-1084027.jpg 320w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/400x250/what-happens-in-a-temple-sealing-1084027.jpg 400w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/800x500/what-happens-in-a-temple-sealing-1084027.jpg 800w, https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/1280x800/what-happens-in-a-temple-sealing-1084027.jpg 1280w"
+                                    alt="About a Temple Sealing" class="templeImg"></div>
+                           </div>
+                        </figure>
+                     </div>
+                     <div class="textContainer"><span class="title">About a Temple Sealing</span>
+                     </div>
+                  </a></div>
+            </section> -->
          </section>
       </div>
    </main>

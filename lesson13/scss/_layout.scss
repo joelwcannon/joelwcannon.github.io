@@ -2,7 +2,7 @@
  Layout
  */
 
- html {
+html {
    box-sizing: border-box;
 }
 
@@ -35,6 +35,7 @@ body {
       text-align: center;
       margin: 0;
    }
+
    p {
       text-align: center;
       font-size: .9rem;
@@ -49,9 +50,14 @@ body {
    padding: .25rem;
    text-align: center;
    font-size: .8rem;
-
 }
 
+.max-width {
+   @include breakpoint(large) {
+
+      @include center(1000px, 95%);
+   }
+}
 
 .heading {
    margin: .5rem 0;
@@ -60,23 +66,32 @@ body {
 
    @include breakpoint(medium) {
       font-size: 2.2rem;
-      padding: 0;
+      padding: 0 1rem;
    }
 }
 
 .container {
    display: grid;
-   grid-template-columns: 11.5rem auto;
-   grid-column-gap: .5rem;
+      grid-template-columns: 11.5rem auto;
+      grid-column-gap: .5rem;
+      
+   @media (min-width : $break-large) {
+      display: grid;
+      grid-template-columns: 11.5rem auto;
+      grid-column-gap: .5rem;     
+   }
 }
 
 .sidebar {
+   // display: none;
    background-color: white;
    padding: .5rem;
+
    a {
       display: block;
       font-size: 1rem;
-padding: .25em 0;   }
+      padding: .25em 0;
+   }
 }
 
 .content {
@@ -86,11 +101,17 @@ padding: .25em 0;   }
    align-content: flex-start;
 }
 
+.hide {
+   display: none;
+}
+
 ul.services,
+ul.schedule,
 ul.closures,
 ul.milestones {
    margin: 1rem 0;
    font-weight: bold;
+
    li {
       display: list-item;
       // color: red;
@@ -105,8 +126,7 @@ ul.milestones {
    width: 300px;
    padding: .5em;
 
-   h4 {
-   }
+   h4 {}
 
    p {
       // padding: 3px 2px;
@@ -166,5 +186,89 @@ ul.milestones {
    }
 }
 
+article {
+   background-color: white;
+   padding: .5em;
+   margin: .5em 0;
+
+   img {
+      width: 100%;
+      padding-right: .5em;
+      padding-bottom: .5em;
+
+      @include breakpoint(medium) {
+         float: left;
+         width: 50%;
+      }
+   }
+
+   .map {
+      padding: .5rem;
+   }
+
+   h3 {
+      // padding: .5rem;
+   }
+
+   h5 {
+      padding-left: 1rem;
+   }
+
+   p {
+      padding: .5rem;
+   }
+}
+
+.title {
+   text-transform: uppercase;
+   margin-bottom: 1rem;
+   padding: 0 1rem;
+
+   display: block;
+}
+
+.tiles {
+   // grid-template-columns: 1fr;
+   display: block;
+   // width: 100%;
+
+   @media (min-width: 600px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1vw;
+      // width: 100%;
+   }
+}
 
 
+
+a.tile {
+   // width: 100%;
+   text-decoration: none;
+   padding-bottom: 1rem;
+   margin-bottom: 1rem;
+}
+
+
+
+.mediaContainer {
+   // width: 100%;
+}
+
+.figContainer {
+   // height: 100%;
+   img {
+      width:100%;
+   }
+}
+
+.textContainer {
+
+   .title {
+      margin-bottom: 1rem;
+      // padding: 0 1rem;
+      text-transform: none;
+      font-style: italic;
+      // text-decoration: none;
+   }
+}
