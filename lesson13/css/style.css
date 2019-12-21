@@ -119,6 +119,21 @@ body {
   }
 }
 
+.quote {
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 1rem auto;
+  width: 90%;
+  text-align: center;
+}
+.quote .credit {
+  padding: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+}
+
 .container {
   display: grid;
   grid-template-columns: 9.5rem auto;
