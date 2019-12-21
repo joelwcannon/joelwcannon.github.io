@@ -162,17 +162,26 @@ body {
 ul.services,
 ul.schedule,
 ul.closures,
-ul.milestones {
-  margin: 1rem 0;
+ul.milestones,
+ul.specializedservices,
+ul.freeamenities {
+  margin-bottom: 1rem;
   font-weight: bold;
 }
 ul.services li,
 ul.schedule li,
 ul.closures li,
-ul.milestones li {
+ul.milestones li,
+ul.specializedservices li,
+ul.freeamenities li {
   display: list-item;
   margin-left: 2rem;
   font-weight: 300;
+}
+
+ul.specializedservices,
+ul.freeamenities {
+  padding: 0.5rem;
 }
 
 .summary-table {
@@ -280,6 +289,40 @@ a.tile {
   margin-bottom: 1rem;
   text-transform: none;
   font-style: italic;
+}
+
+@media (min-width: 600px) {
+  .g3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+    gap: 1em;
+  }
+}
+.g3 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 600px) {
+  .reception,
+.missionary {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: stretch;
+    gap: 1em;
+  }
+}
+.reception img,
+.missionary img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 0.25rem 1rem 2rem;
 }
 
 /*

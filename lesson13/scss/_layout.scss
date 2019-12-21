@@ -72,13 +72,13 @@ body {
 
 .container {
    display: grid;
-      grid-template-columns: 11.5rem auto;
-      grid-column-gap: .5rem;
-      
+   grid-template-columns: 11.5rem auto;
+   grid-column-gap: .5rem;
+
    @media (min-width : $break-large) {
       display: grid;
       grid-template-columns: 11.5rem auto;
-      grid-column-gap: .5rem;     
+      grid-column-gap: .5rem;
    }
 }
 
@@ -108,8 +108,10 @@ body {
 ul.services,
 ul.schedule,
 ul.closures,
-ul.milestones {
-   margin: 1rem 0;
+ul.milestones,
+ul.specializedservices,
+ul.freeamenities {
+   margin-bottom: 1rem;
    font-weight: bold;
 
    li {
@@ -119,6 +121,11 @@ ul.milestones {
       font-weight: 300;
 
    }
+}
+
+ul.specializedservices,
+ul.freeamenities {
+   padding: .5rem;
 }
 
 .summary-table {
@@ -256,9 +263,10 @@ a.tile {
 }
 
 .figContainer {
+
    // height: 100%;
    img {
-      width:100%;
+      width: 100%;
    }
 }
 
@@ -271,4 +279,41 @@ a.tile {
       font-style: italic;
       // text-decoration: none;
    }
+}
+
+.g3 {
+   @media (min-width: 600px) {
+      display: grid;
+      grid-template-columns: (1fr 1fr 1fr);
+      align-items: stretch;
+      gap: 1em;
+   }
+
+   // margin: 1em;
+
+   img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+   }
+}
+
+.reception,
+.missionary {
+   @media (min-width: 600px) {
+      display: grid;
+   grid-template-columns: (2fr 1fr);
+   align-items: stretch;
+   gap: 1em;
+   // margin: 1em;
+   }
+   img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+   }
+}
+
+.caption {
+   padding: .25rem 1rem 2rem;
 }
